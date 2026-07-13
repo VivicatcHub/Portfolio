@@ -1,0 +1,251 @@
+{
+  "current": "en",
+  "light": {
+    "nav": {
+      "home": "Home",
+      "experiences": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "contact": "Contact",
+      "devMode": "Dev mode"
+    },
+    "home": {
+      "hello": "Hi, I'm",
+      "intro": "A passionate developer, I create websites, video games, and useful software. Discover my work below, or switch back to the dev (VS Code) portfolio anytime."
+    },
+    "contact": {
+      "intro": "Feel free to reach out through any of the channels below."
+    }
+  },
+  "navBar": {
+    "switchLanguage": "日本語に切り替え",
+    "switchTheme": "Switch theme",
+    "link": {
+      "profile": "My profile",
+      "mail": "Email me",
+      "linkedin": "My LinkedIn",
+      "github": "My GitHub",
+      "setting": "Settings"
+    }
+  },
+  "fileFinder": {
+    "global": "vguinet",
+    "tabs": {
+      "home": "home.jsx",
+      "formation": "education.html",
+      "experiences": "experiences.json",
+      "skills": "skills.html",
+      "contact": "contact.js",
+      "project": "projects.css",
+      "notepad": "notepad.md",
+      "close": "Close tab"
+    }
+  },
+  "home": {
+    "name": "Valentin GUINET",
+    "xp": "Passionate developer",
+    "projects": "My projects",
+    "contact": "Contact me"
+  },
+  "contact": {
+    "title": "Contact me",
+    "socials": "socials",
+    "website": "Website",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "Linkedin"
+  },
+  "skills": {
+    "title": "My skills"
+  },
+  "data": {
+    "socials": [
+      {
+        "name": "Email",
+        "link": "mailto:guinetvalentin0@gmail.com",
+        "value": "guinetvalentin0@gmail.com"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/VivicatcHub",
+        "value": "VivicatcHub"
+      },
+      {
+        "name": "Linkedin",
+        "link": "https://linkedin.com/in/valentin-guinet-ab683833b",
+        "value": "valentin-guinet-ab683833b"
+      }
+    ],
+    "projects": [
+      {
+        "category": "Epitech",
+        "items": [
+          {
+            "name": "Corewar Best Champion",
+            "company": "1st and 2nd Year",
+            "cover": null,
+            "link": "https://github.com/VivicatcHub/CorewarBestChampion",
+            "description": "Solo project\nA project aimed at discovering Assembler by creating your own champions competing in the Corewar project. These champions are then used to compete in the Corewar tournament held every year at Epitech.",
+            "stack": {
+              "Programming": ["Assembler"],
+              "Tools": ["Git", "GitHub"],
+              "AI": ["Without AI"]
+            }
+          },
+          {
+            "name": "42sh",
+            "company": "1st Year",
+            "cover": null,
+            "link": "https://github.com/VivicatcHub/42sh",
+            "description": "5-person project\nRecreation of the default Linux bash shell entirely in C",
+            "stack": {
+              "Programming": ["C", "Python", "Lexer/Parser", "Signal handling"],
+              "Systems": ["Bash"],
+              "Tools": ["Makefile", "GitHub", "Git"],
+              "Debug & Quality": ["GDB", "Valgrind"],
+              "Tests": ["Criterion"],
+              "AI": ["Without AI"]
+            }
+          }
+        ]
+      },
+      {
+        "category": "Personal Project",
+        "items": [
+          {
+            "name": "Portfolio",
+            "company": null,
+            "cover": null,
+            "link": "./",
+            "description": "Solo project\nYou already know it :P",
+            "stack": {
+              "Frontend": [
+                "React.js",
+                "HTML",
+                "JavaScript",
+                "CSS",
+                "TailwindCSS"
+              ],
+              "DevOps": ["Docker"],
+              "Deployment": ["Vercel"],
+              "Tools": ["Git", "GitHub"],
+              "AI": ["Without AI"]
+            }
+          }
+        ]
+      },
+      {
+        "category": "Professional",
+        "items": [
+          {
+            "name": "Zfvod",
+            "company": "Axiva",
+            "cover": null,
+            "link": "https://www.axiva.fr/",
+            "description": "2-3 person project\nCreation of a back-office for the zfvod project and maintenance of the project. Zfvod is a Windows application that enables video playback on gym kiosks.",
+            "stack": {
+              "Frontend": [
+                "React.js",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "TailwindCSS",
+                "Shadcn"
+              ],
+              "Backend": ["PHP", "Symfony", "Doctrine"],
+              "Database": ["SQL", "MySQL", "DBeaver"],
+              "Application": ["Electron"],
+              "Systems": ["Linux", "Windows", "Nginx"],
+              "Cloud & DevOps": ["AWS", "Docker", "Vercel"],
+              "Tools": ["Git", "GitHub", "Postman", "VSCode", "Vim"],
+              "Programming": [
+                "Python",
+                "Object-Oriented Programming (OOP)",
+                "Multithreading"
+              ],
+              "AI": ["With AI", "Without AI"],
+              "Documentation": ["Markdown", "Technical writing"]
+            }
+          }
+        ]
+      }
+    ],
+    "experiences": {
+      "title": "Experiences",
+      "skillsLabel": "Skills acquired:",
+      "data": [
+        {
+          "company": "Epitech",
+          "xp": "Student",
+          "description": "Student in Epitech's grande école program, class of 2029",
+          "startDate": "10/2024",
+          "endDate": "2029",
+          "skills": {
+            "Soft Skills": {
+              "Teamwork": ["Teamwork", "Code reviews", "Mentoring"],
+              "Communication": ["Professional communication"],
+              "Management": ["Deadline management", "Documentation"],
+              "Languages": ["English"]
+            }
+          }
+        },
+        {
+          "company": "Manta (formerly Cobra)",
+          "xp": "Member then Vice-President",
+          "description": "Member then Vice-President of the association formerly Cobra, now Manta",
+          "startDate": "10/2024",
+          "endDate": "2029",
+          "skills": {
+            "Soft Skills": {
+              "Teamwork": ["Mentoring"],
+              "Management": ["Association management"]
+            }
+          }
+        },
+        {
+          "company": "Heaven of Dice",
+          "xp": "Communications Manager then Chancelier (Co-President)",
+          "description": "Communications Manager then Chancelier (Co-President) in the student association Heaven of Dice",
+          "startDate": "02/2025",
+          "endDate": "02/2027",
+          "skills": {
+            "Soft Skills": {
+              "Communication": [
+                "Social media management",
+                "Simple poster design",
+                "Treasury",
+                "Secretarial work",
+                "Administrative management"
+              ],
+              "Management": ["Event organization", "Team management"]
+            }
+          }
+        },
+        {
+          "company": "Axiva",
+          "xp": "Intern",
+          "description": "Second-year internship as part of Epitech at Axiva",
+          "startDate": "07/2025",
+          "endDate": "12/2025",
+          "skills": {
+            "Soft Skills": {
+              "Teamwork": ["Teamwork", "Code reviews"],
+              "Communication": [
+                "Professional communication with developers",
+                "Professional communication with clients"
+              ],
+              "Management": ["Deadline management", "Documentation"],
+              "Interpersonal skills": [
+                "Autonomy",
+                "Adaptability",
+                "Problem solving"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

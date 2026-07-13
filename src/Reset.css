@@ -1,0 +1,12 @@
+.ql-toolbar.ql-snow,
+.ql-container.ql-snow {
+  border: 0 !important;
+}
+
+.ql-picker-label {
+  color: white !important;
+}
+
+.ql-snow .ql-stroke {
+  stroke: white !important;
+}
