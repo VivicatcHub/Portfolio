@@ -170,6 +170,9 @@
       },
       "zfvod": {
         "description": "Développement d'un back-office pour le projet ZFVOD, ainsi que participation à sa maintenance et à son évolution. ZFVOD est une application Windows permettant la diffusion et la lecture de contenus vidéo sur les bornes interactives de salles de sport."
+      },
+      "cv": {
+        "description": "Création d'un CV en HTML modifiable en changeant seulement un fichier de configuration JSON. Idée inspirée par LAFOLIE Evan."
       }
     }
   }

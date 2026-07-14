@@ -117,7 +117,7 @@
             "Libraries": ["Monaco", "Pyodide"],
             "Deployment": ["Vercel"],
             "Tools": ["Git", "GitHub"],
-            "AI": ["Without AI", "With AI"],
+            "AI": ["Without AI"],
             "Documentation": ["Markdown"]
           }
         },
@@ -191,6 +191,22 @@
             "Tools": ["Git", "GitHub"],
             "Documentation": ["Markdown"]
           }
+        },
+        {
+          "id": "cv",
+          "name": "CV",
+          "date": "07/2026",
+          "status": "done",
+          "personCount": 1,
+          "company": null,
+          "cover": null,
+          "link": "https://github.com/VivicatcHub/CV",
+          "description": "Creation of an HTML resume that can be modified by changing only a JSON configuration file. Idea inspired by LAFOLIE Evan.",
+          "stack": {
+            "Frontend": ["HTML", "CSS", "JavaScript"],
+            "Tools": ["Git", "GitHub"],
+            "Documentation": ["Markdown"]
+          }
         }
       ]
     },
@@ -229,7 +245,7 @@
               "Object-Oriented Programming (OOP)",
               "Multithreading"
             ],
-            "AI": ["With AI", "Without AI"],
+            "AI": ["Without AI"],
             "Documentation": ["Markdown", "Technical writing"]
           }
         }
