@@ -46,7 +46,7 @@
           "status": "done",
           "personCount": 5,
           "collaborators": [
-            "LAFOLIE Evan",
+            "LAFOLIE \"LORAY\" Evan",
             "LEROY Léonard",
             "HENNEVEUX Sacha",
             "RISS Pierre"
@@ -201,7 +201,7 @@
           "company": null,
           "cover": null,
           "link": "https://github.com/VivicatcHub/CV",
-          "description": "Creation of an HTML resume that can be modified by changing only a JSON configuration file. Idea inspired by LAFOLIE Evan.",
+          "description": "Creation of an HTML resume that can be modified by changing only a JSON configuration file. Idea inspired by LAFOLIE \"LORAY\" Evan.",
           "stack": {
             "Frontend": ["HTML", "CSS", "JavaScript"],
             "Tools": ["Git", "GitHub"],
