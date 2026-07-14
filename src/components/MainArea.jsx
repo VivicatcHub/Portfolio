@@ -12,26 +12,27 @@ const MainArea = ({
 
   const Tab = ({ tab }) => (
     <div
-      className={"flex text-gray-500 group border-t-2 border-transparent px-3 py-2 ".concat(
+      onClick={() => setSelectedTab(tab.value)}
+      className={"cursor-pointer flex text-gray-500 group border-t-2 border-transparent px-3 py-2 ".concat(
         selectedTab === tab.value
           ? "bg-main text-white"
           : "hover:border-ayu-purple",
       )}
     >
-      <button
-        onClick={() => setSelectedTab(tab.value)}
-        className="flex items-center text-md min-w-max"
-      >
+      <div className="flex items-center text-md min-w-max">
         <img
           className="h-5 aspect-square pr-2"
           src={`/icons/${tab.name.split(".").pop()}.svg`}
           alt=""
         />
         <span className="min-w-fit">{tab.name}</span>
-      </button>
+      </div>
       <button
         title={translate("fileFinder.tabs.close")}
-        onClick={() => closeTab(tab.value)}
+        onClick={(e) => {
+          e.stopPropagation();
+          closeTab(tab.value);
+        }}
         className="ml-3 group-hover:text-white hidden sm:inline"
       >
         <XMarkIcon className="h-3.5 aspect-square" />
