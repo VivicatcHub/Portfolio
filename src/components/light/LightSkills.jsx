@@ -3,10 +3,12 @@ import useData from "./useData";
 import LightSection from "./LightSection";
 import { SkillIcon } from "../SkillReactIcons";
 import { buildSkills } from "../buildSkills";
+import useSkillLabels from "../skillI18n";
 
 const LightSkills = () => {
   const { t: translate } = useTranslation();
   const data = useData();
+  const labels = useSkillLabels();
   const skills = data ? buildSkills(data) : {};
 
   return (
@@ -15,7 +17,7 @@ const LightSkills = () => {
         {Object.entries(skills).map(([category, items]) => (
           <div key={category}>
             <h2 className="text-lg font-semibold text-gray-500 mb-4">
-              {category}
+              {labels.category(category)}
             </h2>
             <div className="flex flex-wrap gap-4">
               {items.map((skill) => (
@@ -25,7 +27,7 @@ const LightSkills = () => {
                 >
                   <SkillIcon name={skill.name} size={36} />
                   <span className="mt-2 text-xs text-gray-600 text-center px-1">
-                    {skill.name}
+                    {labels.name(skill.name)}
                   </span>
                 </div>
               ))}

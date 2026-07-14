@@ -1,0 +1,177 @@
+{
+  "light": {
+    "nav": {
+      "home": "ホーム",
+      "experiences": "経験",
+      "projects": "プロジェクト",
+      "skills": "スキル",
+      "contact": "お問い合わせ",
+      "devMode": "開発モード"
+    },
+    "home": {
+      "hello": "こんにちは、私は",
+      "intro": "情熱的な開発者として、ウェブサイト、ビデオゲーム、便利なソフトウェアを制作しています。以下で私の作品をご覧いただくか、いつでも開発（VS Code）モードのポートフォリオに切り替えられます。"
+    },
+    "contact": {
+      "intro": "以下のいずれかの方法でお気軽にご連絡ください。"
+    }
+  },
+  "navBar": {
+    "switchLanguage": "Passer en français",
+    "switchTheme": "テーマを切り替え",
+    "link": {
+      "profile": "プロフィール",
+      "mail": "メールを送る",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "setting": "設定"
+    }
+  },
+  "fileFinder": {
+    "global": "vguinet",
+    "tabs": {
+      "home": "home.jsx",
+      "formation": "education.html",
+      "experiences": "experiences.json",
+      "skills": "skills.html",
+      "contact": "contact.js",
+      "project": "projects.css",
+      "notepad": "notepad.md",
+      "close": "タブを閉じる"
+    }
+  },
+  "home": {
+    "name": "Valentin GUINET",
+    "xp": "情熱的な開発者",
+    "projects": "私のプロジェクト",
+    "contact": "お問い合わせ"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "socials": "ソーシャル",
+    "website": "ウェブサイト",
+    "email": "メール",
+    "github": "GitHub",
+    "linkedin": "Linkedin"
+  },
+  "skills": {
+    "title": "私のスキル",
+    "categories": {
+      "Programming": "プログラミング",
+      "Tools": "ツール",
+      "AI": "AI",
+      "Systems": "システム",
+      "Frontend": "フロントエンド",
+      "Backend": "バックエンド",
+      "Database": "データベース",
+      "DevOps": "DevOps",
+      "Cloud & DevOps": "Cloud & DevOps",
+      "Deployment": "デプロイ",
+      "Libraries": "ライブラリ",
+      "Documentation": "ドキュメント",
+      "Debug & Quality": "デバッグ＆品質",
+      "Tests": "テスト",
+      "Formats": "フォーマット",
+      "Application": "アプリケーション",
+      "API": "API"
+    },
+    "names": {
+      "Without AI": "AIなし",
+      "With AI": "AIあり",
+      "Signal handling": "シグナル処理",
+      "Object-Oriented Programming (OOP)": "オブジェクト指向プログラミング（OOP）",
+      "Multithreading": "マルチスレッド",
+      "Technical writing": "技術文書",
+      "Teamwork": "チームワーク",
+      "Code reviews": "コードレビュー",
+      "Mentoring": "指導",
+      "Professional communication": "プロフェッショナルなコミュニケーション",
+      "Professional communication with developers": "開発者とのプロフェッショナルなコミュニケーション",
+      "Professional communication with clients": "クライアントとのプロフェッショナルなコミュニケーション",
+      "Deadline management": "納期管理",
+      "Documentation": "ドキュメント作成",
+      "English": "英語",
+      "Association management": "団体運営",
+      "Social media management": "SNS運用",
+      "Simple poster design": "簡単なポスター制作",
+      "Treasury": "会計",
+      "Secretarial work": "事務",
+      "Administrative management": "管理業務",
+      "Event organization": "イベント企画",
+      "Team management": "チーム管理",
+      "Autonomy": "自律性",
+      "Adaptability": "適応力",
+      "Problem solving": "問題解決"
+    }
+  },
+  "projectCard": {
+    "status": {
+      "done": "完了",
+      "in_progress": "進行中"
+    },
+    "solo": "個人プロジェクト",
+    "people": "{{count}}人",
+    "with": "共同"
+  },
+  "experiences": {
+    "title": "経験",
+    "skillsLabel": "習得したスキル：",
+    "items": {
+      "epitech": {
+        "xp": "学生",
+        "description": "Epitechのグランゼコールプログラム、2029年卒業予定の学生"
+      },
+      "manta": {
+        "company": "Manta（旧Cobra）",
+        "xp": "メンバーを経て副会長",
+        "description": "旧Cobra、現Mantaの団体でメンバーを経て副会長を務める"
+      },
+      "hod": {
+        "xp": "広報担当を経てChancelier（共同会長）",
+        "description": "学生団体Heaven of Diceで広報担当を経てChancelier（共同会長）を務める"
+      },
+      "axiva": {
+        "xp": "インターン",
+        "description": "Epitechの一環としてAxivaでの2年目インターンシップ"
+      }
+    }
+  },
+  "projects": {
+    "categories": {
+      "Epitech": "Epitech",
+      "Personal Project": "個人プロジェクト",
+      "Professional": "実務"
+    },
+    "items": {
+      "corewar": {
+        "company": "1年目・2年目",
+        "description": "Corewarプロジェクトで自作のチャンピオンを作成し、アセンブラを学ぶことを目的としたプロジェクトです。これらのチャンピオンは、Epitechで毎年開催されるCorewarトーナメントに出場するために使用されます。"
+      },
+      "42sh": {
+        "company": "1年目",
+        "description": "LinuxのデフォルトBashシェルをCで再現し、コマンドの実行、リダイレクト、パイプ、環境変数やプロセスの管理といった主要な機能を実装することで、Unixシェルの動作を忠実に再現しました。"
+      },
+      "portfolio": {
+        "description": "もうご存知ですよね :P"
+      },
+      "idepitech": {
+        "description": "ブラウザから完全にアクセスできるIDEの開発。Python、HTML、CSS、JavaScriptでプログラミングを学び、小規模なプロジェクトを作成できるように設計されています。\nこのプラットフォームは、ユーザーの学習をサポートするためのインタラクティブな講座やガイド付きプロジェクトも提供しています。Manta協会のメンバーが「Coding-Clubs」をよりシンプルに、より効率的に、より協力的に運営・開催できるように設計されました。"
+      },
+      "hod-showcase": {
+        "description": "Heaven of Dice協会の紹介サイトの開発。協会の公開Google Driveドキュメントから直接データを自動取得し、情報の更新と発信を容易にします。"
+      },
+      "gotoprojects": {
+        "description": "プロジェクトの作業環境の起動を自動化するLinuxツールの開発。適切なディレクトリでVS Codeを開き、必要なコマンドを実行し、Git（git pull）と同期するなど、繰り返し行う作業を自動化することで、プロジェクトの立ち上げを簡単かつ迅速にします。"
+      },
+      "solo-leveling": {
+        "description": "韓国作品『Solo Leveling』のビジュアルの世界観にインスパイアされたウェブサイトの開発。没入感のある魅力的なインターフェースを通じて、ユーザーが運動の目標や決意を管理できるように設計されています。"
+      },
+      "easytowerofgod": {
+        "description": "Webtoonでの『Tower of God』の読書体験を向上させるウェブ拡張機能の開発。作品のwikiから情報を検索できるインターフェースを統合し、章の読書を中断することなく直接アクセスできます。"
+      },
+      "zfvod": {
+        "description": "ZFVODプロジェクトのバックオフィスの開発、およびその保守と発展への参加。ZFVODは、ジムのインタラクティブなキオスク端末で動画コンテンツを配信・再生できるWindowsアプリケーションです。"
+      }
+    }
+  }
+}

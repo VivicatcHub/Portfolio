@@ -1,0 +1,176 @@
+{
+  "light": {
+    "nav": {
+      "home": "Accueil",
+      "experiences": "Expériences",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "contact": "Contact",
+      "devMode": "Mode dev"
+    },
+    "home": {
+      "hello": "Bonjour, je suis",
+      "intro": "Développeur passionné, je crée des sites web, des jeux vidéos et des logiciels utiles. Découvrez mon travail ci-dessous, ou revenez au portfolio en mode dev (VS Code) à tout moment."
+    },
+    "contact": {
+      "intro": "N'hésitez pas à me contacter via l'un des moyens ci-dessous."
+    }
+  },
+  "navBar": {
+    "switchLanguage": "Switch to english",
+    "switchTheme": "Changer de thème",
+    "link": {
+      "profile": "Mon Profil",
+      "mail": "M'envoyer un email",
+      "linkedin": "Mon LinkedIn",
+      "github": "Mon GitHub",
+      "setting": "Paramètres"
+    }
+  },
+  "fileFinder": {
+    "global": "vguinet",
+    "tabs": {
+      "home": "accueil.jsx",
+      "formation": "formation.html",
+      "experiences": "expériences.json",
+      "skills": "compétences.html",
+      "contact": "contact.js",
+      "project": "projets.css",
+      "notepad": "bloc_note.md",
+      "close": "Fermer l'onglet"
+    }
+  },
+  "home": {
+    "name": "Valentin GUINET",
+    "xp": "Développeur passionné",
+    "projects": "Mes projets",
+    "contact": "Me contacter"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "socials": "réseaux",
+    "website": "Site",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "Linkedin"
+  },
+  "skills": {
+    "title": "Mes compétences",
+    "categories": {
+      "Programming": "Programmation",
+      "Tools": "Outils",
+      "AI": "IA",
+      "Systems": "Systèmes",
+      "Frontend": "Frontend",
+      "Backend": "Backend",
+      "Database": "Base de données",
+      "DevOps": "DevOps",
+      "Cloud & DevOps": "Cloud & DevOps",
+      "Deployment": "Déploiement",
+      "Libraries": "Librairies",
+      "Documentation": "Documentation",
+      "Debug & Quality": "Debug & Qualité",
+      "Tests": "Tests",
+      "Formats": "Formats",
+      "Application": "Application",
+      "API": "API"
+    },
+    "names": {
+      "Without AI": "Sans IA",
+      "With AI": "Avec IA",
+      "Signal handling": "Gestion des signaux",
+      "Object-Oriented Programming (OOP)": "Programmation orientée objet (POO)",
+      "Technical writing": "Ecrits techniques",
+      "Teamwork": "Travail d'équipe",
+      "Code reviews": "Review de code",
+      "Mentoring": "Pédagogie",
+      "Professional communication": "Communication professionnelle",
+      "Professional communication with developers": "Communication professionnelle avec des développeurs",
+      "Professional communication with clients": "Communication professionnelle avec des clients",
+      "Deadline management": "Gestion des délais",
+      "Documentation": "Documentation",
+      "English": "Anglais",
+      "Association management": "Gestion associative",
+      "Social media management": "Utilisation des réseaux sociaux",
+      "Simple poster design": "Création d'affiches simple",
+      "Treasury": "Trésorerie",
+      "Secretarial work": "Secrétariat",
+      "Administrative management": "Gestion administrative",
+      "Event organization": "Organisation d'événements",
+      "Team management": "Gestion d'équipe",
+      "Autonomy": "Autonomie",
+      "Adaptability": "Adaptabilité",
+      "Problem solving": "Résolution de problèmes"
+    }
+  },
+  "projectCard": {
+    "status": {
+      "done": "Terminé",
+      "in_progress": "En cours"
+    },
+    "solo": "Projet solo",
+    "people": "{{count}} personnes",
+    "with": "Avec"
+  },
+  "experiences": {
+    "title": "Expériences",
+    "skillsLabel": "Compétences acquises :",
+    "items": {
+      "epitech": {
+        "xp": "Étudiant",
+        "description": "Étudiant au programme grande école d'Epitech dans la promo 2029"
+      },
+      "manta": {
+        "company": "Manta (anciennement Cobra)",
+        "xp": "Membre puis Vice-président",
+        "description": "Membre puis Vice-président de l'association anciennement Cobra, maintenant Manta"
+      },
+      "hod": {
+        "xp": "Responsable Communication puis Chancelier (Co-Président)",
+        "description": "Responsable Communication puis Chancelier (Co-Président) dans l'association étudiante Heaven of Dice"
+      },
+      "axiva": {
+        "xp": "Stagiaire",
+        "description": "Stage de deuxième année dans le cadre d'Epitech chez Axiva"
+      }
+    }
+  },
+  "projects": {
+    "categories": {
+      "Epitech": "Epitech",
+      "Personal Project": "Projet Perso",
+      "Professional": "Cadre Professionnel"
+    },
+    "items": {
+      "corewar": {
+        "company": "1ère et 2e Année",
+        "description": "Un projet ayant pour but de découvrir l'Assembler en créant ses propres champions concourant dans le projet Corewar. Ces champions sont ensuite utilisé pour concourir au tournoi Corewar organisé chaque année à Epitech."
+      },
+      "42sh": {
+        "company": "1ère Année",
+        "description": "Recréation en C du shell Bash par défaut de Linux, avec l'implémentation de ses principales fonctionnalités, telles que l'exécution de commandes, les redirections, les pipes, la gestion des variables d'environnement et des processus, afin de reproduire fidèlement le comportement d'un shell Unix."
+      },
+      "portfolio": {
+        "description": "Vous le connaissez déjà :P"
+      },
+      "idepitech": {
+        "description": "Développement d'un IDE entièrement accessible depuis le navigateur, conçu pour apprendre la programmation et réaliser de petits projets en Python, HTML, CSS et JavaScript.\nLa plateforme propose également des cours interactifs ainsi que des projets guidés afin d'accompagner les utilisateurs dans leur apprentissage. Elle a été pensée pour permettre aux membres de l'association Manta d'organiser et d'animer les 'Coding-Clubs' de manière plus simple, plus efficace et plus collaborative."
+      },
+      "hod-showcase": {
+        "description": "Développement d'un site vitrine pour l'association Heaven of Dice, avec récupération automatique des données directement depuis les documents Google Drive publics de l'association, afin de faciliter la mise à jour et la diffusion des informations."
+      },
+      "gotoprojects": {
+        "description": "Développement d'un outil Linux permettant d'automatiser le lancement de l'environnement de travail d'un projet : ouverture de VS Code dans le bon répertoire, exécution des commandes nécessaires, synchronisation avec Git (git pull), ainsi que toute autre étape récurrente afin de simplifier et d'accélérer le démarrage d'un projet."
+      },
+      "solo-leveling": {
+        "description": "Développement d'un site web inspiré de l'univers visuel de l'œuvre coréenne Solo Leveling, conçu pour aider les utilisateurs à suivre leurs objectifs et leurs résolutions sportives grâce à une interface immersive et motivante."
+      },
+      "easytowerofgod": {
+        "description": "Développement d'une extension web permettant d'améliorer l'expérience de lecture de 'Tower of God' sur Webtoon, avec l'intégration d'une interface de recherche d'informations issue du wiki de l'œuvre, accessible directement sans interrompre la lecture du chapitre."
+      },
+      "zfvod": {
+        "description": "Développement d'un back-office pour le projet ZFVOD, ainsi que participation à sa maintenance et à son évolution. ZFVOD est une application Windows permettant la diffusion et la lecture de contenus vidéo sur les bornes interactives de salles de sport."
+      }
+    }
+  }
+}

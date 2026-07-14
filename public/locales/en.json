@@ -1,0 +1,73 @@
+{
+  "light": {
+    "nav": {
+      "home": "Home",
+      "experiences": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "contact": "Contact",
+      "devMode": "Dev mode"
+    },
+    "home": {
+      "hello": "Hi, I'm",
+      "intro": "A passionate developer, I create websites, video games, and useful software. Discover my work below, or switch back to the dev (VS Code) portfolio anytime."
+    },
+    "contact": {
+      "intro": "Feel free to reach out through any of the channels below."
+    }
+  },
+  "navBar": {
+    "switchLanguage": "日本語に切り替え",
+    "switchTheme": "Switch theme",
+    "link": {
+      "profile": "My profile",
+      "mail": "Email me",
+      "linkedin": "My LinkedIn",
+      "github": "My GitHub",
+      "setting": "Settings"
+    }
+  },
+  "fileFinder": {
+    "global": "vguinet",
+    "tabs": {
+      "home": "home.jsx",
+      "formation": "education.html",
+      "experiences": "experiences.json",
+      "skills": "skills.html",
+      "contact": "contact.js",
+      "project": "projects.css",
+      "notepad": "notepad.md",
+      "close": "Close tab"
+    }
+  },
+  "home": {
+    "name": "Valentin GUINET",
+    "xp": "Passionate developer",
+    "projects": "My projects",
+    "contact": "Contact me"
+  },
+  "contact": {
+    "title": "Contact me",
+    "socials": "socials",
+    "website": "Website",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "Linkedin"
+  },
+  "skills": {
+    "title": "My skills"
+  },
+  "projectCard": {
+    "status": {
+      "done": "Completed",
+      "in_progress": "In progress"
+    },
+    "solo": "Solo project",
+    "people": "{{count}} people",
+    "with": "With"
+  },
+  "experiences": {
+    "title": "Experiences",
+    "skillsLabel": "Skills acquired:"
+  }
+}

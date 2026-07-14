@@ -43,6 +43,8 @@ import {
   ArchlinuxOriginal,
   AppleOriginal,
   Windows11Original,
+  RubyOriginal,
+  CsharpOriginal,
 } from "devicons-react";
 import { TbApi, TbDatabase, TbCpu, TbRobot, TbRobotOff } from "react-icons/tb";
 import {
@@ -74,8 +76,10 @@ const SKILL_DEVICONS = {
   C: COriginal,
   "C++": CplusplusOriginal,
   Rust: RustOriginal,
+  Ruby: RubyOriginal,
   Haskell: HaskellOriginal,
   Bash: BashOriginal,
+  "C#": CsharpOriginal,
 
   GraphQl: GraphqlPlain,
   MySQL: MysqlOriginal,

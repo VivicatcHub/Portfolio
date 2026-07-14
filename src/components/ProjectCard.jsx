@@ -1,4 +1,5 @@
 import SkillGrid from "./SkillGrid";
+import ProjectMeta from "./ProjectMeta";
 
 const ProjectCard = ({ project }) => {
   const stack = project.stack;
@@ -23,8 +24,8 @@ const ProjectCard = ({ project }) => {
           }
         >
           <div>
-            <div className="flex items-center mb-8">
-              <div className="flex flex-col lg:items-center lg:flex-row ml-4 lg:ml-0">
+            <div className="flex flex-col mb-6 ml-4 lg:ml-0">
+              <div className="flex flex-col lg:items-center lg:flex-row">
                 <h2 className="text-lg md:text-2xl font-semibold">
                   <a href={project.link} className="hover:underline">
                     {project.name}
@@ -36,6 +37,7 @@ const ProjectCard = ({ project }) => {
                   </span>
                 )}
               </div>
+              <ProjectMeta project={project} variant="dark" />
             </div>
             <p className="w-full whitespace-pre-wrap text-justify">
               {project.description}

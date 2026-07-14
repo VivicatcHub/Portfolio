@@ -1,19 +1,15 @@
 import { useTranslation } from "react-i18next";
 import Title from "../Title";
 import ProjectCard from "../ProjectCard";
-import { useEffect, useState } from "react";
+import useData from "../useData";
+import { byDateDesc } from "../dateUtils";
+
+const sortByDate = byDateDesc("date");
 
 const Projects = () => {
-  const { t: translate, i18n } = useTranslation();
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const lang = (i18n?.language || "en").split("-")[0];
-    fetch(`/locales/${lang}/data.json`)
-      .then((res) => res.json())
-      .then((json) => setProjects(json.data?.projects || []))
-      .catch(() => setProjects([]));
-  }, [i18n?.language]);
+  const { t: translate } = useTranslation();
+  const data = useData();
+  const projects = data?.projects || [];
 
   return (
     <div className="text-white flex flex-col h-full overflow-y-scroll lg:overflow-y-auto pt-8 md:pt-12">
@@ -25,7 +21,7 @@ const Projects = () => {
           </h2>
           <div className="flex-grow flex max-w-full h-fit">
             <div className="h-full w-full lg:pb-10 px-2 md:px-4 lg:px-0 flex flex-col lg:flex-row overflow-y-scroll overflow-x-hidden lg:overflow-y-hidden lg:overflow-x-scroll gap-8">
-              {group.items.map((project, idx) => (
+              {sortByDate(group.items).map((project, idx) => (
                 <ProjectCard key={idx} project={project} />
               ))}
             </div>

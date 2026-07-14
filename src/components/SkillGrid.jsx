@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SkillIcon, hasSkillIcon } from "./SkillReactIcons";
+import useSkillLabels from "./skillI18n";
 
 const MODES = ["both", "text", "icon"];
 const MODE_LABELS = {
@@ -87,7 +88,7 @@ const VARIANTS = {
   },
 };
 
-const SkillChip = ({ name, mode, size, variant }) => {
+const SkillChip = ({ name, label, mode, size, variant }) => {
   const hasIcon = hasSkillIcon(name);
   const showIcon = hasIcon && (mode === "icon" || mode === "both");
 
@@ -100,7 +101,7 @@ const SkillChip = ({ name, mode, size, variant }) => {
       className={`inline-flex items-center gap-1.5 rounded-full ${size.chipText} transition-colors duration-150 max-w-[10rem] ${
         iconOnly ? "p-0.5" : `${size.chipPad} shadow-sm border ${variant.chip}`
       }`}
-      title={name}
+      title={label}
     >
       {showIcon && (
         <SkillIcon
@@ -108,7 +109,7 @@ const SkillChip = ({ name, mode, size, variant }) => {
           size={iconOnly ? size.iconOnlySize : size.iconSize}
         />
       )}
-      {showText && <span className="truncate">{name}</span>}
+      {showText && <span className="truncate">{label}</span>}
     </div>
   );
 };
@@ -121,6 +122,7 @@ const SkillGrid = ({
 }) => {
   const sz = SIZES[size] || SIZES.lg;
   const vr = VARIANTS[variant] || VARIANTS.dark;
+  const labels = useSkillLabels();
   const [mode, cycleMode] = useDisplayMode();
   const [open, setOpen] = useState(false);
   const categories = Object.keys(skills);
@@ -175,13 +177,14 @@ const SkillGrid = ({
               <span
                 className={`${sz.catText} font-semibold ${vr.cat} tracking-wide`}
               >
-                {cat}
+                {labels.category(cat)}
               </span>
               <div className={`flex flex-wrap ${sz.innerGap}`}>
                 {skills[cat].map((name) => (
                   <SkillChip
                     key={name}
                     name={name}
+                    label={labels.name(name)}
                     mode={mode}
                     size={sz}
                     variant={vr}

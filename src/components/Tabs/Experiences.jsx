@@ -1,7 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
 import Title from "../Title";
 import { SkillIcon } from "../SkillReactIcons";
+import useData from "../useData";
+import useSkillLabels from "../skillI18n";
+import { byDateDesc } from "../dateUtils";
+
+const sortByStartDate = byDateDesc("startDate");
 
 const flattenSkills = (skills) => [
   ...new Set(
@@ -10,24 +14,18 @@ const flattenSkills = (skills) => [
 ];
 
 const Experiences = () => {
-  const { t: translate, i18n } = useTranslation();
-  const [xps, setXps] = useState([]);
-
-  useEffect(() => {
-    const lang = (i18n?.language || "en").split("-")[0];
-    fetch(`/locales/${lang}/data.json`)
-      .then((res) => res.json())
-      .then((json) => setXps(json.data?.experiences?.data || []))
-      .catch(() => setXps([]));
-  }, [i18n?.language]);
+  const { t: translate } = useTranslation();
+  const data = useData();
+  const labels = useSkillLabels();
+  const xps = data?.experiences || [];
 
   return (
     <div className="h-full max-w-7xl mx-auto flex flex-col lg:flex-row text-white pt-8 overflow-y-auto">
       <div className="px-2 md:px-4 lg:px-6 mb-6">
-        <Title text={translate("data.experiences.title")} />
+        <Title text={translate("experiences.title")} />
         <div className="px-12 space-y-6">
           <div className="relative px-[19px] space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-2 before:bg-gray-700">
-            {xps.map((xp, idx) => (
+            {sortByStartDate(xps).map((xp, idx) => (
               <div
                 key={idx}
                 className="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-34px] before:z-[1] before:bg-ayu-purple"
@@ -43,17 +41,17 @@ const Experiences = () => {
                 {xp.skills && (
                   <div className="mt-4">
                     <span className="block text-sm font-semibold text-ayu-purple mb-2">
-                      {translate("data.experiences.skillsLabel")}
+                      {translate("experiences.skillsLabel")}
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {flattenSkills(xp.skills).map((name) => (
                         <span
                           key={name}
-                          title={name}
+                          title={labels.name(name)}
                           className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-700 border border-gray-600 text-xs text-gray-200"
                         >
                           <SkillIcon name={name} size={14} />
-                          {name}
+                          {labels.name(name)}
                         </span>
                       ))}
                     </div>

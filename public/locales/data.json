@@ -1,0 +1,314 @@
+{
+  "socials": [
+    {
+      "name": "Email",
+      "link": "mailto:guinetvalentin0@gmail.com",
+      "value": "guinetvalentin0@gmail.com"
+    },
+    {
+      "name": "GitHub",
+      "link": "https://github.com/VivicatcHub",
+      "value": "VivicatcHub"
+    },
+    {
+      "name": "Linkedin",
+      "link": "https://linkedin.com/in/valentin-guinet-ab683833b",
+      "value": "valentin-guinet-ab683833b"
+    }
+  ],
+  "skills": {
+    "Programming": ["Ruby", "C++", "C#"]
+  },
+  "projects": [
+    {
+      "category": "Epitech",
+      "items": [
+        {
+          "id": "corewar",
+          "name": "Corewar Best Champion",
+          "date": "06/2025",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st & 2nd Year",
+          "cover": null,
+          "link": "https://github.com/VivicatcHub/CorewarBestChampion",
+          "description": "A project aimed at discovering Assembler by creating your own champions competing in the Corewar project. These champions are then used to compete in the Corewar tournament held every year at Epitech.",
+          "stack": {
+            "Programming": ["Assembler"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "42sh",
+          "name": "42sh",
+          "date": "03/2025",
+          "status": "done",
+          "personCount": 5,
+          "collaborators": [
+            "LAFOLIE Evan",
+            "LEROY Léonard",
+            "HENNEVEUX Sacha",
+            "RISS Pierre"
+          ],
+          "company": "1st Year",
+          "cover": null,
+          "link": "https://github.com/VivicatcHub/42sh",
+          "description": "Recreation in C of the default Linux Bash shell, implementing its main features such as command execution, redirections, pipes, environment variable and process management, in order to faithfully reproduce the behavior of a Unix shell.",
+          "stack": {
+            "Programming": ["C", "Python", "Lexer/Parser", "Signal handling"],
+            "Systems": ["Bash"],
+            "Tools": ["Makefile", "GitHub", "Git"],
+            "Debug & Quality": ["GDB", "Valgrind"],
+            "Tests": ["Criterion"],
+            "AI": ["Without AI"]
+          }
+        }
+      ]
+    },
+    {
+      "category": "Personal Project",
+      "items": [
+        {
+          "id": "portfolio",
+          "name": "Portfolio",
+          "date": "07/2026",
+          "status": "in_progress",
+          "personCount": 1,
+          "company": null,
+          "cover": null,
+          "link": "./",
+          "description": "You already know it :P",
+          "stack": {
+            "Frontend": [
+              "React.js",
+              "HTML",
+              "JavaScript",
+              "CSS",
+              "TailwindCSS"
+            ],
+            "DevOps": ["Docker"],
+            "Deployment": ["Vercel"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "idepitech",
+          "name": "IDEpitech",
+          "date": "06/2026",
+          "status": "in_progress",
+          "personCount": 3,
+          "collaborators": ["LESOBRE Ethan", "LEROY Léonard"],
+          "company": "Manta",
+          "cover": null,
+          "link": "httpd://id-epitech.vercel.app/",
+          "description": "Development of an IDE fully accessible from the browser, designed for learning programming and building small projects in Python, HTML, CSS and JavaScript.\nThe platform also offers interactive courses as well as guided projects to support users in their learning. It was designed to allow members of the Manta association to organize and run the 'Coding-Clubs' in a simpler, more efficient and more collaborative way.",
+          "stack": {
+            "Frontend": [
+              "React.js",
+              "Vite",
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "TailwindCSS"
+            ],
+            "Programming": ["Python"],
+            "Libraries": ["Monaco", "Pyodide"],
+            "Deployment": ["Vercel"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["Without AI", "With AI"],
+            "Documentation": ["Markdown"]
+          }
+        },
+        {
+          "id": "hod-showcase",
+          "name": "HOD Showcase Site",
+          "date": "04/2026",
+          "status": "done",
+          "personCount": 1,
+          "company": "Heaven of Dice",
+          "cover": null,
+          "link": "https://vivicatchub.github.io/HOD-showcase-site/",
+          "description": "Development of a showcase website for the Heaven of Dice association, with automatic data retrieval directly from the association's public Google Drive documents, in order to make updating and sharing information easier.",
+          "stack": {
+            "Frontend": ["React.js", "Next.js", "CSS", "TailwindCSS", "Shadcn"],
+            "API": ["Google API"],
+            "Deployment": ["GitHub Pages"],
+            "AI": ["With AI"],
+            "Tools": ["Git", "GitHub"]
+          }
+        },
+        {
+          "id": "gotoprojects",
+          "name": "GoToProjects",
+          "date": "06/2025",
+          "status": "done",
+          "personCount": 1,
+          "company": null,
+          "cover": null,
+          "link": "https://github.com/VivicatcHub/GoToProjects",
+          "description": "Development of a Linux tool to automate launching a project's working environment: opening VS Code in the right directory, running the necessary commands, syncing with Git (git pull), as well as any other recurring step in order to simplify and speed up starting a project.",
+          "stack": {
+            "Programming": ["Python"],
+            "Systems": ["Bash"],
+            "Formats": ["JSON"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          }
+        },
+        {
+          "id": "solo-leveling",
+          "name": "Solo Leveling Training",
+          "date": "06/2024",
+          "status": "done",
+          "personCount": 1,
+          "company": null,
+          "cover": null,
+          "link": "https://github.com/VivicatcHub/SoloLevelingTraining",
+          "description": "Development of a website inspired by the visual universe of the Korean work Solo Leveling, designed to help users track their sports goals and resolutions through an immersive and motivating interface.",
+          "stack": {
+            "Frontend": ["HTML", "CSS", "JavaScript"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          }
+        },
+        {
+          "id": "easytowerofgod",
+          "name": "EasyTowerOfGod",
+          "date": "12/2025",
+          "status": "done",
+          "personCount": 1,
+          "company": null,
+          "cover": null,
+          "link": "https://github.com/VivicatcHub/EasyTowerOfGod",
+          "description": "Development of a web extension to improve the reading experience of 'Tower of God' on Webtoon, with an integrated interface for searching information from the work's wiki, accessible directly without interrupting the reading of the chapter.",
+          "stack": {
+            "Frontend": ["HTML", "CSS", "JavaScript"],
+            "Systems": ["Bash"],
+            "Tools": ["Git", "GitHub"],
+            "Documentation": ["Markdown"]
+          }
+        }
+      ]
+    },
+    {
+      "category": "Professional",
+      "items": [
+        {
+          "id": "zfvod",
+          "name": "Zfvod",
+          "date": "08/2025",
+          "status": "done",
+          "personCount": 3,
+          "company": "Axiva",
+          "cover": null,
+          "link": "https://www.axiva.fr/",
+          "description": "Development of a back-office for the ZFVOD project, as well as participation in its maintenance and evolution. ZFVOD is a Windows application that enables the broadcasting and playback of video content on interactive kiosks in gyms.",
+          "stack": {
+            "Frontend": [
+              "React.js",
+              "Next.js",
+              "TypeScript",
+              "JavaScript",
+              "HTML",
+              "CSS",
+              "TailwindCSS",
+              "Shadcn"
+            ],
+            "Backend": ["PHP", "Symfony", "Doctrine"],
+            "Database": ["SQL", "MySQL", "DBeaver"],
+            "Application": ["Electron"],
+            "Systems": ["Linux", "Windows", "Nginx"],
+            "Cloud & DevOps": ["AWS", "Docker", "Vercel"],
+            "Tools": ["Git", "GitHub", "Postman", "VSCode", "Vim"],
+            "Programming": [
+              "Python",
+              "Object-Oriented Programming (OOP)",
+              "Multithreading"
+            ],
+            "AI": ["With AI", "Without AI"],
+            "Documentation": ["Markdown", "Technical writing"]
+          }
+        }
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "id": "epitech",
+      "company": "Epitech",
+      "xp": "Student",
+      "description": "Student in Epitech's grande école program, class of 2029",
+      "startDate": "10/2024",
+      "endDate": "2029",
+      "skills": {
+        "Soft Skills": {
+          "Teamwork": ["Teamwork", "Code reviews", "Mentoring"],
+          "Communication": ["Professional communication"],
+          "Management": ["Deadline management", "Documentation"],
+          "Languages": ["English"]
+        }
+      }
+    },
+    {
+      "id": "manta",
+      "company": "Manta (formerly Cobra)",
+      "xp": "Member then Vice-President",
+      "description": "Member then Vice-President of the association formerly Cobra, now Manta",
+      "startDate": "10/2024",
+      "endDate": "2029",
+      "skills": {
+        "Soft Skills": {
+          "Teamwork": ["Mentoring"],
+          "Management": ["Association management"]
+        }
+      }
+    },
+    {
+      "id": "hod",
+      "company": "Heaven of Dice",
+      "xp": "Communications Manager then Chancelier (Co-President)",
+      "description": "Communications Manager then Chancelier (Co-President) in the student association Heaven of Dice",
+      "startDate": "02/2025",
+      "endDate": "02/2027",
+      "skills": {
+        "Soft Skills": {
+          "Communication": [
+            "Social media management",
+            "Simple poster design",
+            "Treasury",
+            "Secretarial work",
+            "Administrative management"
+          ],
+          "Management": ["Event organization", "Team management"]
+        }
+      }
+    },
+    {
+      "id": "axiva",
+      "company": "Axiva",
+      "xp": "Intern",
+      "description": "Second-year internship as part of Epitech at Axiva",
+      "startDate": "07/2025",
+      "endDate": "12/2025",
+      "skills": {
+        "Soft Skills": {
+          "Teamwork": ["Teamwork", "Code reviews"],
+          "Communication": [
+            "Professional communication with developers",
+            "Professional communication with clients"
+          ],
+          "Management": ["Deadline management", "Documentation"],
+          "Interpersonal skills": [
+            "Autonomy",
+            "Adaptability",
+            "Problem solving"
+          ]
+        }
+      }
+    }
+  ]
+}

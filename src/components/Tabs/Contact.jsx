@@ -1,19 +1,12 @@
 import { useTranslation } from "react-i18next";
 import Title from "../Title";
-import { useEffect, useState } from "react";
+import useData from "../useData";
 
 const Contact = () => {
-  const { t: translate, i18n } = useTranslation();
+  const { t: translate } = useTranslation();
 
-  const [SOCIALS, setSOCIALS] = useState([]);
-
-  useEffect(() => {
-    const lang = (i18n?.language || "en").split("-")[0];
-    fetch(`/locales/${lang}/data.json`)
-      .then((res) => res.json())
-      .then((json) => setSOCIALS(json.data?.socials || []))
-      .catch(() => setSOCIALS([]));
-  }, [i18n?.language]);
+  const data = useData();
+  const SOCIALS = data?.socials || [];
 
   const Spacer = () => (
     <>

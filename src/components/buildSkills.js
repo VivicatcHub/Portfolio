@@ -18,7 +18,9 @@ export const buildSkills = (data) => {
   };
 
   Object.entries(data?.skills || {}).forEach(([category, list]) =>
-    (list || []).forEach((skill) => add(category, skill?.name)),
+    (list || []).forEach((skill) =>
+      add(category, typeof skill === "string" ? skill : skill?.name),
+    ),
   );
 
   (data?.projects || []).forEach((group) =>

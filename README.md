@@ -9,7 +9,7 @@ A developer portfolio that ships in **two interchangeable versions**, both drive
 | **Normal** (VS Code) | `/`    | A **VS Code-inspired interface**: tabs, a file finder and an editor-like layout. This started from **[Théo Marinho](https://thmarinho.dev/#contact)**'s project and was **reworked and enhanced** here (data-driven, i18n, extra tabs). It keeps Théo's concept as its base/example. |
 | **Pro**              | `/pro` | A **clean, white, multi-page portfolio**: a classic top-nav site with dedicated pages (Home, Experience, Projects, Skills, Contact). This one is a **fully original design**, built from scratch.                                                                                    |
 
-Both read the **same** `public/locales/{language}/data.json`, so any content you add (a project, a skill, an experience, a language) shows up in **both** versions automatically: no component changes required.
+Both read the **same** `public/locales/data.json`, so any content you add (a project, a skill, an experience, a language) shows up in **both** versions automatically: no component changes required.
 
 The rest of this document describes the shared, **data-driven and scalable** architecture: adding content or even a whole new language never requires touching the components.
 
@@ -17,8 +17,8 @@ The rest of this document describes the shared, **data-driven and scalable** arc
 
 The goal of the rewrite was simple: **update the content, not the code.**
 
-- **Single source of truth**: all content (skills, projects, experiences, socials, labels) is driven by `public/locales/{language}/data.json`.
-- **Fully internationalized**: content and UI strings share the same data files, one per language (`en`, `fr`), loaded on demand.
+- **Single source of truth**: all content (skills, projects, experiences, socials, labels) is driven by `public/locales/data.json` and translation by `public/locales/{language}.json`.
+- **Fully internationalized**: content and UI strings share the same data files, one per language (`en`, `fr`, `ja`), loaded on demand.
 - **Scalable by design**: components render whatever the data describes, so the site grows just by editing JSON.
 - **Modular components**: reusable building blocks like `ProjectCard`, `SkillGrid`, and `SkillReactIcons` keep the rendering generic.
 
@@ -49,9 +49,10 @@ All content lives in per-language data files: no component changes needed.
 
 ```
 public/locales/
-├── en/data.json
-├── jp/data.json
-└── fr/data.json
+├── data.json
+├── en.json
+├── fr.json
+└── ja.json
 ```
 
 Each file contains both the **UI labels** (navbar, tabs, form fields…) and the **content data**:
@@ -67,7 +68,7 @@ To add a project, append an entry under the matching `data.projects[].items`; to
 
 ## 🌍 Adding a language
 
-1. Create `public/locales/<lng>/data.json` (copy an existing one and translate it).
+1. Create `public/locales/<lng>.json` (copy an existing one and translate it).
 2. i18next will pick it up automatically via the loader path in [src/i18n.js](src/i18n.js).
 
 ## 🙏 Credits

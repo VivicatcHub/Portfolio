@@ -2,6 +2,10 @@ import { useTranslation } from "react-i18next";
 import useData from "./useData";
 import LightSection from "./LightSection";
 import { SkillIcon } from "../SkillReactIcons";
+import useSkillLabels from "../skillI18n";
+import { byDateDesc } from "../dateUtils";
+
+const sortByStartDate = byDateDesc("startDate");
 
 const flattenSkills = (skills) => [
   ...new Set(
@@ -12,12 +16,13 @@ const flattenSkills = (skills) => [
 const LightExperiences = () => {
   const { t: translate } = useTranslation();
   const data = useData();
-  const xps = data?.experiences?.data || [];
+  const labels = useSkillLabels();
+  const xps = data?.experiences || [];
 
   return (
     <LightSection title={translate("light.nav.experiences")}>
       <div className="relative border-l-2 border-gray-200 ml-3 space-y-10">
-        {xps.map((xp, idx) => (
+        {sortByStartDate(xps).map((xp, idx) => (
           <div key={idx} className="relative pl-8">
             <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-ayu-purple ring-4 ring-white" />
             <div className="flex flex-wrap items-baseline gap-x-2">
@@ -35,17 +40,17 @@ const LightExperiences = () => {
             {xp.skills && (
               <div className="mt-4">
                 <span className="block text-sm font-semibold text-ayu-purple mb-2">
-                  {translate("data.experiences.skillsLabel")}
+                  {translate("experiences.skillsLabel")}
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {flattenSkills(xp.skills).map((name) => (
                     <span
                       key={name}
-                      title={name}
+                      title={labels.name(name)}
                       className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs text-gray-700"
                     >
                       <SkillIcon name={name} size={14} />
-                      {name}
+                      {labels.name(name)}
                     </span>
                   ))}
                 </div>

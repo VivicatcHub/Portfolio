@@ -1,20 +1,15 @@
 import { useTranslation } from "react-i18next";
 import Title from "../Title";
-import { useEffect, useState } from "react";
 import { SkillIcon } from "../SkillReactIcons";
 import { buildSkills } from "../buildSkills";
+import useData from "../useData";
+import useSkillLabels from "../skillI18n";
 
 const Skills = () => {
-  const { t: translate, i18n } = useTranslation();
-  const [SKILLS, setSKILLS] = useState({});
-
-  useEffect(() => {
-    const lang = (i18n?.language || "en").split("-")[0];
-    fetch(`/locales/${lang}/data.json`)
-      .then((res) => res.json())
-      .then((json) => setSKILLS(buildSkills(json.data)))
-      .catch(() => setSKILLS({}));
-  }, [i18n?.language]);
+  const { t: translate } = useTranslation();
+  const data = useData();
+  const labels = useSkillLabels();
+  const SKILLS = data ? buildSkills(data) : {};
 
   return (
     <section className="text-white max-h-full overflow-y-auto lg:mr-4 lg:pt-4 ">
@@ -25,7 +20,9 @@ const Skills = () => {
             {Object.keys(SKILLS).map((category, idx) => (
               <div key={idx} className="md:ml-8">
                 <div className="text-center lg:text-left mb-3">
-                  <h2 className="text-3xl font-semibold">{category}</h2>
+                  <h2 className="text-3xl font-semibold">
+                    {labels.category(category)}
+                  </h2>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:w-[90%]">
                   {SKILLS[category].map((skill) => (
@@ -35,7 +32,7 @@ const Skills = () => {
                     >
                       <SkillIcon name={skill.name} size={44} />
                       <h3 className="text-center mt-2 italic text-sm">
-                        {skill.name}
+                        {labels.name(skill.name)}
                       </h3>
                     </div>
                   ))}

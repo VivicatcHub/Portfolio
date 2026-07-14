@@ -1,11 +1,17 @@
 import { useTranslation } from "react-i18next";
 import useData from "./useData";
 import LightSection from "./LightSection";
-import { SkillIcon, hasSkillIcon } from "../SkillReactIcons";
+import { SkillIcon } from "../SkillReactIcons";
+import ProjectMeta from "../ProjectMeta";
+import useSkillLabels from "../skillI18n";
+import { byDateDesc } from "../dateUtils";
+
+const sortByDate = byDateDesc("date");
 
 const LightProjects = () => {
   const { t: translate } = useTranslation();
   const data = useData();
+  const labels = useSkillLabels();
   const groups = data?.projects || [];
 
   return (
@@ -17,7 +23,7 @@ const LightProjects = () => {
               {group.category}
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
-              {group.items.map((project, pi) => {
+              {sortByDate(group.items).map((project, pi) => {
                 const stack = project.stack;
                 const skills = Object.values(stack).flat();
                 return (
@@ -55,7 +61,8 @@ const LightProjects = () => {
                         )}
                       </div>
                     </div>
-                    <p className="text-sm text-gray-600 whitespace-pre-wrap flex-grow">
+                    <ProjectMeta project={project} variant="light" />
+                    <p className="mt-4 text-sm text-gray-600 whitespace-pre-wrap flex-grow">
                       {project.description}
                     </p>
                     {skills.length > 0 && (
@@ -63,11 +70,11 @@ const LightProjects = () => {
                         {skills.map((name) => (
                           <span
                             key={name}
-                            title={name}
+                            title={labels.name(name)}
                             className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs text-gray-700"
                           >
                             <SkillIcon name={name} size={14} />
-                            {name}
+                            {labels.name(name)}
                           </span>
                         ))}
                       </div>

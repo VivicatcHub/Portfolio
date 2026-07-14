@@ -72,7 +72,7 @@ i18n
     fallbackLng: DEFAULT_LANGUAGE,
     supportedLngs: SUPPORTED_LANGUAGES,
     backend: {
-      loadPath: "/locales/{{lng}}/data.json",
+      loadPath: "/locales/{{lng}}.json",
     },
     debug: false,
     interpolation: {
