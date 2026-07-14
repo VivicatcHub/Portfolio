@@ -52,7 +52,6 @@ import {
   SiRaylib,
   SiGnu,
   SiShadcnui,
-  SiWebassembly,
 } from "react-icons/si";
 
 const SKILL_DEVICONS = {
