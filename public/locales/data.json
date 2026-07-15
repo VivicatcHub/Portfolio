@@ -102,7 +102,7 @@
           "collaborators": ["LESOBRE Ethan", "LEROY Léonard"],
           "company": "Manta",
           "cover": null,
-          "link": "httpd://id-epitech.vercel.app/",
+          "link": "https://id-epitech.vercel.app/",
           "description": "Development of an IDE fully accessible from the browser, designed for learning programming and building small projects in Python, HTML, CSS and JavaScript.\nThe platform also offers interactive courses as well as guided projects to support users in their learning. It was designed to allow members of the Manta association to organize and run the 'Coding-Clubs' in a simpler, more efficient and more collaborative way.",
           "stack": {
             "Frontend": [
