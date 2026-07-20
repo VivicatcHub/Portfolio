@@ -137,7 +137,6 @@ const SKILL_FALLBACK_ICONS = {
   Makefile: { Icon: SiGnu, color: "#A42E2B" },
   Shadcn: { Icon: SiShadcnui, color: "#000000" },
   Assembly: { Icon: TbCpu, color: "#4B5563" },
-  Assembly: { Icon: TbCpu, color: "#4B5563" },
   "g++": { Icon: SiGnu, color: "#A42E2B" },
   Unix: { Icon: TbTerminal, color: "#111827" },
   ncurses: { Icon: TbTerminal, color: "#1D4ED8" },
