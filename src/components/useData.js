@@ -1,14 +1,26 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+const mergeItem = (item, tr) => {
+  const override = tr?.projects?.items?.[item.id] || {};
+  const merged = { ...item, ...override };
+
+  const companyMap = tr?.projects?.companies || {};
+  if (item.company && companyMap[item.company] && override.company == null) {
+    merged.company = companyMap[item.company];
+  }
+
+  if (item.subProjects) {
+    merged.subProjects = item.subProjects.map((sub) => mergeItem(sub, tr));
+  }
+  return merged;
+};
+
 const mergeProjects = (projects = [], tr) =>
   projects.map((group) => ({
     ...group,
     category: tr?.projects?.categories?.[group.category] ?? group.category,
-    items: (group.items || []).map((item) => ({
-      ...item,
-      ...(tr?.projects?.items?.[item.id] || {}),
-    })),
+    items: (group.items || []).map((item) => mergeItem(item, tr)),
   }));
 
 const mergeExperiences = (experiences = [], tr) =>

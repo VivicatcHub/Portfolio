@@ -73,7 +73,9 @@
       "Tests": "テスト",
       "Formats": "フォーマット",
       "Application": "アプリケーション",
-      "API": "API"
+      "API": "API",
+      "Concepts": "コンセプト",
+      "Game Engine": "ゲームエンジン"
     },
     "names": {
       "Without AI": "AIなし",
@@ -82,6 +84,19 @@
       "Object-Oriented Programming (OOP)": "オブジェクト指向プログラミング（OOP）",
       "Multithreading": "マルチスレッド",
       "Technical writing": "技術文書",
+      "Algorithms": "アルゴリズム",
+      "Mathematics": "数学",
+      "Optimization": "最適化",
+      "Network programming": "ネットワークプログラミング",
+      "Concurrent programming": "並行プログラミング",
+      "Functional programming": "関数型プログラミング",
+      "Raycasting": "レイキャスティング",
+      "Graphics programming": "グラフィックスプログラミング",
+      "Hash tables": "ハッシュテーブル",
+      "Signal processing": "信号処理",
+      "CI/CD": "CI/CD",
+      "Functional testing": "機能テスト",
+      "Unix": "Unix",
       "Teamwork": "チームワーク",
       "Code reviews": "コードレビュー",
       "Mentoring": "指導",
@@ -111,7 +126,16 @@
     },
     "solo": "個人プロジェクト",
     "people": "{{count}}人",
-    "with": "共同"
+    "with": "共同",
+    "durationDay": "{{count}}日",
+    "durationDays": "{{count}}日",
+    "durationWeek": "{{count}}週間",
+    "durationWeeks": "{{count}}週間",
+    "featured": "注目",
+    "bundleCount": "{{count}}件のプロジェクト",
+    "more": "その他",
+    "openBundle": "プロジェクトを見る",
+    "backToProjects": "プロジェクトに戻る"
   },
   "experiences": {
     "title": "経験",
@@ -142,14 +166,123 @@
       "Personal Project": "個人プロジェクト",
       "Professional": "実務"
     },
+    "companies": {
+      "1st Year": "1年目",
+      "2nd Year": "2年目",
+      "1st & 2nd Year": "1年目・2年目"
+    },
     "items": {
       "corewar": {
-        "company": "1年目・2年目",
         "description": "Corewarプロジェクトで自作のチャンピオンを作成し、アセンブラを学ぶことを目的としたプロジェクトです。これらのチャンピオンは、Epitechで毎年開催されるCorewarトーナメントに出場するために使用されます。"
       },
       "42sh": {
-        "company": "1年目",
         "description": "LinuxのデフォルトBashシェルをCで再現し、コマンドの実行、リダイレクト、パイプ、環境変数やプロセスの管理といった主要な機能を実装することで、Unixシェルの動作を忠実に再現しました。"
+      },
+      "piscine-unix-c": {
+        "name": "Unix & C プール"
+      },
+      "days-de-piscine": {
+        "description": "BashとC言語を学ぶ、数週間にわたる集中的な導入ブートキャンプ。strlenやstrcmpといったC標準ライブラリの基本関数から、catやgrepといったより複雑なUnixバイナリまでを再実装し、低レベルプログラミングの確かな基礎を身につけました。"
+      },
+      "star": {
+        "description": "パラメータで指定されたサイズのASCIIの星を、ターミナルに描画するC言語の短い演習。"
+      },
+      "countisland": {
+        "description": "2Dの海の中から最大の島を探し出すC言語のアルゴリズム課題。つながった陸地を探索して面積を測定します。"
+      },
+      "myprintf": {
+        "description": "C言語のprintf関数の再実装。主要なフォーマット指定子（%s、%d、%f、%lld...）に対応し、その出力挙動を忠実に再現します。"
+      },
+      "applied-maths-1": {
+        "name": "応用数学 I"
+      },
+      "pong-101": {
+        "description": "Pongゲームに必要な数学的計算を実装したPythonライブラリ。きれいなアルゴリズム設計に重点を置いています。"
+      },
+      "architect-102": {
+        "description": "数学的なベクトルに対して回転などのさまざまな変換を適用するPythonプロジェクト。線形代数を実践的に学びます。"
+      },
+      "neutrinos-104": {
+        "description": "値を1つずつ受け取り、現在と過去の入力から算術平均・調和平均・標準偏差を逐次計算するPythonプログラム。"
+      },
+      "applied-maths-2": {
+        "name": "応用数学 II"
+      },
+      "interstonar": {
+        "description": "宇宙空間を移動する天体の運動と衝突をシミュレートするプロジェクト。物理・数学・パフォーマンス最適化を組み合わせています。"
+      },
+      "stone-analysis": {
+        "description": "フーリエ解析を用いて音の信号にメッセージを隠したり復号したりするプロジェクト。数学と信号処理の融合です。"
+      },
+      "organized": {
+        "description": "ADD、DEL、SORT、DISPなどのコマンドに対応し、構造化データを保存・操作する、C言語で完全に実装した疑似SQLデータベースマネージャ。"
+      },
+      "secured": {
+        "description": "C言語によるハッシュテーブルの実装。ハッシュ関数と衝突処理を学び、高速なキー／値ストレージを実現します。"
+      },
+      "myhunter": {
+        "description": "グラフィックスライブラリCSFMLを用いて、名作アーケードゲーム『ダックハント』をC言語で再現。スプライト、アニメーション、射撃の仕組みを実装しました。"
+      },
+      "myradar": {
+        "description": "最適化に重点を置いた飛行・墜落シミュレータ。移動と衝突の計算を最適化し、100機から1,000機、さらに100,000機の航空機を同時に扱えるようにしました。"
+      },
+      "myls": {
+        "description": "Linuxの「ls」コマンドをC言語で再実装し、ディレクトリの内容を一覧表示・整形する主要オプションを再現しました。"
+      },
+      "mytop": {
+        "description": "Linuxの「top」コマンドをC言語で再実装し、プロセスとシステムリソースの使用状況をリアルタイムに表示します。"
+      },
+      "mysudo": {
+        "description": "Linuxの「sudo」コマンドをC言語で再実装し、権限昇格・パーミッション確認・他ユーザーとしてのコマンド実行を扱います。"
+      },
+      "myworld": {
+        "description": "CSFMLライブラリを用いてC言語で構築した、地形の起伏を持つ世界の3Dシミュレーション。大きな風景を滑らかに描画できるよう最適化しています。"
+      },
+      "a-maze-d": {
+        "description": "重み付きグラフの最短経路を求めるC言語のプロジェクト。迷路状の構造に経路探索アルゴリズムを適用します。"
+      },
+      "robot-factory": {
+        "description": "EpitechのCorewar用架空アセンブリ言語を、Corewar仮想マシン向けの実行可能なバイトコードに変換する、C言語で書かれたコンパイラ。"
+      },
+      "corewar-vm": {
+        "description": "Epitechの有名なCorewarの実装。Robot Factoryで作成したアセンブリのチャンピオンが共有仮想メモリに読み込まれ・解釈され、生き残りをかけて対戦します。"
+      },
+      "wolf3d": {
+        "description": "CSFMLを用いてC言語で伝説的な『Wolfenstein 3D』を再現。レイキャスティングにより、シンプルな2Dマップから没入感のある疑似3Dの世界を描画します。"
+      },
+      "cuddle": {
+        "description": "PythonのpandasライブラリをC言語で再実装し、データフレーム操作をゼロから作り直しました。データサイエンスとAIへの第一歩です。"
+      },
+      "epytodo": {
+        "description": "初めてのフルスタックWebプロジェクト。独自のバックエンドとデータベースを備えたシンプルなToDoアプリで、Web開発を一通り体験しました。"
+      },
+      "piscine-paradigmes": {
+        "name": "パラダイムプール",
+        "description": "C++、Rust、Haskellを通じて、オブジェクト指向や関数型など主要なプログラミングパラダイムを学ぶ数週間にわたるセミナー。まったく異なる言語と考え方への適応力を養いました。"
+      },
+      "myftp": {
+        "description": "画像を保存・取得するためにC++で書かれたFTPサーバー。クライアント接続、コマンド、ネットワーク上のファイル転送を扱います。"
+      },
+      "myteams": {
+        "description": "C++によるMicrosoft Teamsの再現。専用サーバーを介して、接続した複数のクライアント間でリアルタイムのテキスト通信を可能にします。"
+      },
+      "codewash": {
+        "description": "完成しているものの設計が悪いWebプロジェクトを引き継ぎ、整理する課題。アーキテクチャの再設計、点在するバグの修正、機能テストの追加、CI/CDパイプラインの構築など、まさにコードを『洗う』作業です。"
+      },
+      "panoramix": {
+        "description": "並行プログラミングの入門課題。ローマ人に攻撃されるガリアの村を舞台に、パノラミックスが十分な魔法の薬を作ろうと奮闘する様子を、多数の同時アクターを協調させながらシミュレートします。"
+      },
+      "the-plazza": {
+        "description": "並行プログラミングの専門課題。ピザレストランの複数のキッチンと注文端末をシミュレートし、調理タスクをプロセスとスレッドに分散します。"
+      },
+      "zappy": {
+        "description": "共有された世界の中で小さな部族運営ゲームをシミュレートする学年末プロジェクト。3つの大きな部分から構成されます。GUIとAIと通信し、世界の状態を保持し、コマンドを計算し、フラッドを処理してアクションを保護するサーバー。見やすい2Dビューと迫力ある3Dビューを備えたGUI。そして、自チームのプレイヤーに指示を出し統率する人工知能です。全学年とその家族の前で発表しました。"
+      },
+      "soundboardtty": {
+        "description": "ncursesを用いてC言語で作った完全TTYのサウンドボード。キーボード操作のテキストインターフェースからサウンドクリップを閲覧・再生できます。"
+      },
+      "dragonflyman": {
+        "description": "テーマが「Bug」だった初めてのゲームジャム。Unityで作った初めてのゲームで、アリとトンボのミニマージゲームです。"
       },
       "portfolio": {
         "description": "もうご存知ですよね :P"

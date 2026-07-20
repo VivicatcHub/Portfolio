@@ -64,7 +64,16 @@
     },
     "solo": "Solo project",
     "people": "{{count}} people",
-    "with": "With"
+    "with": "With",
+    "durationDay": "{{count}} day",
+    "durationDays": "{{count}} days",
+    "durationWeek": "{{count}} week",
+    "durationWeeks": "{{count}} weeks",
+    "featured": "Featured",
+    "bundleCount": "{{count}} projects",
+    "more": "more",
+    "openBundle": "View the projects",
+    "backToProjects": "Back to projects"
   },
   "experiences": {
     "title": "Experiences",

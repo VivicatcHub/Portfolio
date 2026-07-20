@@ -4,6 +4,7 @@ import { SkillIcon } from "../SkillReactIcons";
 import { buildSkills } from "../buildSkills";
 import useData from "../useData";
 import useSkillLabels from "../skillI18n";
+import { skillLabelSizeClass } from "../skillMarkup";
 
 const Skills = () => {
   const { t: translate } = useTranslation();
@@ -28,10 +29,33 @@ const Skills = () => {
                   {SKILLS[category].map((skill) => (
                     <div
                       key={skill.name}
-                      className="flex flex-col h-28 aspect-square justify-center items-center rounded-md shadow-md hover:scale-110 transition duration-200 bg-gray-700"
+                      className={
+                        "relative flex flex-col h-28 aspect-square justify-center items-center rounded-md shadow-md hover:scale-110 transition duration-200 " +
+                        (skill.important
+                          ? "bg-gradient-to-br from-ayu-purple/30 via-gray-700 to-ayu-yellow/20 ring-2 ring-ayu-purple/70 shadow-[0_0_22px_-4px_rgba(198,80,230,0.6)]"
+                          : "bg-gray-700")
+                      }
                     >
+                      {skill.important && (
+                        <span
+                          className="absolute top-1 right-1.5 text-ayu-yellow text-sm drop-shadow"
+                          title="Key skill"
+                          aria-label="Key skill"
+                        >
+                          ★
+                        </span>
+                      )}
                       <SkillIcon name={skill.name} size={44} />
-                      <h3 className="text-center mt-2 italic text-sm">
+                      <h3
+                        className={
+                          "text-center mt-2 px-1 leading-tight break-words " +
+                          skillLabelSizeClass(labels.name(skill.name), "sm") +
+                          " " +
+                          (skill.important
+                            ? "font-semibold text-white not-italic"
+                            : "italic")
+                        }
+                      >
                         {labels.name(skill.name)}
                       </h3>
                     </div>

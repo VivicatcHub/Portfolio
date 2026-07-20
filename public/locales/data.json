@@ -19,69 +19,34 @@
   "skills": {
     "Programming": ["Ruby", "C++", "C#"]
   },
+  "importantSkills": [
+    "C",
+    "C++",
+    "Python",
+    "React.js",
+    "Without AI",
+    "Markdown",
+    "Linux",
+    "Arch Linux",
+    "Algorithms",
+    "PHP"
+  ],
   "projects": [
-    {
-      "category": "Epitech",
-      "items": [
-        {
-          "id": "corewar",
-          "name": "Corewar Best Champion",
-          "date": "06/2025",
-          "status": "done",
-          "personCount": 1,
-          "company": "1st & 2nd Year",
-          "cover": null,
-          "link": "https://github.com/VivicatcHub/CorewarBestChampion",
-          "description": "A project aimed at discovering Assembler by creating your own champions competing in the Corewar project. These champions are then used to compete in the Corewar tournament held every year at Epitech.",
-          "stack": {
-            "Programming": ["Assembler"],
-            "Tools": ["Git", "GitHub"],
-            "AI": ["Without AI"]
-          }
-        },
-        {
-          "id": "42sh",
-          "name": "42sh",
-          "date": "03/2025",
-          "status": "done",
-          "personCount": 5,
-          "collaborators": [
-            "LAFOLIE \"LORAY\" Evan",
-            "LEROY Léonard",
-            "HENNEVEUX Sacha",
-            "RISS Pierre"
-          ],
-          "company": "1st Year",
-          "cover": null,
-          "link": "https://github.com/VivicatcHub/42sh",
-          "description": "Recreation in C of the default Linux Bash shell, implementing its main features such as command execution, redirections, pipes, environment variable and process management, in order to faithfully reproduce the behavior of a Unix shell.",
-          "stack": {
-            "Programming": ["C", "Python", "Lexer/Parser", "Signal handling"],
-            "Systems": ["Bash"],
-            "Tools": ["Makefile", "GitHub", "Git"],
-            "Debug & Quality": ["GDB", "Valgrind"],
-            "Tests": ["Criterion"],
-            "AI": ["Without AI"]
-          }
-        }
-      ]
-    },
     {
       "category": "Personal Project",
       "items": [
         {
           "id": "portfolio",
           "name": "Portfolio",
-          "date": "07/2026",
+          "dateBegin": "13/07/2026",
           "status": "in_progress",
+          "important": true,
           "personCount": 1,
-          "company": null,
-          "cover": null,
           "link": "./",
           "description": "You already know it :P",
           "stack": {
             "Frontend": [
-              "React.js",
+              "**React.js**",
               "HTML",
               "JavaScript",
               "CSS",
@@ -96,25 +61,25 @@
         {
           "id": "idepitech",
           "name": "IDEpitech",
-          "date": "06/2026",
+          "dateBegin": "09/06/2026",
+          "important": true,
           "status": "in_progress",
           "personCount": 3,
           "collaborators": ["LESOBRE Ethan", "LEROY Léonard"],
           "company": "Manta",
-          "cover": null,
           "link": "https://id-epitech.vercel.app/",
           "description": "Development of an IDE fully accessible from the browser, designed for learning programming and building small projects in Python, HTML, CSS and JavaScript.\nThe platform also offers interactive courses as well as guided projects to support users in their learning. It was designed to allow members of the Manta association to organize and run the 'Coding-Clubs' in a simpler, more efficient and more collaborative way.",
           "stack": {
             "Frontend": [
-              "React.js",
+              "**React.js**",
               "Vite",
               "HTML",
               "CSS",
-              "JavaScript",
+              "**JavaScript**",
               "TailwindCSS"
             ],
-            "Programming": ["Python"],
-            "Libraries": ["Monaco", "Pyodide"],
+            "Programming": ["Python", "C"],
+            "Libraries": ["Monaco", "**Pyodide**"],
             "Deployment": ["Vercel"],
             "Tools": ["Git", "GitHub"],
             "AI": ["Without AI"],
@@ -124,16 +89,22 @@
         {
           "id": "hod-showcase",
           "name": "HOD Showcase Site",
-          "date": "04/2026",
+          "dateBegin": "03/06/2026",
+          "dateEnd": "24/06/2026",
           "status": "done",
           "personCount": 1,
           "company": "Heaven of Dice",
-          "cover": null,
           "link": "https://vivicatchub.github.io/HOD-showcase-site/",
           "description": "Development of a showcase website for the Heaven of Dice association, with automatic data retrieval directly from the association's public Google Drive documents, in order to make updating and sharing information easier.",
           "stack": {
-            "Frontend": ["React.js", "Next.js", "CSS", "TailwindCSS", "Shadcn"],
-            "API": ["Google API"],
+            "Frontend": [
+              "**React.js**",
+              "Next.js",
+              "CSS",
+              "TailwindCSS",
+              "Shadcn"
+            ],
+            "API": ["**Google API**"],
             "Deployment": ["GitHub Pages"],
             "AI": ["With AI"],
             "Tools": ["Git", "GitHub"]
@@ -142,15 +113,14 @@
         {
           "id": "gotoprojects",
           "name": "GoToProjects",
-          "date": "06/2025",
+          "dateBegin": "16/08/2025",
+          "dateEnd": "20/08/2025",
           "status": "done",
           "personCount": 1,
-          "company": null,
-          "cover": null,
           "link": "https://github.com/VivicatcHub/GoToProjects",
           "description": "Development of a Linux tool to automate launching a project's working environment: opening VS Code in the right directory, running the necessary commands, syncing with Git (git pull), as well as any other recurring step in order to simplify and speed up starting a project.",
           "stack": {
-            "Programming": ["Python"],
+            "Programming": ["**Python**"],
             "Systems": ["Bash"],
             "Formats": ["JSON"],
             "Tools": ["Git", "GitHub"],
@@ -159,17 +129,35 @@
           }
         },
         {
+          "id": "soundboardtty",
+          "name": "SoundboardTTY",
+          "dateBegin": "01/04/2025",
+          "dateEnd": "03/04/2025",
+          "status": "done",
+          "personCount": 2,
+          "collaborators": ["LEROY Léonard"],
+          "link": "https://github.com/VivicatcHub",
+          "description": "A fully terminal-based (TTY) soundboard built in C with ncurses, letting the user browse and trigger sound clips from a keyboard-driven text interface.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Libraries": ["**ncurses**"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
           "id": "solo-leveling",
           "name": "Solo Leveling Training",
-          "date": "06/2024",
+          "dateBegin": "31/05/2024",
+          "dateEnd": "02/06/2024",
           "status": "done",
           "personCount": 1,
-          "company": null,
-          "cover": null,
           "link": "https://github.com/VivicatcHub/SoloLevelingTraining",
           "description": "Development of a website inspired by the visual universe of the Korean work Solo Leveling, designed to help users track their sports goals and resolutions through an immersive and motivating interface.",
           "stack": {
-            "Frontend": ["HTML", "CSS", "JavaScript"],
+            "Frontend": ["HTML", "CSS", "**JavaScript**"],
             "Tools": ["Git", "GitHub"],
             "AI": ["Without AI"],
             "Documentation": ["Markdown"]
@@ -178,34 +166,758 @@
         {
           "id": "easytowerofgod",
           "name": "EasyTowerOfGod",
-          "date": "12/2025",
+          "dateBegin": "11/06/2025",
+          "dateEnd": "11/06/2025",
           "status": "done",
           "personCount": 1,
-          "company": null,
-          "cover": null,
           "link": "https://github.com/VivicatcHub/EasyTowerOfGod",
           "description": "Development of a web extension to improve the reading experience of 'Tower of God' on Webtoon, with an integrated interface for searching information from the work's wiki, accessible directly without interrupting the reading of the chapter.",
           "stack": {
-            "Frontend": ["HTML", "CSS", "JavaScript"],
+            "Frontend": ["HTML", "CSS", "**JavaScript**"],
             "Systems": ["Bash"],
             "Tools": ["Git", "GitHub"],
             "Documentation": ["Markdown"]
           }
         },
         {
+          "id": "dragonflyman",
+          "name": "DragonFlyMan",
+          "status": "done",
+          "dateBegin": "15/05/2026",
+          "dateEnd": "17/05/2026",
+          "personCount": 1,
+          "link": "https://github.com/VivicatcHub",
+          "description": "My first game jam, on the theme 'Bug'. So I made my first game in Unity: a mini merge game of ants and dragonflies.",
+          "stack": {
+            "Programming": ["**C#**"],
+            "Game Engine": ["**Unity**"],
+            "Concepts": ["Object-Oriented Programming (OOP)"],
+            "AI": ["With AI"]
+          }
+        },
+        {
           "id": "cv",
           "name": "CV",
-          "date": "07/2026",
+          "dateBegin": "14/07/2026",
+          "dateEnd": "14/07/2026",
           "status": "done",
           "personCount": 1,
-          "company": null,
-          "cover": null,
           "link": "https://github.com/VivicatcHub/CV",
           "description": "Creation of an HTML resume that can be modified by changing only a JSON configuration file. Idea inspired by LAFOLIE \"LORAY\" Evan.",
           "stack": {
-            "Frontend": ["HTML", "CSS", "JavaScript"],
+            "Frontend": ["**HTML**", "CSS", "JavaScript"],
             "Tools": ["Git", "GitHub"],
             "Documentation": ["Markdown"]
+          }
+        }
+      ]
+    },
+    {
+      "category": "Epitech",
+      "items": [
+        {
+          "id": "corewar",
+          "name": "Corewar Best Champion",
+          "dateBegin": "06/2025",
+          "dateEnd": "06/2025",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st & 2nd Year",
+          "link": "https://github.com/VivicatcHub/CorewarBestChampion",
+          "description": "A project aimed at discovering Assembly by creating your own champions competing in the Corewar project. These champions are then used to compete in the Corewar tournament held every year at Epitech.",
+          "stack": {
+            "Programming": ["Assembly"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "42sh",
+          "name": "42sh",
+          "dateBegin": "05/04/2025",
+          "dateEnd": "09/05/2025",
+          "status": "done",
+          "personCount": 5,
+          "important": true,
+          "collaborators": [
+            "LAFOLIE \"LORAY\" Evan",
+            "LEROY Léonard",
+            "HENNEVEUX Sacha",
+            "RISS Pierre"
+          ],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub/42sh",
+          "description": "Recreation in C of the default Linux Bash shell, implementing its main features such as command execution, redirections, pipes, environment variable and process management, in order to faithfully reproduce the behavior of a Unix shell.",
+          "stack": {
+            "Programming": [
+              "**C**",
+              "Python",
+              "Lexer/Parser",
+              "Signal handling"
+            ],
+            "Systems": ["Bash"],
+            "Tools": ["Makefile", "GitHub", "Git"],
+            "Debug & Quality": ["GDB", "Valgrind"],
+            "Tests": ["Criterion"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "piscine-unix-c",
+          "name": "Unix & C Pool",
+          "dateBegin": "09/09/2024",
+          "dateEnd": "03/11/2024",
+          "company": "1st Year",
+          "important": true,
+          "subProjects": [
+            {
+              "id": "days-de-piscine",
+              "name": "Days de Piscine",
+              "dateBegin": "09/09/2024",
+              "dateEnd": "03/11/2024",
+              "status": "done",
+              "personCount": 1,
+              "important": true,
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "An intensive multi-week onboarding bootcamp introducing Bash and the C language. It involved reimplementing core C standard-library functions such as strlen and strcmp, then tackling more complex Unix binaries like cat and grep, to build a solid grasp of low-level programming.",
+              "stack": {
+                "Programming": ["**C**"],
+                "Systems": ["**Bash**", "Linux"],
+                "Tools": [
+                  "Makefile",
+                  "clang",
+                  "VSCode",
+                  "Vim",
+                  "Git",
+                  "GitHub"
+                ],
+                "Debug & Quality": ["Valgrind", "GDB"],
+                "AI": ["Without AI"]
+              }
+            },
+            {
+              "id": "star",
+              "name": "Star",
+              "dateBegin": "02/10/2024",
+              "dateEnd": "06/10/2024",
+              "status": "done",
+              "personCount": 1,
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A short C exercise that draws an ASCII star of a size given as a parameter directly in the terminal.",
+              "stack": {
+                "Programming": ["**C**"],
+                "Systems": ["Linux"],
+                "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+                "Debug & Quality": ["Valgrind"],
+                "AI": ["Without AI"]
+              }
+            },
+            {
+              "id": "countisland",
+              "name": "CountIsland",
+              "dateBegin": "07/10/2024",
+              "dateEnd": "13/10/2024",
+              "status": "done",
+              "personCount": 1,
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "An algorithmic C project that locates the largest island within a 2D ocean grid by exploring and measuring connected land areas.",
+              "stack": {
+                "Programming": ["**C**"],
+                "Concepts": ["Algorithms"],
+                "Systems": ["Linux"],
+                "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+                "Debug & Quality": ["Valgrind"],
+                "AI": ["Without AI"]
+              }
+            },
+            {
+              "id": "myprintf",
+              "name": "MyPrintf",
+              "dateBegin": "19/10/2024",
+              "dateEnd": "01/11/2024",
+              "status": "done",
+              "personCount": 2,
+              "important": true,
+              "collaborators": ["KUBIACZYK Alexandre"],
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A reimplementation of the C printf function, supporting the main format flags (%s, %d, %f, %lld...) and faithfully reproducing its output behaviour.",
+              "stack": {
+                "Programming": ["**C**"],
+                "Systems": ["Linux"],
+                "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+                "Debug & Quality": ["Valgrind"],
+                "AI": ["Without AI"]
+              }
+            }
+          ]
+        },
+        {
+          "id": "applied-maths-1",
+          "name": "Applied Mathematics I",
+          "dateBegin": "02/11/2024",
+          "dateEnd": "10/01/2025",
+          "company": "1st Year",
+          "subProjects": [
+            {
+              "id": "pong-101",
+              "name": "101Pong",
+              "dateBegin": "02/11/2024",
+              "dateEnd": "15/11/2024",
+              "status": "done",
+              "personCount": 2,
+              "collaborators": ["DE MUIZON Ferréol"],
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A Python library implementing the mathematical computations needed to run a game of Pong, focusing on clean algorithmic foundations.",
+              "stack": {
+                "Programming": ["Python"],
+                "Concepts": ["**Algorithms**", "Mathematics"],
+                "Systems": ["Linux"],
+                "Tools": ["VSCode", "Git", "GitHub"],
+                "AI": ["Without AI"]
+              }
+            },
+            {
+              "id": "architect-102",
+              "name": "102Architect",
+              "dateBegin": "16/11/2024",
+              "dateEnd": "29/11/2024",
+              "status": "done",
+              "personCount": 2,
+              "collaborators": ["DE MUIZON Ferréol"],
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A Python project applying a range of transformations (rotation and more) to mathematical vectors, exploring linear algebra in practice.",
+              "stack": {
+                "Programming": ["Python"],
+                "Concepts": ["**Mathematics**"],
+                "Systems": ["Linux"],
+                "Tools": ["VSCode", "Git", "GitHub"],
+                "AI": ["Without AI"]
+              }
+            },
+            {
+              "id": "neutrinos-104",
+              "name": "104Neutrinos",
+              "dateBegin": "13/12/2024",
+              "dateEnd": "10/01/2025",
+              "status": "done",
+              "personCount": 2,
+              "collaborators": ["DE MUIZON Ferréol"],
+              "company": "1st Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A Python program that consumes values one by one and incrementally computes the arithmetic mean, the harmonic mean and the standard deviation from the current and previous inputs.",
+              "stack": {
+                "Programming": ["Python"],
+                "Concepts": ["**Mathematics**"],
+                "Systems": ["Linux"],
+                "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+                "AI": ["Without AI"]
+              }
+            }
+          ]
+        },
+        {
+          "id": "applied-maths-2",
+          "name": "Applied Mathematics II",
+          "dateBegin": "30/03/2026",
+          "dateEnd": "07/06/2026",
+          "company": "2nd Year",
+          "subProjects": [
+            {
+              "id": "interstonar",
+              "name": "Interstonar",
+              "dateBegin": "30/03/2026",
+              "dateEnd": "19/04/2026",
+              "status": "done",
+              "personCount": 2,
+              "important": false,
+              "collaborators": ["LAFOLIE \"LORAY\" Evan"],
+              "company": "2nd Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A simulation of the movement and collisions of a celestial body travelling through space, combining physics, mathematics and performance optimisation.",
+              "stack": {
+                "Programming": ["Python"],
+                "Concepts": ["**Mathematics**", "**Optimization**"],
+                "Systems": ["Linux", "Arch Linux"],
+                "Tools": ["VSCode", "Git", "GitHub"],
+                "AI": ["Without AI"]
+              }
+            },
+            {
+              "id": "stone-analysis",
+              "name": "Stone Analysis",
+              "dateBegin": "18/05/2026",
+              "dateEnd": "07/06/2026",
+              "status": "done",
+              "personCount": 2,
+              "important": false,
+              "collaborators": ["LAFOLIE \"LORAY\" Evan"],
+              "company": "2nd Year",
+              "link": "https://github.com/VivicatcHub",
+              "description": "A project that hides and decodes messages inside audio signals using Fourier analysis, blending mathematics and signal processing.",
+              "stack": {
+                "Programming": ["Python"],
+                "Concepts": [
+                  "**Mathematics**",
+                  "**Optimization**",
+                  "Signal processing"
+                ],
+                "Systems": ["Linux", "Arch Linux"],
+                "Tools": ["VSCode", "Git", "GitHub"],
+                "AI": ["Without AI"]
+              }
+            }
+          ]
+        },
+        {
+          "id": "organized",
+          "name": "Organized",
+          "dateBegin": "23/11/2024",
+          "dateEnd": "13/12/2024",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A fake SQL-style database manager written entirely in C, supporting commands such as ADD, DEL, SORT and DISP to store and manipulate structured records.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Database": ["SQL"],
+            "Concepts": ["Algorithms"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "secured",
+          "name": "Secured",
+          "dateBegin": "04/01/2025",
+          "dateEnd": "24/01/2025",
+          "status": "done",
+          "personCount": 2,
+          "collaborators": ["LEROY Léonard"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "An implementation of a hash table in C, exploring hashing functions and collision handling to provide fast key/value storage and lookup.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Concepts": ["Hash tables"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "myhunter",
+          "name": "MyHunter",
+          "dateBegin": "09/11/2024",
+          "dateEnd": "29/11/2024",
+          "status": "done",
+          "personCount": 1,
+          "important": true,
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A recreation of the classic Duck Hunt arcade game in C using the CSFML graphics library, with sprites, animations and shooting mechanics.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Libraries": ["**CSFML**"],
+            "Concepts": ["Graphics programming"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "myradar",
+          "name": "MyRadar",
+          "dateBegin": "30/11/2024",
+          "dateEnd": "10/01/2025",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A flight and crash simulator focused on optimisation: movement and collision computations are tuned to scale smoothly from 100 to 1,000 and finally 100,000 simultaneous aircraft.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Libraries": ["CSFML"],
+            "Concepts": ["Graphics programming", "**Optimization**"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "myls",
+          "name": "MyLs",
+          "dateBegin": "02/11/2024",
+          "dateEnd": "15/11/2024",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A reimplementation of the Linux `ls` command in C, reproducing its main options for listing and formatting directory contents.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "mytop",
+          "name": "MyTop",
+          "dateBegin": "16/11/2024",
+          "dateEnd": "06/12/2024",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A reimplementation of the Linux `top` command in C, displaying processes and system resource usage updated in real time.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Systems": ["Linux"],
+            "Libraries": ["**ncurses**"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "mysudo",
+          "name": "MySudo",
+          "dateBegin": "11/01/2025",
+          "dateEnd": "31/01/2025",
+          "status": "done",
+          "personCount": 1,
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A reimplementation of the Linux `sudo` command in C, handling privilege elevation, permission checks and command execution as another user.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Systems": ["Linux", "Unix"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "myworld",
+          "name": "MyWorld",
+          "dateBegin": "22/02/2025",
+          "dateEnd": "07/03/2025",
+          "status": "done",
+          "personCount": 2,
+          "important": true,
+          "collaborators": ["NGUYEN Charles"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A 3D simulation of a world and its terrain relief, built in C with the CSFML library and optimised to render large landscapes smoothly.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Libraries": ["**CSFML**"],
+            "Concepts": ["Graphics programming", "Optimization"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "a-maze-d",
+          "name": "A-maze-d",
+          "dateBegin": "15/03/2025",
+          "dateEnd": "11/04/2025",
+          "status": "done",
+          "personCount": 2,
+          "collaborators": ["LEROY Léonard"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A C project that finds the shortest path through a weighted graph, applying pathfinding algorithms to maze-like structures.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Concepts": ["Algorithms"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "robot-factory",
+          "name": "Robot Factory",
+          "dateBegin": "15/02/2025",
+          "dateEnd": "07/03/2025",
+          "status": "done",
+          "personCount": 2,
+          "important": true,
+          "collaborators": ["LEROY Léonard"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A compiler, written in C, that turns Epitech's fictional Corewar assembly language into executable bytecode for the Corewar virtual machine.",
+          "stack": {
+            "Programming": ["**C**", "**Assembly**"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "corewar-vm",
+          "name": "Corewar",
+          "dateBegin": "19/04/2025",
+          "dateEnd": "16/05/2025",
+          "status": "done",
+          "personCount": 2,
+          "important": true,
+          "collaborators": ["LEROY Léonard"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "An implementation of Epitech's famous Corewar: assembly champions built with Robot Factory are loaded and interpreted inside a shared virtual memory, where they battle each other for survival.",
+          "stack": {
+            "Programming": ["**C**", "**Assembly**"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "wolf3d",
+          "name": "Wolf3D",
+          "dateBegin": "12/04/2025",
+          "dateEnd": "25/05/2025",
+          "status": "done",
+          "personCount": 3,
+          "important": true,
+          "collaborators": ["DE MUIZON Ferréol", "NGUYEN Jan"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A recreation of the legendary Wolfenstein 3D in C with CSFML, using raycasting to render an immersive pseudo-3D world from a simple 2D map.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Libraries": ["CSFML"],
+            "Concepts": ["**Raycasting**", "Graphics programming"],
+            "Systems": ["Linux", "MacOS"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "cuddle",
+          "name": "Cuddle",
+          "dateBegin": "08/03/2025",
+          "dateEnd": "21/03/2025",
+          "status": "done",
+          "personCount": 2,
+          "collaborators": ["LEROY Léonard"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A C reimplementation of Python's pandas library, rebuilding data-frame manipulation from scratch as a first step toward data science and AI.",
+          "stack": {
+            "Programming": ["**C**"],
+            "Concepts": ["Algorithms"],
+            "Systems": ["Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "epytodo",
+          "name": "Epytodo",
+          "dateBegin": "26/04/2025",
+          "dateEnd": "16/05/2025",
+          "status": "done",
+          "personCount": 3,
+          "collaborators": ["LEROY Léonard", "LAFOLIE \"LORAY\" Evan"],
+          "company": "1st Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A first full-stack web project: a simple to-do application with its own backend and database, used to discover web development from end to end.",
+          "stack": {
+            "Frontend": ["**Next.js**", "React.js"],
+            "Database": ["**SQL**", "MySQL"],
+            "Systems": ["Linux"],
+            "Tools": ["VSCode", "Git", "GitHub"],
+            "AI": ["With AI"]
+          }
+        },
+        {
+          "id": "piscine-paradigmes",
+          "name": "Paradigms Pool",
+          "dateBegin": "06/01/2026",
+          "dateEnd": "08/02/2026",
+          "status": "done",
+          "personCount": 1,
+          "important": true,
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A multi-week seminar exploring the main programming paradigms: object-oriented, functional and more... through C++, Rust and Haskell, building fluency across very different languages and mindsets.",
+          "stack": {
+            "Programming": ["**C++**", "**Rust**", "**Haskell**", "C"],
+            "Concepts": [
+              "Object-Oriented Programming (OOP)",
+              "Functional programming"
+            ],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
+            "Debug & Quality": ["Valgrind"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "myftp",
+          "name": "MyFtp",
+          "dateBegin": "16/02/2026",
+          "dateEnd": "15/03/2026",
+          "status": "done",
+          "personCount": 1,
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "An FTP server written in C++ for storing and retrieving images, handling client connections, commands and file transfers over the network.",
+          "stack": {
+            "Programming": ["**C++**"],
+            "Concepts": [
+              "**Network programming**",
+              "Object-Oriented Programming (OOP)"
+            ],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "myteams",
+          "name": "MyTeams",
+          "dateBegin": "23/03/2026",
+          "dateEnd": "19/04/2026",
+          "status": "done",
+          "personCount": 2,
+          "important": false,
+          "collaborators": ["LAFOLIE \"LORAY\" Evan"],
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A recreation of Microsoft Teams in C++, with a dedicated server enabling real-time text communication between multiple connected clients.",
+          "stack": {
+            "Programming": ["**C++**"],
+            "Concepts": [
+              "**Network programming**",
+              "Object-Oriented Programming (OOP)"
+            ],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "codewash",
+          "name": "Codewash",
+          "dateBegin": "23/02/2026",
+          "dateEnd": "29/03/2026",
+          "status": "done",
+          "personCount": 3,
+          "important": true,
+          "collaborators": ["DE MUIZON Ferréol", "LAFOLIE \"LORAY\" Evan"],
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A complete but poorly-architected web project handed over to be cleaned up: refactoring the architecture, fixing scattered bugs, adding functional tests and setting up a CI/CD pipeline. Essentially 'washing' the codebase.",
+          "stack": {
+            "Frontend": ["React.js", "JavaScript", "TypeScript"],
+            "Concepts": ["Object-Oriented Programming (OOP)"],
+            "DevOps": ["CI/CD"],
+            "Tests": ["Functional testing"],
+            "Application": ["Electron"],
+            "API": ["REST"],
+            "Systems": ["Linux", "Arch Linux", "Windows"],
+            "Tools": ["VSCode", "Git", "GitHub"]
+          }
+        },
+        {
+          "id": "panoramix",
+          "name": "Panoramix",
+          "dateBegin": "24/04/2026",
+          "dateEnd": "10/05/2026",
+          "status": "done",
+          "personCount": 1,
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A concurrent-programming introduction that simulates the Gaulish village under Roman attack while Panoramix races to brew enough magic potion, coordinating many simultaneous actors.",
+          "stack": {
+            "Programming": ["C++"],
+            "Concepts": [
+              "**Concurrent programming**",
+              "Object-Oriented Programming (OOP)"
+            ],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "the-plazza",
+          "name": "The Plazza",
+          "dateBegin": "11/05/2026",
+          "dateEnd": "31/05/2026",
+          "status": "done",
+          "personCount": 2,
+          "important": false,
+          "collaborators": ["LAFOLIE \"LORAY\" Evan"],
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "A concurrent-programming specialisation simulating several kitchens and an order terminal for a pizza restaurant, distributing cooking tasks across processes and threads.",
+          "stack": {
+            "Programming": ["C++"],
+            "Concepts": [
+              "**Concurrent programming**",
+              "Object-Oriented Programming (OOP)"
+            ],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
+            "AI": ["Without AI"]
+          }
+        },
+        {
+          "id": "zappy",
+          "name": "Zappy",
+          "dateBegin": "25/05/2026",
+          "dateEnd": "28/06/2026",
+          "status": "done",
+          "personCount": 7,
+          "important": true,
+          "collaborators": [
+            "LAFOLIE \"LORAY\" Evan",
+            "LEROY Léonard",
+            "NGUYEN Charles",
+            "LESOBRE Ethan",
+            "MORAT Léo",
+            "SILVESTRE Edouard"
+          ],
+          "company": "2nd Year",
+          "link": "https://github.com/VivicatcHub",
+          "description": "An end-of-year project simulating a small tribe-management game inside a shared world, split into three parts:\n- a server that talks to the GUI and the AI, stores the world state, computes commands, handles flooding and secures actions\n- a GUI offering a readable 2D view and a spectacular 3D view\n- and an artificial intelligence that gives orders to our team's players and orchestrates them. It was presented to the whole class and their families.",
+          "stack": {
+            "Programming": ["C++", "C", "Python"],
+            "Libraries": ["Raylib"],
+            "Concepts": [
+              "**Network programming**",
+              "**Concurrent programming**",
+              "Algorithms",
+              "Object-Oriented Programming (OOP)"
+            ],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "Git", "GitHub"],
+            "AI": ["Without AI"]
           }
         }
       ]
@@ -216,11 +928,11 @@
         {
           "id": "zfvod",
           "name": "Zfvod",
-          "date": "08/2025",
+          "dateBegin": "08/2025",
+          "dateEnd": "08/2025",
           "status": "done",
           "personCount": 3,
           "company": "Axiva",
-          "cover": null,
           "link": "https://www.axiva.fr/",
           "description": "Development of a back-office for the ZFVOD project, as well as participation in its maintenance and evolution. ZFVOD is a Windows application that enables the broadcasting and playback of video content on interactive kiosks in gyms.",
           "stack": {

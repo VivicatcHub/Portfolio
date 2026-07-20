@@ -73,7 +73,9 @@
       "Tests": "Tests",
       "Formats": "Formats",
       "Application": "Application",
-      "API": "API"
+      "API": "API",
+      "Concepts": "Concepts",
+      "Game Engine": "Moteur de jeu"
     },
     "names": {
       "Without AI": "Sans IA",
@@ -81,6 +83,20 @@
       "Signal handling": "Gestion des signaux",
       "Object-Oriented Programming (OOP)": "Programmation orientée objet (POO)",
       "Technical writing": "Ecrits techniques",
+      "Multithreading": "Multithreading",
+      "Algorithms": "Algorithmie",
+      "Mathematics": "Mathématiques",
+      "Optimization": "Optimisation",
+      "Network programming": "Programmation réseau",
+      "Concurrent programming": "Programmation concurrente",
+      "Functional programming": "Programmation fonctionnelle",
+      "Raycasting": "Raycasting",
+      "Graphics programming": "Programmation graphique",
+      "Hash tables": "Tables de hachage",
+      "Signal processing": "Traitement du signal",
+      "CI/CD": "CI/CD",
+      "Functional testing": "Tests fonctionnels",
+      "Unix": "Unix",
       "Teamwork": "Travail d'équipe",
       "Code reviews": "Review de code",
       "Mentoring": "Pédagogie",
@@ -110,7 +126,16 @@
     },
     "solo": "Projet solo",
     "people": "{{count}} personnes",
-    "with": "Avec"
+    "with": "Avec",
+    "durationDay": "{{count}} jour",
+    "durationDays": "{{count}} jours",
+    "durationWeek": "{{count}} semaine",
+    "durationWeeks": "{{count}} semaines",
+    "featured": "À la une",
+    "bundleCount": "{{count}} projets",
+    "more": "de plus",
+    "openBundle": "Voir les projets",
+    "backToProjects": "Retour aux projets"
   },
   "experiences": {
     "title": "Expériences",
@@ -141,14 +166,123 @@
       "Personal Project": "Projet Perso",
       "Professional": "Cadre Professionnel"
     },
+    "companies": {
+      "1st Year": "1ère Année",
+      "2nd Year": "2e Année",
+      "1st & 2nd Year": "1ère et 2e Année"
+    },
     "items": {
       "corewar": {
-        "company": "1ère et 2e Année",
         "description": "Un projet ayant pour but de découvrir l'Assembler en créant ses propres champions concourant dans le projet Corewar. Ces champions sont ensuite utilisé pour concourir au tournoi Corewar organisé chaque année à Epitech."
       },
       "42sh": {
-        "company": "1ère Année",
         "description": "Recréation en C du shell Bash par défaut de Linux, avec l'implémentation de ses principales fonctionnalités, telles que l'exécution de commandes, les redirections, les pipes, la gestion des variables d'environnement et des processus, afin de reproduire fidèlement le comportement d'un shell Unix."
+      },
+      "piscine-unix-c": {
+        "name": "Piscine Unix & C"
+      },
+      "days-de-piscine": {
+        "description": "Un stage d'intégration intensif de plusieurs semaines pour découvrir Bash et le langage C. Il s'agissait de recoder les fonctions de base de la libc comme strlen et strcmp, puis des binaires Unix plus complexes comme cat et grep, afin d'acquérir de solides bases en programmation bas niveau."
+      },
+      "star": {
+        "description": "Un court exercice en C qui dessine dans le terminal une étoile ASCII de la taille passée en paramètre."
+      },
+      "countisland": {
+        "description": "Un projet algorithmique en C qui recherche la plus grande île d'un océan en 2D en explorant et en mesurant les zones de terre connectées."
+      },
+      "myprintf": {
+        "description": "Une réimplémentation de la fonction printf du C, gérant les principaux flags de format (%s, %d, %f, %lld...) et reproduisant fidèlement son comportement d'affichage."
+      },
+      "applied-maths-1": {
+        "name": "Mathématiques Appliquées I"
+      },
+      "pong-101": {
+        "description": "Une bibliothèque Python implémentant les calculs mathématiques nécessaires à un jeu de Pong, avec un soin particulier apporté aux fondations algorithmiques."
+      },
+      "architect-102": {
+        "description": "Un projet Python appliquant de nombreuses transformations (rotation, etc.) à des vecteurs mathématiques, pour explorer l'algèbre linéaire en pratique."
+      },
+      "neutrinos-104": {
+        "description": "Un programme Python qui reçoit des valeurs une à une et calcule au fur et à mesure la moyenne arithmétique, la moyenne harmonique et l'écart-type à partir des entrées courantes et précédentes."
+      },
+      "applied-maths-2": {
+        "name": "Mathématiques Appliquées II"
+      },
+      "interstonar": {
+        "description": "Une simulation du déplacement et des collisions d'un astre voyageant dans l'espace, mêlant physique, mathématiques et optimisation des performances."
+      },
+      "stone-analysis": {
+        "description": "Un projet qui cache et décode des messages dans des signaux sonores grâce à l'analyse de Fourier, à la croisée des mathématiques et du traitement du signal."
+      },
+      "organized": {
+        "description": "Un faux gestionnaire de base de données de type SQL entièrement écrit en C, prenant en charge des commandes telles que ADD, DEL, SORT et DISP pour stocker et manipuler des enregistrements structurés."
+      },
+      "secured": {
+        "description": "Une implémentation d'une table de hachage en C, explorant les fonctions de hachage et la gestion des collisions pour un stockage clé/valeur rapide."
+      },
+      "myhunter": {
+        "description": "Une recréation du célèbre jeu d'arcade Duck Hunt en C à l'aide de la bibliothèque graphique CSFML, avec sprites, animations et mécaniques de tir."
+      },
+      "myradar": {
+        "description": "Un simulateur de vol et de crash axé sur l'optimisation : les calculs de déplacement et de collision sont optimisés pour passer de 100 à 1 000 puis 100 000 avions simultanés."
+      },
+      "myls": {
+        "description": "Une réimplémentation de la commande Linux « ls » en C, reproduisant ses principales options d'affichage du contenu des répertoires."
+      },
+      "mytop": {
+        "description": "Une réimplémentation de la commande Linux « top » en C, affichant les processus et l'utilisation des ressources système en temps réel."
+      },
+      "mysudo": {
+        "description": "Une réimplémentation de la commande Linux « sudo » en C, gérant l'élévation de privilèges, la vérification des permissions et l'exécution de commandes en tant qu'autre utilisateur."
+      },
+      "myworld": {
+        "description": "Une simulation 3D d'un monde et de son relief, développée en C avec la bibliothèque CSFML et optimisée pour afficher de grands paysages de façon fluide."
+      },
+      "a-maze-d": {
+        "description": "Un projet en C qui trouve le plus court chemin dans un graphe pondéré, en appliquant des algorithmes de recherche de chemin à des structures de type labyrinthe."
+      },
+      "robot-factory": {
+        "description": "Un compilateur, écrit en C, qui traduit le langage assembleur fictif du Corewar d'Epitech en bytecode exécutable pour la machine virtuelle Corewar."
+      },
+      "corewar-vm": {
+        "description": "Une implémentation du célèbre Corewar d'Epitech : les champions assembleur créés avec Robot Factory sont chargés et interprétés dans une mémoire virtuelle partagée, où ils s'affrontent pour survivre."
+      },
+      "wolf3d": {
+        "description": "Une recréation du légendaire Wolfenstein 3D en C avec la CSFML, utilisant le raycasting pour afficher un monde en fausse 3D immersif à partir d'une simple carte 2D."
+      },
+      "cuddle": {
+        "description": "Une réimplémentation en C de la bibliothèque Python pandas, reconstruisant la manipulation de dataframes à partir de zéro, comme un premier pas vers la data science et l'IA."
+      },
+      "epytodo": {
+        "description": "Un premier projet web full-stack : une application de to-do simple avec son propre backend et sa base de données, pour découvrir le développement web de bout en bout."
+      },
+      "piscine-paradigmes": {
+        "name": "Piscine des Paradigmes",
+        "description": "Un séminaire de plusieurs semaines pour explorer les principaux paradigmes de programmation : orienté objet, fonctionnel et bien d'autres... à travers le C++, le Rust et le Haskell, afin de gagner en aisance sur des langages et des approches très différents."
+      },
+      "myftp": {
+        "description": "Un serveur FTP écrit en C++ pour stocker et récupérer des images, gérant les connexions clients, les commandes et les transferts de fichiers sur le réseau."
+      },
+      "myteams": {
+        "description": "Une recréation de Microsoft Teams en C++, avec un serveur dédié permettant une communication texte en temps réel entre plusieurs clients connectés."
+      },
+      "codewash": {
+        "description": "Un projet web complet mais mal architecturé confié pour être nettoyé : refonte de l'architecture, correction de bugs éparpillés, ajout de tests fonctionnels et mise en place d'une chaîne CI/CD. En somme, « laver » le code."
+      },
+      "panoramix": {
+        "description": "Une introduction à la programmation concurrente qui simule le village gaulois attaqué par les Romains pendant que Panoramix s'efforce de préparer assez de potion magique, en coordonnant de nombreux acteurs simultanés."
+      },
+      "the-plazza": {
+        "description": "Une spécialisation en programmation concurrente simulant plusieurs cuisines et une borne de commande pour un restaurant de pizzas, répartissant les tâches de préparation entre processus et threads."
+      },
+      "zappy": {
+        "description": "Un projet de fin d'année simulant un petit jeu de gestion de tribu dans un monde partagé, en trois grandes parties :\n- un serveur qui communique avec le GUI et l'IA, stocke l'état du monde, calcule les commandes, gère le flood et sécurise les actions\n- un GUI proposant une vue 2D lisible et une vue 3D spectaculaire\n- et une intelligence artificielle qui donne les ordres aux joueurs de notre équipe et les orchestre. Il a été présenté devant toute la promo et leurs familles."
+      },
+      "soundboardtty": {
+        "description": "Un soundboard entièrement en TTY développé en C avec ncurses, permettant de parcourir et de déclencher des extraits sonores depuis une interface texte pilotée au clavier."
+      },
+      "dragonflyman": {
+        "description": "Ma première game jam qui avait pour thème 'Bug'. J'ai donc réalisé mon premier jeu sur Unity, un mini merge game de fourmis et libellules."
       },
       "portfolio": {
         "description": "Vous le connaissez déjà :P"

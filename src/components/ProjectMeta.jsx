@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { durationInfo, formatDateRange } from "./dateUtils";
 
 const STATUS_STYLES = {
   dark: {
@@ -16,11 +17,30 @@ const BADGE = {
   light: "bg-gray-50 text-gray-600 border-gray-200",
 };
 
+const DURATION_BADGE = {
+  dark: "bg-ayu-blue/15 text-ayu-blue border-ayu-blue/30",
+  light: "bg-teal-50 text-teal-700 border-teal-200",
+};
+
+const durationLabelKey = ({ value, unit }) => {
+  if (unit === "week") return value > 1 ? "durationWeeks" : "durationWeek";
+  return value > 1 ? "durationDays" : "durationDay";
+};
+
 const ProjectMeta = ({ project, variant = "dark" }) => {
   const { t: translate } = useTranslation();
-  const { date, status, personCount, collaborators } = project;
+  const { dateBegin, dateEnd, status, personCount, collaborators } = project;
   const statusStyles = STATUS_STYLES[variant] || STATUS_STYLES.dark;
   const badge = BADGE[variant] || BADGE.dark;
+  const durationBadge = DURATION_BADGE[variant] || DURATION_BADGE.dark;
+
+  const dateRange = formatDateRange(dateBegin, dateEnd);
+  const duration = durationInfo(dateBegin, dateEnd);
+  const durationLabel = duration
+    ? translate(`projectCard.${durationLabelKey(duration)}`, {
+        count: duration.value,
+      })
+    : null;
 
   const teamLabel =
     personCount > 1
@@ -32,11 +52,19 @@ const ProjectMeta = ({ project, variant = "dark" }) => {
   return (
     <div className="mt-1">
       <div className="flex flex-wrap items-center gap-2">
-        {date && (
+        {dateRange && (
           <span
             className={`inline-flex items-center px-2 py-0.5 rounded-full border text-[11px] font-medium ${badge}`}
           >
-            {date}
+            {dateRange}
+          </span>
+        )}
+        {durationLabel && (
+          <span
+            className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border text-[11px] font-medium ${durationBadge}`}
+          >
+            <span aria-hidden="true">⏱</span>
+            {durationLabel}
           </span>
         )}
         {status && translate(`projectCard.status.${status}`) && (

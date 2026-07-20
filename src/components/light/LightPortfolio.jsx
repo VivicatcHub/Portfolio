@@ -4,6 +4,7 @@ import LightNav from "./LightNav";
 import LightHome from "./LightHome";
 import LightExperiences from "./LightExperiences";
 import LightProjects from "./LightProjects";
+import LightProjectBundle from "./LightProjectBundle";
 import LightSkills from "./LightSkills";
 import LightContact from "./LightContact";
 
@@ -26,6 +27,7 @@ const LightPortfolio = () => {
           <Route index element={<LightHome />} />
           <Route path="experiences" element={<LightExperiences />} />
           <Route path="projects" element={<LightProjects />} />
+          <Route path="projects/:bundleId" element={<LightProjectBundle />} />
           <Route path="skills" element={<LightSkills />} />
           <Route path="contact" element={<LightContact />} />
           <Route path="*" element={<Navigate to="" replace />} />

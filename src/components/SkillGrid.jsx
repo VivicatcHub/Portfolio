@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { SkillIcon, hasSkillIcon } from "./SkillReactIcons";
 import useSkillLabels from "./skillI18n";
+import { parseSkill } from "./skillMarkup";
 
 const MODES = ["both", "text", "icon"];
 const MODE_LABELS = {
@@ -88,7 +89,10 @@ const VARIANTS = {
   },
 };
 
-const SkillChip = ({ name, label, mode, size, variant }) => {
+const IMPORTANT_CHIP =
+  "bg-gradient-to-r from-ayu-purple to-fuchsia-500 text-white border-transparent shadow-[0_0_10px_-1px_rgba(198,80,230,0.7)]";
+
+const SkillChip = ({ name, label, mode, size, variant, important }) => {
   const hasIcon = hasSkillIcon(name);
   const showIcon = hasIcon && (mode === "icon" || mode === "both");
 
@@ -99,15 +103,22 @@ const SkillChip = ({ name, label, mode, size, variant }) => {
   return (
     <div
       className={`inline-flex items-center gap-1.5 rounded-full ${size.chipText} transition-colors duration-150 max-w-[10rem] ${
-        iconOnly ? "p-0.5" : `${size.chipPad} shadow-sm border ${variant.chip}`
+        iconOnly
+          ? "p-0.5"
+          : `${size.chipPad} shadow-sm border ${important ? IMPORTANT_CHIP : variant.chip}`
       }`}
-      title={label}
+      title={important ? `★ ${label}` : label}
     >
       {showIcon && (
         <SkillIcon
           name={name}
           size={iconOnly ? size.iconOnlySize : size.iconSize}
         />
+      )}
+      {important && !iconOnly && (
+        <span aria-hidden="true" className="text-ayu-yellow leading-none">
+          ★
+        </span>
       )}
       {showText && <span className="truncate">{label}</span>}
     </div>
@@ -180,16 +191,20 @@ const SkillGrid = ({
                 {labels.category(cat)}
               </span>
               <div className={`flex flex-wrap ${sz.innerGap}`}>
-                {skills[cat].map((name) => (
-                  <SkillChip
-                    key={name}
-                    name={name}
-                    label={labels.name(name)}
-                    mode={mode}
-                    size={sz}
-                    variant={vr}
-                  />
-                ))}
+                {skills[cat].map((raw) => {
+                  const { name, important } = parseSkill(raw);
+                  return (
+                    <SkillChip
+                      key={name}
+                      name={name}
+                      label={labels.name(name)}
+                      mode={mode}
+                      size={sz}
+                      variant={vr}
+                      important={important}
+                    />
+                  );
+                })}
               </div>
             </div>
           ))}
