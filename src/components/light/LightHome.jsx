@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import Announcement from "../Announcement";
 
 const LightHome = () => {
   const { t: translate } = useTranslation();
@@ -7,6 +8,7 @@ const LightHome = () => {
 
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-32">
+      <Announcement variant="light" className="mb-8" />
       <p className="text-ayu-purple font-semibold mb-4">
         {translate("light.home.hello")}
       </p>

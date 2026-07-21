@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Announcement from "../Announcement";
 
 const Home = ({ navigate }) => {
   const { t: translate } = useTranslation();
@@ -7,6 +8,7 @@ const Home = ({ navigate }) => {
     <div className="h-full bg-hero bg-cover flex flex-col justify-center md:items-start text-white relative">
       <div className="absolute h-full w-full bg-black opacity-60"></div>
       <div className="z-10 p-8">
+        <Announcement variant="dark" className="mb-6" />
         <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold ">
           {translate("home.name")}
         </h1>

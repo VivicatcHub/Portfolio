@@ -1,4 +1,8 @@
 {
+  "announcement": {
+    "message": "Looking for a 6-month work-study internship from September 14, 2026 to February 28, 2027, on Thursdays and Fridays.",
+    "dismiss": "Dismiss announcement"
+  },
   "light": {
     "nav": {
       "home": "Home",

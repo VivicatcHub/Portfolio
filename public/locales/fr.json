@@ -1,4 +1,8 @@
 {
+  "announcement": {
+    "message": "Recherche un stage en alternance de 6 mois du 14 septembre 2026 au 28 février 2027, les jeudis et vendredis.",
+    "dismiss": "Fermer l'annonce"
+  },
   "light": {
     "nav": {
       "home": "Accueil",
