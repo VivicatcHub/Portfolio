@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { announcement } from "../announcement";
 
-const STORAGE_PREFIX = "announcementDismissed:";
-
 const VARIANTS = {
   dark: {
     wrapper:
