@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useMatch, useNavigate } from "react-router-dom";
 import FileFinder from "./components/FileFinder";
 import MainArea from "./components/MainArea";
 import NavBar from "./components/NavBar";
@@ -17,13 +18,20 @@ function App() {
 
   const [explorerOpen, setExplorerOpen] = useState(true);
 
+  const routedProject = useMatch("/project/:projectId");
+  const routedBundle = useMatch("/projects/:bundleId");
+  const onProjectRoute = Boolean(routedProject || routedBundle);
+  const routerNavigate = useNavigate();
+
   const openTab = (tabValue) => {
     setClosedTabs((old) => old.filter((tab) => tab !== tabValue));
     setSelectedTab(tabValue);
+    if (onProjectRoute) routerNavigate("/");
   };
 
   const navigate = (tab) => {
     setSelectedTab(tab);
+    if (onProjectRoute) routerNavigate("/");
   };
 
   const closeTab = (tabValue) => {
@@ -71,6 +79,12 @@ function App() {
 
   const [selectedTab, setSelectedTab] = useState(TABS[0].value);
   const [closedTabs, setClosedTabs] = useState([]);
+
+  useEffect(() => {
+    if (!onProjectRoute) return;
+    setClosedTabs((old) => old.filter((tab) => tab !== "projects"));
+    setSelectedTab("projects");
+  }, [onProjectRoute]);
 
   return (
     <div className="h-screen w-screen flex flex-col-reverse sm:flex-row">

@@ -139,7 +139,12 @@
     "bundleCount": "{{count}}件のプロジェクト",
     "more": "その他",
     "openBundle": "プロジェクトを見る",
-    "backToProjects": "プロジェクトに戻る"
+    "backToProjects": "プロジェクトに戻る",
+    "stack": "技術スタック",
+    "openLink": "プロジェクトを開く",
+    "details": "詳細を見る",
+    "notFound": "プロジェクトが見つかりません",
+    "backTo": "{{name}}に戻る"
   },
   "experiences": {
     "title": "経験",

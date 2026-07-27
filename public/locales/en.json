@@ -77,7 +77,12 @@
     "bundleCount": "{{count}} projects",
     "more": "more",
     "openBundle": "View the projects",
-    "backToProjects": "Back to projects"
+    "backToProjects": "Back to projects",
+    "stack": "Stack",
+    "openLink": "Open the project",
+    "details": "View details",
+    "notFound": "Project not found",
+    "backTo": "Back to {{name}}"
   },
   "experiences": {
     "title": "Experiences",

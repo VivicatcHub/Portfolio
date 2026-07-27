@@ -139,7 +139,12 @@
     "bundleCount": "{{count}} projets",
     "more": "de plus",
     "openBundle": "Voir les projets",
-    "backToProjects": "Retour aux projets"
+    "backToProjects": "Retour aux projets",
+    "stack": "Technologies",
+    "openLink": "Ouvrir le projet",
+    "details": "Voir le détail",
+    "notFound": "Projet introuvable",
+    "backTo": "Retour à {{name}}"
   },
   "experiences": {
     "title": "Expériences",
