@@ -142,6 +142,7 @@
     "backToProjects": "Retour aux projets",
     "stack": "Technologies",
     "openLink": "Ouvrir le projet",
+    "openGithub": "Voir le code",
     "details": "Voir le détail",
     "notFound": "Projet introuvable",
     "backTo": "Retour à {{name}}"

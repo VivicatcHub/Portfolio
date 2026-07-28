@@ -80,6 +80,7 @@
     "backToProjects": "Back to projects",
     "stack": "Stack",
     "openLink": "Open the project",
+    "openGithub": "View the code",
     "details": "View details",
     "notFound": "Project not found",
     "backTo": "Back to {{name}}"

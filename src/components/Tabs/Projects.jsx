@@ -81,7 +81,7 @@ const Projects = () => {
         <div className="mt-8">
           <Title text={bundle.name} />
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {byDateEndDesc(bundle.subProjects || []).map((project, idx) => (
             <ProjectTile
               key={project.id || idx}
@@ -107,7 +107,7 @@ const Projects = () => {
                 {(group.items || []).length}
               </span>
             </h2>
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {byDateEndDesc(group.items).map((project, idx) => (
                 <ProjectTile
                   key={project.id || idx}
