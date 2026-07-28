@@ -146,7 +146,11 @@ const ProjectDetailContent = ({ project, variant = "dark" }) => {
             <div
               className={`w-200 h-200 shrink-0 rounded-xl flex items-center justify-center ${style.cover}`}
             >
-              <img src={image} className="w-auto h-[100%] rounded-xl" />
+              <img
+                src={image}
+                alt={image}
+                className="w-auto h-[100%] rounded-xl"
+              />
             </div>
           ))}
       </div>
