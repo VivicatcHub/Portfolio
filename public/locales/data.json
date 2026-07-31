@@ -1038,6 +1038,7 @@
     {
       "id": "epitech",
       "company": "Epitech",
+      "type": "academic",
       "xp": "Student",
       "description": "Student in Epitech's grande école program, class of 2029",
       "startDate": "10/2024",
@@ -1054,6 +1055,7 @@
     {
       "id": "manta",
       "company": "Manta (formerly Cobra)",
+      "type": "associative",
       "xp": "Member then Vice-President",
       "description": "Member then Vice-President of the association formerly Cobra, now Manta",
       "startDate": "10/2024",
@@ -1068,6 +1070,7 @@
     {
       "id": "hod",
       "company": "Heaven of Dice",
+      "type": "associative",
       "xp": "Communications Manager then Chancelier (Co-President)",
       "description": "Communications Manager then Chancelier (Co-President) in the student association Heaven of Dice",
       "startDate": "02/2025",
@@ -1088,6 +1091,7 @@
     {
       "id": "axiva",
       "company": "Axiva",
+      "type": "professional",
       "xp": "Intern",
       "description": "Second-year internship as part of Epitech at Axiva",
       "startDate": "07/2025",

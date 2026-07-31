@@ -87,6 +87,11 @@
   },
   "experiences": {
     "title": "Experiences",
-    "skillsLabel": "Skills acquired:"
+    "skillsLabel": "Skills acquired:",
+    "categories": {
+      "academic": "Academic",
+      "professional": "Professional",
+      "associative": "Associative"
+    }
   }
 }

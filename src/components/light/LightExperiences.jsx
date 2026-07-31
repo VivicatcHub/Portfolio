@@ -3,9 +3,7 @@ import useData from "./useData";
 import LightSection from "./LightSection";
 import { SkillIcon } from "../SkillReactIcons";
 import useSkillLabels from "../skillI18n";
-import { byDateDesc } from "../dateUtils";
-
-const sortByStartDate = byDateDesc("startDate");
+import { groupExperiences } from "../experienceGroups";
 
 const flattenSkills = (skills) => [
   ...new Set(
@@ -21,42 +19,53 @@ const LightExperiences = () => {
 
   return (
     <LightSection title={translate("light.nav.experiences")}>
-      <div className="relative border-l-2 border-gray-200 ml-3 space-y-10">
-        {sortByStartDate(xps).map((xp, idx) => (
-          <div key={idx} className="relative pl-8">
-            <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-ayu-purple ring-4 ring-white" />
-            <div className="flex flex-wrap items-baseline gap-x-2">
-              <h3 className="text-xl font-semibold text-gray-900">
-                {xp.company}
-              </h3>
-              {xp.xp && <span className="italic text-gray-500">— {xp.xp}</span>}
-            </div>
-            <time className="block text-xs uppercase tracking-wide text-gray-400 mt-1">
-              {xp.startDate} - {xp.endDate}
-            </time>
-            <p className="mt-3 text-gray-600 whitespace-pre-wrap">
-              {xp.description}
-            </p>
-            {xp.skills && (
-              <div className="mt-4">
-                <span className="block text-sm font-semibold text-ayu-purple mb-2">
-                  {translate("experiences.skillsLabel")}
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {flattenSkills(xp.skills).map((name) => (
-                    <span
-                      key={name}
-                      title={labels.name(name)}
-                      className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs text-gray-700"
-                    >
-                      <SkillIcon name={name} size={14} />
-                      {labels.name(name)}
-                    </span>
-                  ))}
+      <div className="space-y-12">
+        {groupExperiences(xps).map((group) => (
+          <section key={group.type}>
+            <h2 className="text-lg font-semibold uppercase tracking-wide text-ayu-purple mb-6">
+              {translate(`experiences.categories.${group.type}`)}
+            </h2>
+            <div className="relative border-l-2 border-gray-200 ml-3 space-y-10">
+              {group.items.map((xp, idx) => (
+                <div key={xp.id || idx} className="relative pl-8">
+                  <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-ayu-purple ring-4 ring-white" />
+                  <div className="flex flex-wrap items-baseline gap-x-2">
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {xp.company}
+                    </h3>
+                    {xp.xp && (
+                      <span className="italic text-gray-500">— {xp.xp}</span>
+                    )}
+                  </div>
+                  <time className="block text-xs uppercase tracking-wide text-gray-400 mt-1">
+                    {xp.startDate} - {xp.endDate}
+                  </time>
+                  <p className="mt-3 text-gray-600 whitespace-pre-wrap">
+                    {xp.description}
+                  </p>
+                  {xp.skills && (
+                    <div className="mt-4">
+                      <span className="block text-sm font-semibold text-ayu-purple mb-2">
+                        {translate("experiences.skillsLabel")}
+                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {flattenSkills(xp.skills).map((name) => (
+                          <span
+                            key={name}
+                            title={labels.name(name)}
+                            className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 border border-gray-100 text-xs text-gray-700"
+                          >
+                            <SkillIcon name={name} size={14} />
+                            {labels.name(name)}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-            )}
-          </div>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
     </LightSection>

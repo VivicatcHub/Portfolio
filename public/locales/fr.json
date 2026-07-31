@@ -150,6 +150,11 @@
   "experiences": {
     "title": "Expériences",
     "skillsLabel": "Compétences acquises :",
+    "categories": {
+      "academic": "Académique",
+      "professional": "Professionnel",
+      "associative": "Associatif"
+    },
     "items": {
       "epitech": {
         "xp": "Étudiant",
@@ -289,10 +294,10 @@
         "description": "Un projet de fin d'année simulant un petit jeu de gestion de tribu dans un monde partagé, en trois grandes parties :\n- un serveur qui communique avec le GUI et l'IA, stocke l'état du monde, calcule les commandes, gère le flood et sécurise les actions\n- un GUI proposant une vue 2D lisible et une vue 3D spectaculaire\n- et une intelligence artificielle qui donne les ordres aux joueurs de notre équipe et les orchestre. Il a été présenté devant toute la promo et leurs familles."
       },
       "soundboardtty": {
-        "description": "Un soundboard entièrement en TTY développé en C avec ncurses, permettant de parcourir et de déclencher des extraits sonores depuis une interface texte pilotée au clavier."
+        "description": "Développement d'un soundboard entièrement en TTY en C avec ncurses, permettant de parcourir et de déclencher des extraits sonores depuis une interface texte pilotée au clavier. Le projet peut être utilisé de deux manières différentes :\n- Directement depuis le terminal à l'aide d'arguments en ligne de commande.\n- Via une interface interactive ncurses avec des raccourcis clavier."
       },
       "dragonflyman": {
-        "description": "Ma première game jam qui avait pour thème 'Bug'. J'ai donc réalisé mon premier jeu sur Unity, un mini merge game de fourmis et libellules."
+        "description": "Ma première game jam, qui avait pour thème 'Bug'. Durant le week-end, j'ai réalisé mon premier jeu sur Unity : un mini merge game de fourmis et de libellules.\nLe concept est simple : au début de chaque manche, vous recevez une fourmi de niveau 1. Vous choisissez ensuite comment répartir vos insectes entre trois chemins différents, en en attribuant au moins un et jusqu'à trois. Chaque chemin peut être l'un des suivants :\n- Piège : tous les insectes envoyés sur ce chemin sont perdus.\n- Combat : si le niveau cumulé de vos insectes est inférieur à celui de l'ennemi, vous les perdez. Sinon, vous vainquez l'ennemi.\n- Coffre : il contient un insecte. Si le niveau de votre insecte est supérieur à celui du coffre, vous le sauvez et le recrutez. Sinon, vous conservez simplement votre insecte.\n\nEntre les manches, vous pouvez fusionner deux insectes du même type pour créer une version plus forte, de niveau supérieur.\nVotre objectif est de survivre et d'aller le plus loin possible.\nL'ensemble du projet a été développé en un seul week-end, je me suis donc concentré sur l'implémentation du gameplay plutôt que sur le soin apporté aux visuels."
       },
       "portfolio": {
         "description": "Vous le connaissez déjà :P"
@@ -301,7 +306,7 @@
         "description": "Développement d'un IDE entièrement accessible depuis le navigateur, conçu pour apprendre la programmation et réaliser de petits projets en Python, HTML, CSS et JavaScript.\nLa plateforme propose également des cours interactifs ainsi que des projets guidés afin d'accompagner les utilisateurs dans leur apprentissage. Elle a été pensée pour permettre aux membres de l'association Manta d'organiser et d'animer les 'Coding-Clubs' de manière plus simple, plus efficace et plus collaborative."
       },
       "hod-showcase": {
-        "description": "Développement d'un site vitrine pour l'association Heaven of Dice, avec récupération automatique des données directement depuis les documents Google Drive publics de l'association, afin de faciliter la mise à jour et la diffusion des informations."
+        "description": "Développement d'un site vitrine pour l'association Heaven of Dice, avec récupération automatique des données directement depuis les documents Google Drive publics de l'association, afin de faciliter la mise à jour et la diffusion des informations. Le site affiche la liste des membres du Conseil d'Administration, un agenda des événements à venir, la liste des XP Epitech accessibles aux membres, les informations légales telles que les statuts de l'association et les rapports annuels, ainsi qu'un catalogue de tous les jeux de Heaven of Dice."
       },
       "gotoprojects": {
         "description": "Développement d'un outil Linux permettant d'automatiser le lancement de l'environnement de travail d'un projet : ouverture de VS Code dans le bon répertoire, exécution des commandes nécessaires, synchronisation avec Git (git pull), ainsi que toute autre étape récurrente afin de simplifier et d'accélérer le démarrage d'un projet."
@@ -310,13 +315,13 @@
         "description": "Développement d'un site web inspiré de l'univers visuel de l'œuvre coréenne Solo Leveling, conçu pour aider les utilisateurs à suivre leurs objectifs et leurs résolutions sportives grâce à une interface immersive et motivante."
       },
       "easytowerofgod": {
-        "description": "Développement d'une extension web permettant d'améliorer l'expérience de lecture de 'Tower of God' sur Webtoon, avec l'intégration d'une interface de recherche d'informations issue du wiki de l'œuvre, accessible directement sans interrompre la lecture du chapitre."
+        "description": "Développement d'une extension de navigateur permettant d'améliorer l'expérience de lecture de 'Tower of God' sur Webtoon, avec l'intégration d'une interface de recherche d'informations issue du wiki de l'œuvre, accessible directement sans interrompre la lecture du chapitre. Il s'agissait de ma première extension de navigateur, et l'objectif principal était d'apprendre à en développer une, tout en me facilitant la lecture de Tower of God."
       },
       "zfvod": {
         "description": "Développement d'un back-office pour le projet ZFVOD, ainsi que participation à sa maintenance et à son évolution. ZFVOD est une application Windows permettant la diffusion et la lecture de contenus vidéo sur les bornes interactives de salles de sport."
       },
       "cv": {
-        "description": "Création d'un CV en HTML modifiable en changeant seulement un fichier de configuration JSON. Idée inspirée par LAFOLIE \"LORAY\" Evan."
+        "description": "Création d'un CV en HTML modifiable en changeant seulement un fichier de configuration JSON. Idée inspirée par LAFOLIE \"LORAY\" Evan. Ce CV compatible ATS peut facilement être adapté à différentes candidatures en mettant simplement à jour la configuration JSON."
       }
     }
   }
