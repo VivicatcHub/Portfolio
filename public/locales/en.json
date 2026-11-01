@@ -1,6 +1,6 @@
 {
   "announcement": {
-    "message": "Looking for a 6-month work-study internship from September 14, 2026 to February 28, 2027, on Thursdays and Fridays.",
+    "message": "Looking for a 6-month internship from March 29, 2027 to August 20, 2027",
     "dismiss": "Dismiss announcement"
   },
   "light": {
@@ -10,14 +10,80 @@
       "projects": "Projects",
       "skills": "Skills",
       "contact": "Contact",
-      "devMode": "Dev mode"
+      "devMode": "Dev mode",
+      "exhibition": "Retrospective",
+      "language": "Language",
+      "label": "Main navigation",
+      "menu": "Menu"
     },
     "home": {
       "hello": "Hi, I'm",
-      "intro": "A passionate developer, I create websites, video games, and useful software. Discover my work below, or switch back to the dev (VS Code) portfolio anytime."
+      "intro": "A passionate developer, I create websites, video games, and useful software. Discover my work below, or switch back to the dev (VS Code) portfolio anytime.",
+      "works": "Projects {{from}}–{{to}}",
+      "statement": "Epitech student (class of 2029), I build websites, video games and useful tools, most of them written without AI.",
+      "selected": "Selected projects",
+      "allWorks_one": "All projects ({{count}})",
+      "allWorks_other": "All projects ({{count}})",
+      "fullChronology": "Full chronology",
+      "keyTechniques": "Key tech",
+      "allTechniques": "Full tech index",
+      "keysNote": "The number is how many projects use the tech."
     },
     "contact": {
       "intro": "Feel free to reach out through any of the channels below."
+    },
+    "skip": "Skip to content",
+    "footer": {
+      "made": "All rights reserved"
+    },
+    "welcome": {
+      "title": "Open to an internship"
+    },
+    "desk": {
+      "title": "Let's talk",
+      "all": "All contact options"
+    },
+    "cartel": {
+      "cat": "Cat. {{n}}",
+      "inProgress": "ongoing",
+      "series_one": "Series of {{count}} project",
+      "series_other": "Series of {{count}} projects",
+      "more": "+{{count}}"
+    },
+    "checklist": {
+      "no": "No.",
+      "title": "Project",
+      "year": "Year",
+      "medium": "Medium"
+    },
+    "works": {
+      "count_one": "{{count}} project",
+      "count_other": "{{count}} projects",
+      "intro": "Every project hangs with its wall label: dates, tech, duration, team, and whether it was made with or without AI.",
+      "rooms": "Rooms"
+    },
+    "detail": {
+      "date": "Dates",
+      "duration": "Duration",
+      "team": "Team",
+      "with": "With",
+      "context": "Context",
+      "status": "Status",
+      "studies": "More views",
+      "studyAlt": "{{name}}, view {{n}}"
+    },
+    "chronology": {
+      "title": "Chronology",
+      "today": "Today",
+      "future": "Upcoming",
+      "ends": "Ended: {{name}} ({{date}})",
+      "endsPlanned": "Planned end: {{name}} ({{date}})"
+    },
+    "techniques": {
+      "count_one": "{{count}} tech",
+      "count_other": "{{count}} techs",
+      "intro": "Everything I have used in my projects, with the number of projects each technique appears in.",
+      "key": "Key skill"
     }
   },
   "navBar": {
@@ -93,5 +159,21 @@
       "professional": "Professional",
       "associative": "Associative"
     }
+  },
+  "devProjects": {
+    "title": "Projects",
+    "filter": "Filter (name, tech…)",
+    "clear": "Clear filter",
+    "collapseAll": "Collapse all",
+    "noResults": "No project matches “{{query}}”.",
+    "noCapture": "No screenshot for this project.",
+    "openDetail": "Open",
+    "live": "Live",
+    "ongoing": "ongoing",
+    "meta": "metadata",
+    "hint": "Hover or browse with ↑ ↓, Enter to open.",
+    "captures": "Screenshots",
+    "captureAlt": "{{name}}, screenshot {{n}}",
+    "aiUnknown": "not specified"
   }
 }

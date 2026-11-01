@@ -42,6 +42,18 @@ const Experiences = () => {
                     <time className="text-xs tracking-wide uppercase text-gray-400">
                       {xp.startDate} - {xp.endDate}
                     </time>
+                    {xp.roles?.length > 0 && (
+                      <ol className="mt-2 text-sm space-y-0.5">
+                        {xp.roles.map((role, i) => (
+                          <li key={i}>
+                            <span className="font-semibold">{role.title}</span>
+                            <span className="text-gray-400">
+                              {` · ${role.startDate} - ${role.endDate}`}
+                            </span>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                     <p className="mt-3 whitespace-pre-wrap">{xp.description}</p>
                     {xp.skills && (
                       <div className="mt-4">

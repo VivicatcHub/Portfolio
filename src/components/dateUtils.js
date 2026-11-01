@@ -38,7 +38,7 @@ export const durationInfo = (begin, end) => {
 
   const bd = new Date(b.y, b.m - 1, b.d);
   const ed = new Date(e.y, e.m - 1, e.d);
-  const days = Math.round((ed - bd) / 86400000) + 1; // inclusive of both ends
+  const days = Math.round((ed - bd) / 86400000) + 1;
   if (days <= 0) return null;
 
   if (days > 14) return { value: Math.round(days / 7), unit: "week" };

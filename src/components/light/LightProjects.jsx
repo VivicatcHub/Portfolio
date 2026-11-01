@@ -1,59 +1,92 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import useData from "./useData";
-import LightSection from "./LightSection";
-import ProjectTile from "../ProjectTile";
-import { byDateEndDesc } from "../dateUtils";
+import useSkillLabels from "../skillI18n";
+import RoomHeader from "./RoomHeader";
+import HungWork from "./HungWork";
+import { AiStamp } from "./Cartel";
+import {
+  aiTagOf,
+  byBeginDesc,
+  catalogue,
+  countWorks,
+  mediumOf,
+  workPath,
+  yearLabel,
+  yearSpan,
+} from "./museum";
 
-export const projectPath = (project) =>
-  project.subProjects
-    ? `/pro/projects/${project.id}`
-    : `/pro/project/${project.id}`;
+const HANG = ["l", "s", "s", "l", "t", "t", "t"];
 
-export const ProjectGrid = ({ items }) => (
-  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-    {items.map((project, pi) => (
-      <ProjectTile
-        key={project.id || pi}
-        project={project}
-        to={projectPath(project)}
-        variant="light"
-      />
-    ))}
-  </div>
-);
-
-const CategorySection = ({ group }) => {
-  const [open, setOpen] = useState(true);
-  const items = byDateEndDesc(group.items);
+export const Checklist = ({ works, numbers }) => {
+  const { t: translate } = useTranslation();
+  const labels = useSkillLabels();
 
   return (
-    <div>
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        aria-expanded={open}
-        className="group flex w-full items-center gap-2 mb-5 text-left"
-      >
-        <span
-          aria-hidden="true"
-          className={`text-gray-400 group-hover:text-ayu-purple transition-transform duration-200 ${open ? "rotate-90" : ""}`}
-        >
-          ▶
-        </span>
-        <h2 className="text-lg font-semibold text-gray-500 group-hover:text-ayu-purple transition-colors">
-          {group.category}
-        </h2>
-        <span className="inline-flex items-center justify-center min-w-[1.5rem] px-1.5 rounded-full bg-gray-100 text-gray-500 text-xs font-medium">
-          {items.length}
-        </span>
-      </button>
-      {open && (
-        <div className="animate-fade-in">
-          <ProjectGrid items={items} />
+    <ol className="checklist">
+      <li className="checklist-head" aria-hidden="true">
+        <span>{translate("light.checklist.no")}</span>
+        <span>{translate("light.checklist.title")}</span>
+        <span>{translate("light.checklist.year")}</span>
+        <span>{translate("light.checklist.medium")}</span>
+        <span />
+      </li>
+      {works.map((work) => {
+        const medium = mediumOf(work, 3);
+        return (
+          <li key={work.id}>
+            <Link to={workPath(work)} className="checklist-row">
+              <span className="checklist-num">{numbers[work.id]}</span>
+              <span className="checklist-title">
+                {work.name}
+                {work.company && (
+                  <span className="checklist-company">{work.company}</span>
+                )}
+              </span>
+              <span className="checklist-year">
+                {yearLabel(work, translate("light.cartel.inProgress"))}
+              </span>
+              <span className="checklist-medium">
+                {work.subProjects
+                  ? translate("light.cartel.series", {
+                      count: work.subProjects.length,
+                    })
+                  : medium.names.map((name) => labels.name(name)).join(", ")}
+              </span>
+              <span className="checklist-end">
+                <AiStamp tag={aiTagOf(work)} />
+                <ArrowRightIcon className="btn-icon" aria-hidden="true" />
+              </span>
+            </Link>
+          </li>
+        );
+      })}
+    </ol>
+  );
+};
+
+export const WorksRoom = ({ items, numbers }) => {
+  const sorted = byBeginDesc(items);
+  const hung = sorted.filter((work) => work.cover);
+  const listed = sorted.filter((work) => !work.cover);
+
+  return (
+    <>
+      {hung.length > 0 && (
+        <div className="hang">
+          {hung.map((work, i) => (
+            <HungWork
+              key={work.id}
+              work={work}
+              number={numbers[work.id]}
+              size={HANG[i % HANG.length]}
+            />
+          ))}
         </div>
       )}
-    </div>
+      {listed.length > 0 && <Checklist works={listed} numbers={numbers} />}
+    </>
   );
 };
 
@@ -61,15 +94,44 @@ const LightProjects = () => {
   const { t: translate } = useTranslation();
   const data = useData();
   const groups = data?.projects || [];
+  const numbers = catalogue(groups);
+  const span = yearSpan(groups);
 
   return (
-    <LightSection title={translate("home.projects")}>
-      <div className="space-y-8">
+    <div className="room room--white room--page">
+      <div className="room-inner">
+        <RoomHeader
+          title={translate("light.nav.projects")}
+          meta={
+            data &&
+            [
+              translate("light.works.count", { count: countWorks(groups) }),
+              span && `${span.from}–${span.to}`,
+            ]
+              .filter(Boolean)
+              .join(" · ")
+          }
+          intro={translate("light.works.intro")}
+        />
+        <nav className="room-index" aria-label={translate("light.works.rooms")}>
+          {groups.map((group, gi) => (
+            <a key={gi} href={`#salle-${gi}`} className="room-index-link">
+              {group.category}
+              <span className="room-index-count">{group.items.length}</span>
+            </a>
+          ))}
+        </nav>
         {groups.map((group, gi) => (
-          <CategorySection key={gi} group={group} />
+          <section key={gi} id={`salle-${gi}`} className="works-room">
+            <h2 className="works-room-title">
+              {group.category}
+              <span className="works-room-count">{group.items.length}</span>
+            </h2>
+            <WorksRoom items={group.items || []} numbers={numbers} />
+          </section>
         ))}
       </div>
-    </LightSection>
+    </div>
   );
 };
 

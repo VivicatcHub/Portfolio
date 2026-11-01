@@ -8,8 +8,6 @@ export const parseSkill = (raw) => {
 
 export const skillName = (raw) => parseSkill(raw).name;
 
-// Shrink the label font when it is too long to fit a fixed-size skill card.
-// `base` is the normal (short-label) size: "sm" for the dark page, "xs" for light.
 export const skillLabelSizeClass = (label, base = "sm") => {
   const len = (label || "").length;
   if (base === "xs") {

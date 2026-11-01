@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import useData from "./useData";
-import LightSection from "./LightSection";
+import RoomHeader from "./RoomHeader";
+import WelcomePanel from "./WelcomePanel";
 
 const LightContact = () => {
   const { t: translate } = useTranslation();
@@ -8,34 +10,33 @@ const LightContact = () => {
   const socials = data?.socials || [];
 
   return (
-    <LightSection
-      title={translate("contact.title")}
-      subtitle={translate("light.contact.intro")}
-    >
-      <div className="grid gap-4 sm:grid-cols-2 max-w-2xl">
-        {socials.map((social) => (
-          <a
-            key={social.link}
-            href={social.link}
-            target="_blank"
-            rel="noreferrer"
-            className="group flex items-center justify-between rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-ayu-purple/40 hover:shadow-md transition-all"
-          >
-            <div>
-              <p className="text-xs uppercase tracking-wide text-gray-400">
-                {social.name}
-              </p>
-              <p className="mt-1 font-medium text-gray-900 group-hover:text-ayu-purple break-all">
-                {social.value}
-              </p>
-            </div>
-            <span className="text-gray-300 group-hover:text-ayu-purple text-xl">
-              →
-            </span>
-          </a>
-        ))}
+    <div className="room room--violet room--page desk">
+      <div className="room-inner">
+        <RoomHeader
+          title={translate("contact.title")}
+          intro={translate("light.contact.intro")}
+        />
+        <div className="desk-grid">
+          <ul className="desk-list">
+            {socials.map((social) => (
+              <li key={social.link}>
+                <a
+                  href={social.link}
+                  target={social.link.startsWith("http") ? "_blank" : undefined}
+                  rel="noreferrer"
+                  className="desk-row"
+                >
+                  <span className="desk-label">{social.name}</span>
+                  <span className="desk-value">{social.value}</span>
+                  <ArrowUpRightIcon className="desk-arrow" aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <WelcomePanel showContact={false} className="desk-welcome" />
+        </div>
       </div>
-    </LightSection>
+    </div>
   );
 };
 

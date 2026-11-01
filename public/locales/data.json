@@ -41,30 +41,62 @@
       "category": "Personal Project",
       "items": [
         {
-          "id": "portfolio",
-          "name": "Portfolio",
+          "id": "portfolio-code",
+          "name": "Portfolio Code",
           "cover": "/images/portfolio.png",
           "dateBegin": "13/07/2026",
           "status": "in_progress",
           "important": true,
           "personCount": 1,
-          "link": "./",
+          "link": "/",
           "github": "https://github.com/VivicatcHub/Portfolio",
-          "description": "You already know it :P",
+          "description": "You already know it :P\nThe developer version of my portfolio, styled like a VS Code editor: every section is a file opened in its own tab (home.jsx, experiences.json, projects.css...), with a file explorer, projects displayed as CSS rules and a working notepad built on the Monaco editor. Available in French, English and Japanese, and written entirely without AI.",
           "stack": {
             "Frontend": [
               "**React.js**",
               "HTML",
               "JavaScript",
               "CSS",
-              "TailwindCSS"
+              "**TailwindCSS**"
             ],
+            "Libraries": ["Monaco", "React Router", "i18next"],
             "DevOps": ["Docker"],
             "Deployment": ["Vercel"],
             "Tools": ["Git", "GitHub"],
             "AI": ["Without AI"]
           },
-          "images": ["/images/portfolio.png"]
+          "images": [
+            "/images/portfolio.png",
+            "/images/portfolio-code3.png",
+            "/images/portfolio-code2.png"
+          ]
+        },
+        {
+          "id": "portfolio-pro",
+          "name": "Portfolio Pro",
+          "cover": "/images/portfolio-pro.png",
+          "dateBegin": "13/10/2026",
+          "status": "in_progress",
+          "important": true,
+          "personCount": 1,
+          "link": "/pro",
+          "github": "https://github.com/VivicatcHub/Portfolio",
+          "description": "The professional version of my portfolio, designed as a museum retrospective: each project hangs on the wall with its own label (dates, tech, team, with or without AI), experiences are laid out on a chronology, and skills are listed with the number of projects they appear in. It shares the same data as the code version, and was built with the help of AI.",
+          "stack": {
+            "Frontend": ["**React.js**", "HTML", "JavaScript", "**CSS**"],
+            "Libraries": ["React Router", "i18next"],
+            "DevOps": ["Docker"],
+            "Deployment": ["Vercel"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["With AI"]
+          },
+          "images": [
+            "/images/portfolio-pro.png",
+            "/images/portfolio-pro2.png",
+            "/images/portfolio-pro3.png",
+            "/images/portfolio-pro4.png",
+            "/images/portfolio-pro5.png"
+          ]
         },
         {
           "id": "idepitech",
@@ -101,7 +133,10 @@
             "/images/idepitech3.png",
             "/images/idepitech4.png",
             "/images/idepitech5.png",
-            "/images/idepitech6.png"
+            "/images/idepitech6.png",
+            "/images/idepitech7.png",
+            "/images/idepitech8.png",
+            "/images/idepitech9.png"
           ]
         },
         {
@@ -135,14 +170,50 @@
           "images": [
             "/images/hod-showcase.png",
             "/images/hod-showcase2.png",
-            "/images/hod-showcase3.png"
+            "/images/hod-showcase3.png",
+            "/images/hod-showcase4.png",
+            "/images/hod-showcase5.png"
+          ]
+        },
+        {
+          "id": "hod-ads",
+          "name": "HOD Ads",
+          "cover": "/images/hod-ads3.png",
+          "icon": "/images/hod-showcase-icon.png",
+          "dateBegin": "01/10/2026",
+          "dateEnd": "01/11/2026",
+          "status": "done",
+          "personCount": 1,
+          "company": "Heaven of Dice",
+          "link": "https://hod-ads.vercel.app/",
+          "github": "https://github.com/VivicatcHub/HOD_Ads",
+          "description": "A poster generator for the Heaven of Dice association's events, so that any board member can publish a poster without opening a design tool. Each poster is styled like the lid of a game box from the HOD collection: the color and pattern of one of the 7 club divisions (TCG, Board games, Wargames, Poker...), the HOD phoenix, and a strip with the date or recurrence, times, room and entry fee.\nYou fill in a form, pick a 'Box' or 'Sober' style, a weekly or special edition and optional partner associations, then export the poster in PNG, JPG or PDF for Instagram (post, square, story), screens (Full HD, Discord) or A4 print at 300 dpi. Everything runs in the browser, and the form is remembered between visits.",
+          "stack": {
+            "Frontend": [
+              "**React.js**",
+              "**TypeScript**",
+              "Vite",
+              "HTML",
+              "CSS"
+            ],
+            "Libraries": ["html-to-image", "jsPDF"],
+            "Deployment": ["Vercel"],
+            "Tools": ["Git", "GitHub"],
+            "AI": ["With AI"],
+            "Documentation": ["Markdown"]
+          },
+          "images": [
+            "/images/hod-ads.png",
+            "/images/hod-ads2.png",
+            "/images/hod-ads3.png",
+            "/images/hod-ads4.png"
           ]
         },
         {
           "id": "gotoprojects",
           "name": "GoToProjects",
           "cover": "/images/gotoprojects.png",
-          "images": ["/images/gotoprojects.png"],
+          "images": ["/images/gotoprojects.png", "/images/gotoprojects2.png"],
           "dateBegin": "16/08/2025",
           "dateEnd": "20/08/2025",
           "status": "done",
@@ -204,7 +275,10 @@
             "/images/sololevelingtraining.png",
             "/images/sololevelingtraining2.png",
             "/images/sololevelingtraining3.png",
-            "/images/sololevelingtraining4.png"
+            "/images/sololevelingtraining4.png",
+            "/images/sololevelingtraining5.png",
+            "/images/sololevelingtraining6.png",
+            "/images/sololevelingtraining7.png"
           ]
         },
         {
@@ -251,7 +325,8 @@
           "images": [
             "/images/dragonflyman.png",
             "/images/dragonflyman2.png",
-            "/images/dragonflyman3.png"
+            "/images/dragonflyman3.png",
+            "/images/dragonflyman4.png"
           ],
           "cover": "/images/dragonflyman3.png"
         },
@@ -267,7 +342,8 @@
           "stack": {
             "Frontend": ["HTML", "CSS", "**JavaScript**"],
             "Tools": ["Git", "GitHub"],
-            "Documentation": ["Markdown"]
+            "Documentation": ["Markdown"],
+            "AI": ["With AI"]
           },
           "cover": "/images/cv.png",
           "images": ["/images/cv.png", "/images/cv2.png", "/images/cv3.png"]
@@ -287,6 +363,7 @@
           "company": "1st & 2nd Year",
           "icon": "/images/epitech-icon.png",
           "github": "https://github.com/VivicatcHub/CorewarBestChampion",
+          "images": ["/images/corewar.png", "/images/corewar2.png"],
           "description": "A project aimed at discovering Assembly by creating your own champions competing in the Corewar project. These champions are then used to compete in the Corewar tournament held every year at Epitech.",
           "stack": {
             "Programming": ["Assembly"],
@@ -311,6 +388,7 @@
           "company": "1st Year",
           "icon": "/images/epitech-icon.png",
           "github": "https://github.com/VivicatcHub/42sh",
+          "images": ["/images/42sh.png", "/images/42sh2.png"],
           "description": "Recreation in C of the default Linux Bash shell, implementing its main features such as command execution, redirections, pipes, environment variable and process management, in order to faithfully reproduce the behavior of a Unix shell.",
           "stack": {
             "Programming": [
@@ -372,6 +450,7 @@
               "company": "1st Year",
               "icon": "/images/epitech-icon.png",
               "github": "https://github.com/VivicatcHub/PiscineTek1",
+              "images": ["/images/star.png"],
               "description": "A short C exercise that draws an ASCII star of a size given as a parameter directly in the terminal.",
               "stack": {
                 "Programming": ["**C**"],
@@ -1058,8 +1137,15 @@
       "type": "associative",
       "xp": "Member then Vice-President",
       "description": "Member then Vice-President of the association formerly Cobra, now Manta",
-      "startDate": "10/2024",
-      "endDate": "2029",
+      "roles": [
+        { "title": "Member", "startDate": "11/2024", "endDate": "06/2026" },
+        {
+          "title": "Vice-President",
+          "startDate": "06/2026",
+          "endDate": "06/2027"
+        },
+        { "title": "Member", "startDate": "06/2027", "endDate": "2029" }
+      ],
       "skills": {
         "Soft Skills": {
           "Teamwork": ["Mentoring"],
@@ -1071,10 +1157,23 @@
       "id": "hod",
       "company": "Heaven of Dice",
       "type": "associative",
-      "xp": "Communications Manager then Chancelier (Co-President)",
-      "description": "Communications Manager then Chancelier (Co-President) in the student association Heaven of Dice",
-      "startDate": "02/2025",
-      "endDate": "02/2027",
+      "xp": "Communications Manager then Chancelier (Co-President) then President",
+      "description": "Communications Manager then Chancelier (Co-President) then President in the student association Heaven of Dice",
+      "roles": [
+        { "title": "Member", "startDate": "10/2024", "endDate": "02/2025" },
+        {
+          "title": "Communications Manager",
+          "startDate": "02/2025",
+          "endDate": "02/2026"
+        },
+        {
+          "title": "Chancelier (Co-President)",
+          "startDate": "02/2026",
+          "endDate": "08/2026"
+        },
+        { "title": "President", "startDate": "08/2026", "endDate": "02/2027" },
+        { "title": "Member", "startDate": "02/2027", "endDate": "2029" }
+      ],
       "skills": {
         "Soft Skills": {
           "Communication": [
@@ -1085,6 +1184,26 @@
             "Administrative management"
           ],
           "Management": ["Event organization", "Team management"]
+        }
+      }
+    },
+    {
+      "id": "bde-lyon",
+      "company": "BDE Epitech Lyon",
+      "type": "associative",
+      "xp": "Club Leader",
+      "description": "Club leader in the student union (BDE) of Epitech Lyon",
+      "startDate": "08/2026",
+      "endDate": "02/2027",
+      "skills": {
+        "Soft Skills": {
+          "Communication": ["Professional communication"],
+          "Management": [
+            "Event organization",
+            "Team management",
+            "Association management"
+          ],
+          "Interpersonal skills": ["Leadership"]
         }
       }
     },

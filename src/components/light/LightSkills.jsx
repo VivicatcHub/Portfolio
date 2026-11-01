@@ -1,65 +1,76 @@
 import { useTranslation } from "react-i18next";
 import useData from "./useData";
-import LightSection from "./LightSection";
+import RoomHeader from "./RoomHeader";
 import { SkillIcon } from "../SkillReactIcons";
 import { buildSkills } from "../buildSkills";
 import useSkillLabels from "../skillI18n";
-import { skillLabelSizeClass } from "../skillMarkup";
+import { usageCounts } from "./museum";
 
 const LightSkills = () => {
   const { t: translate } = useTranslation();
   const data = useData();
   const labels = useSkillLabels();
   const skills = data ? buildSkills(data) : {};
+  const counts = data ? usageCounts(data.projects) : {};
+  const total = Object.values(skills).reduce((n, list) => n + list.length, 0);
 
   return (
-    <LightSection title={translate("skills.title")}>
-      <div className="space-y-10">
-        {Object.entries(skills).map(([category, items]) => (
-          <div key={category}>
-            <h2 className="text-lg font-semibold text-gray-500 mb-4">
-              {labels.category(category)}
-            </h2>
-            <div className="flex flex-wrap gap-4">
-              {items.map((skill) => (
-                <div
-                  key={skill.name}
-                  className={
-                    "relative flex flex-col items-center justify-center w-24 h-24 rounded-xl border shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all " +
-                    (skill.important
-                      ? "border-ayu-purple/50 bg-gradient-to-br from-ayu-purple/10 to-ayu-yellow/10 ring-1 ring-ayu-purple/40"
-                      : "border-gray-200 bg-white")
-                  }
-                >
-                  {skill.important && (
-                    <span
-                      className="absolute top-1 right-1.5 text-ayu-purple text-sm"
-                      title="Key skill"
-                      aria-label="Key skill"
+    <div className="room room--white room--page">
+      <div className="room-inner">
+        <RoomHeader
+          title={translate("light.nav.skills")}
+          meta={data && translate("light.techniques.count", { count: total })}
+          intro={translate("light.techniques.intro")}
+        >
+          <p className="index-legend">
+            <span className="key-mark" aria-hidden="true" />
+            {translate("light.techniques.key")}
+          </p>
+        </RoomHeader>
+
+        <div className="index">
+          {Object.entries(skills).map(([category, items]) => (
+            <section key={category} className="index-group">
+              <h2 className="index-title">{labels.category(category)}</h2>
+              <ul>
+                {[...items]
+                  .sort(
+                    (a, b) =>
+                      Number(b.important) - Number(a.important) ||
+                      (counts[b.name] || 0) - (counts[a.name] || 0),
+                  )
+                  .map((skill) => (
+                    <li
+                      key={skill.name}
+                      className={`index-row ${skill.important ? "is-key" : ""}`}
                     >
-                      ★
-                    </span>
-                  )}
-                  <SkillIcon name={skill.name} size={36} />
-                  <span
-                    className={
-                      "mt-2 text-center px-1 leading-tight break-words " +
-                      skillLabelSizeClass(labels.name(skill.name), "xs") +
-                      " " +
-                      (skill.important
-                        ? "font-semibold text-gray-800"
-                        : "text-gray-600")
-                    }
-                  >
-                    {labels.name(skill.name)}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+                      <SkillIcon name={skill.name} size={16} />
+                      <span className="index-name">
+                        {labels.name(skill.name)}
+                        {skill.important && (
+                          <span className="sr-only">
+                            {" "}
+                            ({translate("light.techniques.key")})
+                          </span>
+                        )}
+                      </span>
+                      <span className="index-leader" aria-hidden="true" />
+                      <span
+                        className="index-count"
+                        title={translate("light.works.count", {
+                          count: counts[skill.name] || 0,
+                        })}
+                      >
+                        {counts[skill.name] || "—"}
+                      </span>
+                    </li>
+                  ))}
+              </ul>
+            </section>
+          ))}
+        </div>
       </div>
-    </LightSection>
+    </div>
   );
 };
 

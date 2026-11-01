@@ -1,5 +1,7 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route, Navigate, Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import LightNav from "./LightNav";
 import LightHome from "./LightHome";
 import LightExperiences from "./LightExperiences";
@@ -8,22 +10,24 @@ import LightProjectBundle from "./LightProjectBundle";
 import LightProjectDetail from "./LightProjectDetail";
 import LightSkills from "./LightSkills";
 import LightContact from "./LightContact";
+import "@fontsource-variable/archivo/wdth";
+import "./museum.css";
 
 const LightPortfolio = () => {
-  const { t: translate } = useTranslation();
+  const { t: translate, i18n } = useTranslation();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
-    <div className="relative isolate min-h-screen flex flex-col bg-white text-gray-900">
-      <div
-        aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 animate-purple-pulse"
-        style={{
-          background:
-            "radial-gradient(circle at 30% 20%, rgba(198,80,230,0.28), rgba(198,80,230,0.10) 40%, transparent 70%)",
-        }}
-      />
+    <div className="museum" lang={i18n.language}>
+      <a href="#salle" className="skip-link">
+        {translate("light.skip")}
+      </a>
       <LightNav />
-      <main className="flex-grow">
+      <main id="salle" className="museum-main">
         <Routes>
           <Route index element={<LightHome />} />
           <Route path="experiences" element={<LightExperiences />} />
@@ -35,8 +39,17 @@ const LightPortfolio = () => {
           <Route path="*" element={<Navigate to="" replace />} />
         </Routes>
       </main>
-      <footer className="border-t border-gray-200 py-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} {translate("home.name")}
+      <footer className="colophon">
+        <div className="colophon-inner">
+          <p>
+            © {new Date().getFullYear()} {translate("home.name")} ·{" "}
+            {translate("light.footer.made")}
+          </p>
+          <Link to="/" className="colophon-link">
+            <CodeBracketIcon className="btn-icon" aria-hidden="true" />
+            {translate("light.nav.devMode")}
+          </Link>
+        </div>
       </footer>
     </div>
   );

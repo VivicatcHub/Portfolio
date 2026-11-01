@@ -1,6 +1,6 @@
 {
   "announcement": {
-    "message": "Recherche un stage en alternance de 6 mois du 14 septembre 2026 au 28 février 2027, les jeudis et vendredis.",
+    "message": "Recherche un stage 6 mois du 29 mars 2027 au 20 août 2027",
     "dismiss": "Fermer l'annonce"
   },
   "light": {
@@ -10,14 +10,80 @@
       "projects": "Projets",
       "skills": "Compétences",
       "contact": "Contact",
-      "devMode": "Mode dev"
+      "devMode": "Mode dev",
+      "exhibition": "Rétrospective",
+      "language": "Langue",
+      "label": "Navigation principale",
+      "menu": "Menu"
     },
     "home": {
       "hello": "Bonjour, je suis",
-      "intro": "Développeur passionné, je crée des sites web, des jeux vidéos et des logiciels utiles. Découvrez mon travail ci-dessous, ou revenez au portfolio en mode dev (VS Code) à tout moment."
+      "intro": "Développeur passionné, je crée des sites web, des jeux vidéos et des logiciels utiles. Découvrez mon travail ci-dessous, ou revenez au portfolio en mode dev (VS Code) à tout moment.",
+      "works": "Projets {{from}}–{{to}}",
+      "statement": "Étudiant à Epitech (promo 2029), je conçois des sites, des jeux vidéo et des outils utiles, la plupart écrits sans IA.",
+      "selected": "Projets choisies",
+      "allWorks_one": "Toutes les Projets ({{count}})",
+      "allWorks_other": "Toutes les Projets ({{count}})",
+      "fullChronology": "Toute la chronologie",
+      "keyTechniques": "Technos clés",
+      "allTechniques": "Index complet des technos",
+      "keysNote": "Le chiffre indique le nombre de projets qui utilisent la techno."
     },
     "contact": {
       "intro": "N'hésitez pas à me contacter via l'un des moyens ci-dessous."
+    },
+    "skip": "Aller au contenu",
+    "footer": {
+      "made": "Tous droits réservés"
+    },
+    "welcome": {
+      "title": "Disponible en stage"
+    },
+    "desk": {
+      "title": "Prenons contact",
+      "all": "Tous les moyens de contact"
+    },
+    "cartel": {
+      "cat": "Cat. {{n}}",
+      "inProgress": "en cours",
+      "series_one": "Série de {{count}} projet",
+      "series_other": "Série de {{count}} Projets",
+      "more": "+{{count}}"
+    },
+    "checklist": {
+      "no": "N°",
+      "title": "Projet",
+      "year": "Année",
+      "medium": "Médium"
+    },
+    "works": {
+      "count_one": "{{count}} projet",
+      "count_other": "{{count}} Projets",
+      "intro": "Chaque projet est accroché avec son cartel : dates, technos, durée, équipe, et s'il a été réalisé avec ou sans IA.",
+      "rooms": "Salles"
+    },
+    "detail": {
+      "date": "Dates",
+      "duration": "Durée",
+      "team": "Équipe",
+      "with": "Avec",
+      "context": "Contexte",
+      "status": "Statut",
+      "studies": "Autres vues",
+      "studyAlt": "{{name}}, vue {{n}}"
+    },
+    "chronology": {
+      "title": "Chronologie",
+      "today": "Aujourd'hui",
+      "future": "À venir",
+      "ends": "Fin : {{name}} ({{date}})",
+      "endsPlanned": "Fin prévue : {{name}} ({{date}})"
+    },
+    "techniques": {
+      "count_one": "{{count}} techno",
+      "count_other": "{{count}} technos",
+      "intro": "Tout ce que j'ai utilisé dans mes projets, avec le nombre de projets où chaque technique apparaît.",
+      "key": "Technique clé"
     }
   },
   "navBar": {
@@ -120,7 +186,8 @@
       "Team management": "Gestion d'équipe",
       "Autonomy": "Autonomie",
       "Adaptability": "Adaptabilité",
-      "Problem solving": "Résolution de problèmes"
+      "Problem solving": "Résolution de problèmes",
+      "Leadership": "Leadership"
     }
   },
   "projectCard": {
@@ -163,11 +230,23 @@
       "manta": {
         "company": "Manta (anciennement Cobra)",
         "xp": "Membre puis Vice-président",
+        "roles": ["Membre", "Vice-président", "Membre"],
         "description": "Membre puis Vice-président de l'association anciennement Cobra, maintenant Manta"
       },
       "hod": {
-        "xp": "Responsable Communication puis Chancelier (Co-Président)",
-        "description": "Responsable Communication puis Chancelier (Co-Président) dans l'association étudiante Heaven of Dice"
+        "xp": "Responsable Communication puis Chancelier (Co-Président) puis Président",
+        "roles": [
+          "Membre",
+          "Responsable Communication",
+          "Chancelier (Co-Président)",
+          "Président",
+          "Membre"
+        ],
+        "description": "Responsable Communication puis Chancelier (Co-Président) puis Président dans l'association étudiante Heaven of Dice"
+      },
+      "bde-lyon": {
+        "xp": "Chef de club",
+        "description": "Chef de club au sein du BDE d'Epitech Lyon"
       },
       "axiva": {
         "xp": "Stagiaire",
@@ -299,8 +378,11 @@
       "dragonflyman": {
         "description": "Ma première game jam, qui avait pour thème 'Bug'. Durant le week-end, j'ai réalisé mon premier jeu sur Unity : un mini merge game de fourmis et de libellules.\nLe concept est simple : au début de chaque manche, vous recevez une fourmi de niveau 1. Vous choisissez ensuite comment répartir vos insectes entre trois chemins différents, en en attribuant au moins un et jusqu'à trois. Chaque chemin peut être l'un des suivants :\n- Piège : tous les insectes envoyés sur ce chemin sont perdus.\n- Combat : si le niveau cumulé de vos insectes est inférieur à celui de l'ennemi, vous les perdez. Sinon, vous vainquez l'ennemi.\n- Coffre : il contient un insecte. Si le niveau de votre insecte est supérieur à celui du coffre, vous le sauvez et le recrutez. Sinon, vous conservez simplement votre insecte.\n\nEntre les manches, vous pouvez fusionner deux insectes du même type pour créer une version plus forte, de niveau supérieur.\nVotre objectif est de survivre et d'aller le plus loin possible.\nL'ensemble du projet a été développé en un seul week-end, je me suis donc concentré sur l'implémentation du gameplay plutôt que sur le soin apporté aux visuels."
       },
-      "portfolio": {
-        "description": "Vous le connaissez déjà :P"
+      "portfolio-code": {
+        "description": "Vous le connaissez déjà :P\nLa version développeur de mon portfolio, pensée comme un éditeur VS Code : chaque section est un fichier ouvert dans son propre onglet (home.jsx, experiences.json, projects.css...), avec un explorateur de fichiers, des projets affichés sous forme de règles CSS et un bloc-notes fonctionnel basé sur l'éditeur Monaco. Disponible en français, en anglais et en japonais, et entièrement réalisée sans IA."
+      },
+      "portfolio-pro": {
+        "description": "La version professionnelle de mon portfolio, conçue comme une rétrospective de musée : chaque projet est accroché au mur avec son cartel (dates, technos, équipe, avec ou sans IA), les expériences sont disposées sur une frise chronologique et les compétences sont listées avec le nombre de projets dans lesquelles elles apparaissent. Elle partage les mêmes données que la version code, et a été réalisée avec l'aide de l'IA."
       },
       "idepitech": {
         "description": "Développement d'un IDE entièrement accessible depuis le navigateur, conçu pour apprendre la programmation et réaliser de petits projets en Python, HTML, CSS et JavaScript.\nLa plateforme propose également des cours interactifs ainsi que des projets guidés afin d'accompagner les utilisateurs dans leur apprentissage. Elle a été pensée pour permettre aux membres de l'association Manta d'organiser et d'animer les 'Coding-Clubs' de manière plus simple, plus efficace et plus collaborative."
@@ -308,14 +390,17 @@
       "hod-showcase": {
         "description": "Développement d'un site vitrine pour l'association Heaven of Dice, avec récupération automatique des données directement depuis les documents Google Drive publics de l'association, afin de faciliter la mise à jour et la diffusion des informations. Le site affiche la liste des membres du Conseil d'Administration, un agenda des événements à venir, la liste des XP Epitech accessibles aux membres, les informations légales telles que les statuts de l'association et les rapports annuels, ainsi qu'un catalogue de tous les jeux de Heaven of Dice."
       },
+      "hod-ads": {
+        "description": "Un générateur d'affiches pour les évènements de l'association Heaven of Dice, pour que n'importe quel membre du bureau puisse publier une affiche sans ouvrir un logiciel de graphisme. Chaque affiche reprend le couvercle d'une boîte de jeu de la collection HOD : la couleur et le motif de l'un des 7 pôles du club (TCG, Jeux de société, Wargames, Poker...), le phénix HOD et un bandeau avec la date ou la récurrence, les horaires, la salle et le prix d'entrée.\nOn remplit une fiche, on choisit un style « Boîte » ou « Sobre », une édition hebdomadaire ou spéciale et d'éventuelles assos partenaires, puis on exporte l'affiche en PNG, JPG ou PDF pour Instagram (post, carré, story), pour écran (Full HD, Discord) ou pour l'impression A4 en 300 dpi. Tout fonctionne dans le navigateur, et la fiche est mémorisée entre deux visites."
+      },
       "gotoprojects": {
         "description": "Développement d'un outil Linux permettant d'automatiser le lancement de l'environnement de travail d'un projet : ouverture de VS Code dans le bon répertoire, exécution des commandes nécessaires, synchronisation avec Git (git pull), ainsi que toute autre étape récurrente afin de simplifier et d'accélérer le démarrage d'un projet."
       },
       "solo-leveling": {
-        "description": "Développement d'un site web inspiré de l'univers visuel de l'œuvre coréenne Solo Leveling, conçu pour aider les utilisateurs à suivre leurs objectifs et leurs résolutions sportives grâce à une interface immersive et motivante."
+        "description": "Développement d'un site web inspiré de l'univers visuel de l'projet coréenne Solo Leveling, conçu pour aider les utilisateurs à suivre leurs objectifs et leurs résolutions sportives grâce à une interface immersive et motivante."
       },
       "easytowerofgod": {
-        "description": "Développement d'une extension de navigateur permettant d'améliorer l'expérience de lecture de 'Tower of God' sur Webtoon, avec l'intégration d'une interface de recherche d'informations issue du wiki de l'œuvre, accessible directement sans interrompre la lecture du chapitre. Il s'agissait de ma première extension de navigateur, et l'objectif principal était d'apprendre à en développer une, tout en me facilitant la lecture de Tower of God."
+        "description": "Développement d'une extension de navigateur permettant d'améliorer l'expérience de lecture de 'Tower of God' sur Webtoon, avec l'intégration d'une interface de recherche d'informations issue du wiki de l'projet, accessible directement sans interrompre la lecture du chapitre. Il s'agissait de ma première extension de navigateur, et l'objectif principal était d'apprendre à en développer une, tout en me facilitant la lecture de Tower of God."
       },
       "zfvod": {
         "description": "Développement d'un back-office pour le projet ZFVOD, ainsi que participation à sa maintenance et à son évolution. ZFVOD est une application Windows permettant la diffusion et la lecture de contenus vidéo sur les bornes interactives de salles de sport."
@@ -324,5 +409,21 @@
         "description": "Création d'un CV en HTML modifiable en changeant seulement un fichier de configuration JSON. Idée inspirée par LAFOLIE \"LORAY\" Evan. Ce CV compatible ATS peut facilement être adapté à différentes candidatures en mettant simplement à jour la configuration JSON."
       }
     }
+  },
+  "devProjects": {
+    "title": "Projets",
+    "filter": "Filtrer (nom, techno…)",
+    "clear": "Effacer le filtre",
+    "collapseAll": "Tout replier",
+    "noResults": "Aucun projet ne correspond à « {{query}} ».",
+    "noCapture": "Pas de capture pour ce projet.",
+    "openDetail": "Ouvrir",
+    "live": "Voir en ligne",
+    "ongoing": "en cours",
+    "meta": "métadonnées",
+    "hint": "Survolez ou parcourez avec ↑ ↓, Entrée pour ouvrir.",
+    "captures": "Captures",
+    "captureAlt": "{{name}}, capture {{n}}",
+    "aiUnknown": "non renseigné"
   }
 }

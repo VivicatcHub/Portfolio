@@ -23,11 +23,23 @@ const mergeProjects = (projects = [], tr) =>
     items: (group.items || []).map((item) => mergeItem(item, tr)),
   }));
 
-const mergeExperiences = (experiences = [], tr) =>
-  experiences.map((xp) => ({
-    ...xp,
-    ...(tr?.experiences?.items?.[xp.id] || {}),
+const mergeExperience = (xp, tr) => {
+  const { roles: roleTitles, ...override } =
+    tr?.experiences?.items?.[xp.id] || {};
+  const merged = { ...xp, ...override };
+  if (!xp.roles?.length) return merged;
+
+  merged.roles = xp.roles.map((role, i) => ({
+    ...role,
+    title: roleTitles?.[i] ?? role.title,
   }));
+  merged.startDate = merged.roles[0].startDate;
+  merged.endDate = merged.roles[merged.roles.length - 1].endDate;
+  return merged;
+};
+
+const mergeExperiences = (experiences = [], tr) =>
+  experiences.map((xp) => mergeExperience(xp, tr));
 
 const mergeData = (base, tr) => ({
   ...base,
