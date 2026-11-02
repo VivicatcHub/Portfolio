@@ -149,7 +149,7 @@
           "status": "done",
           "personCount": 1,
           "company": "Heaven of Dice",
-          "link": "https://vivicatchub.github.io/HOD-showcase-site/",
+          "link": "https://hod-showcase-site.vercel.app/HOD-showcase-site/",
           "github": "https://github.com/VivicatcHub/HOD-showcase-site",
           "description": "Developed a showcase website for the Heaven of Dice association, with automatic data retrieval directly from the association's public Google Drive documents to simplify updating and sharing information. The website displays the list of Administrative Council members, an agenda of upcoming events, the list of Epitech XP available to members, legal information such as the association's statutes and annual reports, and a catalog of all Heaven of Dice games.",
           "stack": {
