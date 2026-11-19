@@ -60,7 +60,10 @@
       "count_one": "{{count}} project",
       "count_other": "{{count}} projects",
       "intro": "Every project hangs with its wall label: dates, tech, duration, team, and whether it was made with or without AI.",
-      "rooms": "Rooms"
+      "rooms": "Rooms",
+      "scope": "Projects shown",
+      "featured": "Featured",
+      "all": "All"
     },
     "detail": {
       "date": "Dates",
@@ -174,6 +177,9 @@
     "hint": "Hover or browse with ↑ ↓, Enter to open.",
     "captures": "Screenshots",
     "captureAlt": "{{name}}, screenshot {{n}}",
-    "aiUnknown": "not specified"
+    "aiUnknown": "not specified",
+    "scope": "Projects shown",
+    "featured": "Featured",
+    "all": "All"
   }
 }

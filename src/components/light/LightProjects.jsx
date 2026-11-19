@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { featuredOnly } from "../projectData";
+import useShowAllProjects from "../useShowAllProjects";
 import useData from "./useData";
 import useSkillLabels from "../skillI18n";
 import RoomHeader from "./RoomHeader";
@@ -93,8 +95,12 @@ export const WorksRoom = ({ items, numbers }) => {
 const LightProjects = () => {
   const { t: translate } = useTranslation();
   const data = useData();
-  const groups = data?.projects || [];
-  const numbers = catalogue(groups);
+  const allGroups = data?.projects || [];
+  const [showAll, setShowAll] = useShowAllProjects();
+  const featured = featuredOnly(allGroups);
+  const groups = showAll ? allGroups : featured;
+  // Catalogue numbers stay the same whatever the filter.
+  const numbers = catalogue(allGroups);
   const span = yearSpan(groups);
 
   return (
@@ -112,7 +118,31 @@ const LightProjects = () => {
               .join(" · ")
           }
           intro={translate("light.works.intro")}
-        />
+        >
+          {data && (
+            <div
+              className="scope"
+              role="group"
+              aria-label={translate("light.works.scope")}
+            >
+              {[
+                [false, "featured", countWorks(featured)],
+                [true, "all", countWorks(allGroups)],
+              ].map(([value, key, count]) => (
+                <button
+                  key={key}
+                  type="button"
+                  className="scope-btn"
+                  aria-pressed={showAll === value}
+                  onClick={() => setShowAll(value)}
+                >
+                  {translate(`light.works.${key}`)}
+                  <span className="scope-count">{count}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </RoomHeader>
         <nav className="room-index" aria-label={translate("light.works.rooms")}>
           {groups.map((group, gi) => (
             <a key={gi} href={`#salle-${gi}`} className="room-index-link">

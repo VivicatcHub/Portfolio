@@ -145,6 +145,52 @@
   display: none;
 }
 
+.dp-scope {
+  display: flex;
+  margin: 0 12px 8px 20px;
+  border: 1px solid var(--dp-hair);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.dp-scope-btn {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 24px;
+  color: var(--dp-muted);
+  font-size: 12px;
+}
+.dp-scope-btn + .dp-scope-btn {
+  border-left: 1px solid var(--dp-hair);
+}
+.dp-scope-btn:hover:not(:disabled) {
+  background: var(--dp-hover);
+  color: var(--dp-bright);
+}
+.dp-scope-btn[aria-pressed="true"] {
+  background: var(--dp-select);
+  color: var(--dp-bright);
+}
+.dp-scope-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.dp-scope-btn:focus-visible {
+  outline: 1px solid var(--dp-accent);
+  outline-offset: -1px;
+}
+.dp-scope-star {
+  width: 12px;
+  height: 12px;
+  color: var(--dp-yellow);
+}
+.dp-scope-count {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
 .dp-tree-scroll {
   flex: 1;
   min-height: 0;

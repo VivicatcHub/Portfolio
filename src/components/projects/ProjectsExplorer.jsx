@@ -10,7 +10,15 @@ import {
 import { StarIcon } from "@heroicons/react/20/solid";
 import useSkillLabels from "../skillI18n";
 import { SkillIcon, hasSkillIcon } from "../SkillReactIcons";
-import { byBeginDesc, keySkillOf, stackOf, yearLabel } from "../projectData";
+import {
+  allWorks,
+  byBeginDesc,
+  featuredOnly,
+  keySkillOf,
+  stackOf,
+  yearLabel,
+} from "../projectData";
+import useShowAllProjects from "../useShowAllProjects";
 import ProjectPreview from "./ProjectPreview";
 import "./devProjects.css";
 
@@ -34,6 +42,9 @@ const useWide = () => {
   }, []);
   return wide;
 };
+
+const countLeaves = (groups) =>
+  allWorks(groups).filter((work) => !work.subProjects).length;
 
 const FileIcon = ({ project }) => {
   const skill = keySkillOf(project, hasSkillIcon);
@@ -64,8 +75,15 @@ const ProjectsExplorer = ({ groups = [], openBundle }) => {
     return null;
   });
   const [peekId, setPeekId] = useState(null);
+  const [showAll, setShowAll] = useShowAllProjects();
 
   const q = fold(query.trim());
+  const featured = useMemo(
+    () => featuredOnly(groups, openBundle),
+    [groups, openBundle],
+  );
+  // A search always looks through every project.
+  const scoped = showAll || q ? groups : featured;
   const matches = (project) =>
     !q ||
     [
@@ -76,7 +94,7 @@ const ProjectsExplorer = ({ groups = [], openBundle }) => {
 
   const tree = useMemo(
     () =>
-      groups
+      scoped
         .map((group, gi) => {
           const items = byBeginDesc(group.items || [])
             .map((item) => {
@@ -96,7 +114,7 @@ const ProjectsExplorer = ({ groups = [], openBundle }) => {
         })
         .filter((group) => group.items.length > 0),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [groups, q, labels],
+    [scoped, q, labels],
   );
 
   const all = useMemo(
@@ -329,6 +347,31 @@ const ProjectsExplorer = ({ groups = [], openBundle }) => {
             </button>
           )}
         </label>
+        <div
+          className="dp-scope"
+          role="group"
+          aria-label={translate("devProjects.scope")}
+        >
+          {[
+            [false, "featured", countLeaves(featured)],
+            [true, "all", countLeaves(groups)],
+          ].map(([value, key, count]) => (
+            <button
+              key={key}
+              type="button"
+              className="dp-scope-btn"
+              aria-pressed={showAll === value}
+              disabled={Boolean(q)}
+              onClick={() => setShowAll(value)}
+            >
+              {key === "featured" && (
+                <StarIcon className="dp-scope-star" aria-hidden="true" />
+              )}
+              {translate(`devProjects.${key}`)}
+              <span className="dp-scope-count">{count}</span>
+            </button>
+          ))}
+        </div>
 
         <div className="dp-tree-scroll">
           {tree.length === 0 ? (

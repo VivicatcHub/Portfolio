@@ -50,3 +50,22 @@ export const keySkillOf = (work, hasIcon = () => true) => {
   );
   return (skills.find((skill) => skill.important) || skills[0] || {}).name;
 };
+
+const isFeatured = (work) =>
+  work.important || (work.subProjects || []).some((sub) => sub.important);
+
+// Keeps featured projects only. A featured bundle keeps all its sub-projects;
+// a non-featured bundle keeps only its featured ones. `keepId` is always kept.
+export const featuredOnly = (groups = [], keepId = null) =>
+  groups
+    .map((group) => ({
+      ...group,
+      items: (group.items || [])
+        .filter((item) => item.id === keepId || isFeatured(item))
+        .map((item) =>
+          item.subProjects && !item.important && item.id !== keepId
+            ? { ...item, subProjects: item.subProjects.filter((s) => s.important) }
+            : item,
+        ),
+    }))
+    .filter((group) => group.items.length > 0);

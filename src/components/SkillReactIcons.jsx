@@ -45,6 +45,16 @@ import {
   Windows11Original,
   RubyOriginal,
   CsharpOriginal,
+  ViteOriginal,
+  GoOriginal,
+  PostgresqlOriginal,
+  GoogleOriginal,
+  JsonOriginal,
+  UnityOriginal,
+  LlvmOriginal,
+  NodejsOriginal,
+  ExpressOriginal,
+  DoctrineOriginal,
 } from "devicons-react";
 import {
   TbApi,
@@ -69,8 +79,21 @@ import {
   TbBraces,
   TbNeedleThread,
   TbBroadcast,
+  TbGlassGin,
+  TbCards,
+  TbBug,
+  TbFlask,
+  TbLock,
+  TbWriting,
 } from "react-icons/tb";
-import { SiSfml, SiRaylib, SiGnu, SiShadcnui } from "react-icons/si";
+import {
+  SiSfml,
+  SiRaylib,
+  SiGnu,
+  SiShadcnui,
+  SiGithub,
+  SiPrettier,
+} from "react-icons/si";
 
 const SKILL_DEVICONS = {
   "React.js": ReactOriginal,
@@ -82,6 +105,7 @@ const SKILL_DEVICONS = {
   TailwindCSS: TailwindcssOriginal,
   HTML: Html5Original,
   Figma: FigmaOriginal,
+  Vite: ViteOriginal,
 
   TypeScript: TypescriptOriginal,
   JavaScript: JavascriptOriginal,
@@ -97,12 +121,19 @@ const SKILL_DEVICONS = {
   Haskell: HaskellOriginal,
   Bash: BashOriginal,
   "C#": CsharpOriginal,
+  Go: GoOriginal,
+  "Node.js": NodejsOriginal,
+  Express: ExpressOriginal,
+  Doctrine: DoctrineOriginal,
 
   GraphQl: GraphqlPlain,
   MySQL: MysqlOriginal,
   MongoDB: MongodbOriginal,
   Redis: RedisOriginal,
   DBeaver: DbeaverOriginal,
+  PostgreSQL: PostgresqlOriginal,
+  JSON: JsonOriginal,
+  "Google API": GoogleOriginal,
 
   Jest: JestPlain,
   Cypress: CypressioOriginal,
@@ -120,6 +151,8 @@ const SKILL_DEVICONS = {
   VSCode: VscodeOriginal,
   Vim: VimOriginal,
   Markdown: MarkdownOriginal,
+  Unity: UnityOriginal,
+  clang: LlvmOriginal,
 
   Linux: LinuxOriginal,
   "Linux, Windows": LinuxOriginal,
@@ -140,6 +173,14 @@ const SKILL_FALLBACK_ICONS = {
   "g++": { Icon: SiGnu, color: "#A42E2B" },
   Unix: { Icon: TbTerminal, color: "#111827" },
   ncurses: { Icon: TbTerminal, color: "#1D4ED8" },
+  Gin: { Icon: TbGlassGin, color: "#008ECF" },
+  "Scryfall API": { Icon: TbCards, color: "#C2410C" },
+  "GitHub Pages": { Icon: SiGithub, color: "#222222" },
+  Prettier: { Icon: SiPrettier, color: "#F7B93E" },
+  GDB: { Icon: SiGnu, color: "#A42E2B" },
+  Valgrind: { Icon: TbBug, color: "#B91C1C" },
+  Criterion: { Icon: TbFlask, color: "#0F766E" },
+  unittest: { Icon: TbFlask, color: "#3776AB" },
 
   Algorithms: { Icon: TbBinaryTree, color: "#2563EB" },
   Mathematics: { Icon: TbMath, color: "#DB2777" },
@@ -155,6 +196,8 @@ const SKILL_FALLBACK_ICONS = {
   "Lexer/Parser": { Icon: TbBraces, color: "#CA8A04" },
   Multithreading: { Icon: TbNeedleThread, color: "#BE185D" },
   "Signal handling": { Icon: TbBroadcast, color: "#0284C7" },
+  Cryptography: { Icon: TbLock, color: "#B45309" },
+  "Technical writing": { Icon: TbWriting, color: "#475569" },
   "CI/CD": { Icon: TbInfinity, color: "#2563EB" },
   "Functional testing": { Icon: TbTestPipe, color: "#059669" },
   "Avec IA": { Icon: TbRobot, color: "#7C3AED" },

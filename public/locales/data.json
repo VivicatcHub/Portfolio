@@ -69,7 +69,8 @@
             "/images/portfolio.png",
             "/images/portfolio-code3.png",
             "/images/portfolio-code2.png"
-          ]
+          ],
+          "syncedCommit": "ab096257818d536e9c4bc7b8d4cb234d7c277b91"
         },
         {
           "id": "portfolio-pro",
@@ -96,7 +97,8 @@
             "/images/portfolio-pro3.png",
             "/images/portfolio-pro4.png",
             "/images/portfolio-pro5.png"
-          ]
+          ],
+          "syncedCommit": "ab096257818d536e9c4bc7b8d4cb234d7c277b91"
         },
         {
           "id": "idepitech",
@@ -110,7 +112,7 @@
           "company": "Manta",
           "link": "https://idepitech.vercel.app/",
           "github": "https://github.com/Ethanlsbr/IdEpitech",
-          "description": "Development of an IDE fully accessible from the browser, designed for learning programming and building small projects in Python, HTML, CSS and JavaScript.\nThe platform also offers interactive courses as well as guided projects to support users in their learning. It was designed to allow members of the Manta association to organize and run the 'Coding-Clubs' in a simpler, more efficient and more collaborative way.",
+          "description": "Development of an IDE fully accessible from the browser, designed for learning programming and building small projects in Python, C and HTML/CSS/JavaScript. Code runs on the user's machine: Python through Pyodide and C through Clang compiled to WebAssembly.\nThe platform offers a learning track of auto-checked exercises, guided projects with their own statement and visualiser, a glossary, a stats page with XP, levels and achievements, a campus events agenda and several themes. A Go backend with a PostgreSQL database is being added to save users' progress. It was designed to allow members of the Manta association to organize and run the 'Coding-Clubs' in a simpler, more efficient and more collaborative way.",
           "stack": {
             "Frontend": [
               "**React.js**",
@@ -120,8 +122,17 @@
               "**JavaScript**",
               "TailwindCSS"
             ],
+            "Backend": ["Go", "Gin"],
+            "Database": ["PostgreSQL"],
             "Programming": ["Python", "C"],
-            "Libraries": ["Monaco", "**Pyodide**"],
+            "Libraries": [
+              "Monaco",
+              "**Pyodide**",
+              "WebAssembly",
+              "Three.js",
+              "React Router"
+            ],
+            "DevOps": ["Docker", "CI/CD"],
             "Deployment": ["Vercel"],
             "Tools": ["Git", "GitHub"],
             "AI": ["Without AI"],
@@ -137,7 +148,8 @@
             "/images/idepitech7.png",
             "/images/idepitech8.png",
             "/images/idepitech9.png"
-          ]
+          ],
+          "syncedCommit": "2b74d6f3ff042e3ab1b6c53db4a9e4c95faed5ed"
         },
         {
           "id": "hod-showcase",
@@ -151,7 +163,7 @@
           "company": "Heaven of Dice",
           "link": "https://hod-showcase-site.vercel.app/HOD-showcase-site/",
           "github": "https://github.com/VivicatcHub/HOD-showcase-site",
-          "description": "Developed a showcase website for the Heaven of Dice association, with automatic data retrieval directly from the association's public Google Drive documents to simplify updating and sharing information. The website displays the list of Administrative Council members, an agenda of upcoming events, the list of Epitech XP available to members, legal information such as the association's statutes and annual reports, and a catalog of all Heaven of Dice games.",
+          "description": "Developed a showcase website for the Heaven of Dice association, with automatic data retrieval directly from the association's public Google Drive documents and Google Calendar to simplify updating and sharing information. The website displays the Administrative Council's org chart, an agenda of upcoming events, the list of Epitech XP available to members, a catalog of all Heaven of Dice games, and the association's Magic: The Gathering Commander decks, with their cards fetched from the Scryfall API.",
           "stack": {
             "Frontend": [
               "**React.js**",
@@ -161,7 +173,7 @@
               "TypeScript"
             ],
             "DevOps": ["CI/CD"],
-            "API": ["**Google API**"],
+            "API": ["**Google API**", "Scryfall API"],
             "Deployment": ["GitHub Pages"],
             "AI": ["With AI"],
             "Tools": ["Git", "GitHub"],
@@ -173,7 +185,8 @@
             "/images/hod-showcase3.png",
             "/images/hod-showcase4.png",
             "/images/hod-showcase5.png"
-          ]
+          ],
+          "syncedCommit": "ca4848623966cd41066e82beacc8431b373037d7"
         },
         {
           "id": "hod-ads",
@@ -187,7 +200,7 @@
           "company": "Heaven of Dice",
           "link": "https://hod-ads.vercel.app/",
           "github": "https://github.com/VivicatcHub/HOD_Ads",
-          "description": "A poster generator for the Heaven of Dice association's events, so that any board member can publish a poster without opening a design tool. Each poster is styled like the lid of a game box from the HOD collection: the color and pattern of one of the 7 club divisions (TCG, Board games, Wargames, Poker...), the HOD phoenix, and a strip with the date or recurrence, times, room and entry fee.\nYou fill in a form, pick a 'Box' or 'Sober' style, a weekly or special edition and optional partner associations, then export the poster in PNG, JPG or PDF for Instagram (post, square, story), screens (Full HD, Discord) or A4 print at 300 dpi. Everything runs in the browser, and the form is remembered between visits.",
+          "description": "A poster generator for the Heaven of Dice association's events, so that any board member can publish a poster without opening a design tool. Each poster is styled like the lid of a game box from the HOD collection: the color and pattern of one of the 7 club divisions (TCG, Board games, Wargames, Poker...), the HOD phoenix, and a strip with the date or recurrence, times, room and entry fee.\nYou fill in a form, pick a 'Box' or 'Sober' style, a weekly or special edition and optional partner associations, then export the poster in PNG, JPG or PDF for Instagram (post, square, story), screens (Full HD, Discord) or A4 print (portrait or landscape) at 300 dpi, with optional QR codes to the associations' Discord servers. Everything runs in the browser, and the form is remembered between visits.",
           "stack": {
             "Frontend": [
               "**React.js**",
@@ -196,9 +209,9 @@
               "HTML",
               "CSS"
             ],
-            "Libraries": ["html-to-image", "jsPDF"],
+            "Libraries": ["html-to-image", "jsPDF", "qrcode-generator"],
             "Deployment": ["Vercel"],
-            "Tools": ["Git", "GitHub"],
+            "Tools": ["Git", "GitHub", "Prettier"],
             "AI": ["With AI"],
             "Documentation": ["Markdown"]
           },
@@ -207,7 +220,8 @@
             "/images/hod-ads2.png",
             "/images/hod-ads3.png",
             "/images/hod-ads4.png"
-          ]
+          ],
+          "syncedCommit": "6b58a154cd8251bb82cb66f33fa134c68faaa079"
         },
         {
           "id": "gotoprojects",
@@ -219,7 +233,7 @@
           "status": "done",
           "personCount": 1,
           "github": "https://github.com/VivicatcHub/GoToProjects",
-          "description": "Development of a Linux tool to automate launching a project's working environment: opening VS Code in the right directory, running the necessary commands, syncing with Git (git pull), as well as any other recurring step in order to simplify and speed up starting a project.",
+          "description": "Development of a Linux tool to automate launching a project's working environment: opening VS Code in the right directory, running the necessary commands, syncing with Git (git pull), as well as any other recurring step in order to simplify and speed up starting a project. Projects are declared in a JSON file, can be listed, and are found by a case-insensitive name.",
           "stack": {
             "Programming": ["**Python**"],
             "Systems": ["**Bash**"],
@@ -227,19 +241,20 @@
             "Tools": ["Git", "GitHub"],
             "AI": ["Without AI"],
             "Documentation": ["Markdown"]
-          }
+          },
+          "syncedCommit": "2b1768dafff707891d392e93eef96a70a0fdeca6"
         },
         {
           "id": "soundboardtty",
           "name": "SoundboardTTY",
-          "dateBegin": "01/04/2025",
-          "dateEnd": "03/04/2025",
+          "dateBegin": "13/02/2025",
+          "dateEnd": "11/04/2025",
           "cover": "/images/soundboardtty.png",
           "status": "done",
           "personCount": 2,
           "collaborators": ["LEROY Léonard"],
           "github": "https://github.com/VivicatcHub/SoundBoardTTY",
-          "description": "Developed a fully terminal-based (TTY) soundboard in C using ncurses, allowing users to browse and play sound clips through a keyboard-driven text interface. The project can be used in two different ways:\n- Directly from the terminal using command-line arguments.\n- Through an interactive ncurses interface with keyboard shortcuts.",
+          "description": "Developed a fully terminal-based (TTY) soundboard in C using ncurses, allowing users to browse and play MP3 and WAV sound clips through a keyboard-driven text interface. The project ships with an installer and can be used in two different ways:\n- Directly from the terminal using command-line arguments (add, update, delete or play a sound).\n- Through an interactive ncurses interface with keyboard shortcuts.",
           "stack": {
             "Programming": ["**C**"],
             "Libraries": ["**ncurses**"],
@@ -253,7 +268,8 @@
             "/images/soundboardtty4.png",
             "/images/soundboardtty.png",
             "/images/soundboardtty2.png"
-          ]
+          ],
+          "syncedCommit": "ae25b2270e39b3f76f2e865cb09c00e84b5bef13"
         },
         {
           "id": "solo-leveling",
@@ -264,7 +280,7 @@
           "status": "done",
           "personCount": 1,
           "github": "https://github.com/VivicatcHub/SoloLevelingTraining",
-          "description": "Development of a website inspired by the visual universe of the Korean work Solo Leveling, designed to help users track their sports goals and resolutions through an immersive and motivating interface.",
+          "description": "Development of a website inspired by the visual universe of the Korean work Solo Leveling, designed to help users track their sports goals and resolutions through an immersive and motivating interface. The site was later redesigned and now offers several themes.",
           "stack": {
             "Frontend": ["HTML", "CSS", "**JavaScript**"],
             "Tools": ["Git", "GitHub"],
@@ -279,7 +295,8 @@
             "/images/sololevelingtraining5.png",
             "/images/sololevelingtraining6.png",
             "/images/sololevelingtraining7.png"
-          ]
+          ],
+          "syncedCommit": "5e3a1777b642e39b06cd0b9256340d68784d23a1"
         },
         {
           "id": "easytowerofgod",
@@ -291,7 +308,7 @@
           "status": "done",
           "personCount": 1,
           "github": "https://github.com/VivicatcHub/EasyTowerOfGod",
-          "description": "Developed a browser extension to improve the reading experience of Tower of God on Webtoon by integrating a searchable interface for the series' wiki, allowing readers to access information without interrupting the chapter. This was my first browser extension, and the main goal was to learn how to build one while also making it easier for me to read Tower of God.",
+          "description": "Developed a browser extension for Chrome and Firefox to improve the reading experience of Tower of God on Webtoon by integrating a searchable interface for the series' wiki, allowing readers to access information without interrupting the chapter. It also remembers the last chapter read, so it can be reopened in one click. This was my first browser extension, and the main goal was to learn how to build one while also making it easier for me to read Tower of God.",
           "stack": {
             "Frontend": ["HTML", "CSS", "**JavaScript**"],
             "Systems": ["Bash"],
@@ -303,7 +320,8 @@
             "/images/easytowerofgod.png",
             "/images/easytowerofgod2.png",
             "/images/easytowerofgod3.png"
-          ]
+          ],
+          "syncedCommit": "27f8c3cba1356a30c22dc9b35a1184fee390922f"
         },
         {
           "id": "dragonflyman",
@@ -328,7 +346,8 @@
             "/images/dragonflyman3.png",
             "/images/dragonflyman4.png"
           ],
-          "cover": "/images/dragonflyman3.png"
+          "cover": "/images/dragonflyman3.png",
+          "syncedCommit": "28f50fbbd6d24e479d010a9ce43f151b876b3393"
         },
         {
           "id": "cv",
@@ -346,7 +365,8 @@
             "AI": ["With AI"]
           },
           "cover": "/images/cv.png",
-          "images": ["/images/cv.png", "/images/cv2.png", "/images/cv3.png"]
+          "images": ["/images/cv.png", "/images/cv2.png", "/images/cv3.png"],
+          "syncedCommit": "365a774505d102ad7a02bcfe04fb59fe304c7bb0"
         }
       ]
     },
@@ -369,7 +389,8 @@
             "Programming": ["Assembly"],
             "Tools": ["Git", "GitHub"],
             "AI": ["Without AI"]
-          }
+          },
+          "syncedCommit": "d3e37806113630f344a662b4f9ca96aad51401f3"
         },
         {
           "id": "42sh",
@@ -402,7 +423,8 @@
             "Debug & Quality": ["GDB", "Valgrind"],
             "Tests": ["Criterion"],
             "AI": ["Without AI"]
-          }
+          },
+          "syncedCommit": "7d54f3ec87fd5fed5a11b1edf3f4796986ac0077"
         },
         {
           "id": "piscine-unix-c",
@@ -438,7 +460,8 @@
                 ],
                 "Debug & Quality": ["Valgrind", "GDB"],
                 "AI": ["Without AI"]
-              }
+              },
+              "syncedCommit": "ab752fd64e725e33d072fc3249e387990f3487b7"
             },
             {
               "id": "star",
@@ -458,7 +481,8 @@
                 "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
                 "Debug & Quality": ["Valgrind"],
                 "AI": ["Without AI"]
-              }
+              },
+              "syncedCommit": "ab752fd64e725e33d072fc3249e387990f3487b7"
             },
             {
               "id": "countisland",
@@ -607,9 +631,10 @@
               "collaborators": ["LAFOLIE \"LORAY\" Evan"],
               "company": "2nd Year",
               "icon": "/images/epitech-icon.png",
-              "description": "A project that hides and decodes messages inside audio signals using Fourier analysis, blending mathematics and signal processing.",
+              "description": "A Python command-line tool that finds the dominant frequencies of a WAV file with a hand-written FFT, and hides text messages in audio on an ultrasonic carrier (22 kHz) on the second channel, blending mathematics and signal processing.",
               "stack": {
                 "Programming": ["Python"],
+                "Libraries": ["NumPy"],
                 "Concepts": [
                   "**Mathematics**",
                   "**Optimization**",
@@ -617,8 +642,12 @@
                 ],
                 "Systems": ["Linux", "Arch Linux"],
                 "Tools": ["VSCode", "Git", "GitHub"],
-                "AI": ["Without AI"]
-              }
+                "Tests": ["unittest"],
+                "AI": ["Without AI"],
+                "Documentation": ["Markdown"]
+              },
+              "github": "https://github.com/VivicatcHub/EpiStoneAnalysis",
+              "syncedCommit": "f4852e04c4cc5fce6d619726f61aacd962e6d101"
             }
           ]
         },
@@ -719,7 +748,9 @@
             "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
             "Debug & Quality": ["Valgrind"],
             "AI": ["Without AI"]
-          }
+          },
+          "github": "https://github.com/VivicatcHub/EpiLs",
+          "syncedCommit": "adf561a443397c0a21a0114121d964bba649edb0"
         },
         {
           "id": "mytop",
@@ -933,17 +964,18 @@
           "personCount": 1,
           "company": "2nd Year",
           "icon": "/images/epitech-icon.png",
-          "description": "An FTP server written in C++ for storing and retrieving images, handling client connections, commands and file transfers over the network.",
+          "description": "A single-process FTP server written in C following RFC 959, handling many clients at once with poll, with passive (PASV) and active (PORT) data transfers, an anonymous account, and a shell tester for functional tests.",
           "stack": {
-            "Programming": ["**C++**"],
-            "Concepts": [
-              "**Network programming**",
-              "Object-Oriented Programming (OOP)"
-            ],
-            "Systems": ["Linux", "Arch Linux"],
-            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
-            "AI": ["Without AI"]
-          }
+            "Programming": ["**C**"],
+            "Concepts": ["**Network programming**"],
+            "Systems": ["Bash", "Linux", "Arch Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Tests": ["Functional testing"],
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          },
+          "github": "https://github.com/VivicatcHub/EpiFTP",
+          "syncedCommit": "7f3c28eae06612ee08da61b85f316e765c13af0f"
         },
         {
           "id": "myteams",
@@ -951,22 +983,28 @@
           "dateBegin": "23/03/2026",
           "dateEnd": "19/04/2026",
           "status": "done",
-          "personCount": 2,
+          "personCount": 3,
           "important": false,
-          "collaborators": ["LAFOLIE \"LORAY\" Evan"],
+          "collaborators": ["LAFOLIE \"LORAY\" Evan", "NGUYEN Charles"],
           "company": "2nd Year",
           "icon": "/images/epitech-icon.png",
-          "description": "A recreation of Microsoft Teams in C++, with a dedicated server enabling real-time text communication between multiple connected clients.",
+          "description": "A simplified Microsoft Teams clone running in the terminal: a TCP server written in C and a command-line client written in C++. Users can send private messages, create teams, channels, threads and replies, subscribe to teams and receive live notifications, and all data is saved to JSON files when the server stops.",
           "stack": {
-            "Programming": ["**C++**"],
+            "Programming": ["**C**", "**C++**"],
             "Concepts": [
               "**Network programming**",
               "Object-Oriented Programming (OOP)"
             ],
+            "Formats": ["JSON"],
             "Systems": ["Linux", "Arch Linux"],
             "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
-            "AI": ["Without AI"]
-          }
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          },
+          "github": "https://github.com/VivicatcHub/EpiTeams",
+          "cover": "/images/myteams.png",
+          "images": ["/images/myteams.png"],
+          "syncedCommit": "96899dc3739f9ce62da9e9dd79f0ba01a06f6e6f"
         },
         {
           "id": "codewash",
@@ -1000,17 +1038,18 @@
           "personCount": 1,
           "company": "2nd Year",
           "icon": "/images/epitech-icon.png",
-          "description": "A concurrent-programming introduction that simulates the Gaulish village under Roman attack while Panoramix races to brew enough magic potion, coordinating many simultaneous actors.",
+          "description": "A concurrent-programming introduction in C that simulates the Gaulish village under Roman attack while Panoramix brews magic potion: each villager is a thread drinking from a shared pot, and the druid is woken up to refill it. Shared state is protected by mutexes and the druid is signalled through a semaphore.",
           "stack": {
-            "Programming": ["C++"],
-            "Concepts": [
-              "**Concurrent programming**",
-              "Object-Oriented Programming (OOP)"
-            ],
-            "Systems": ["Linux", "Arch Linux"],
-            "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
-            "AI": ["Without AI"]
-          }
+            "Programming": ["**C**"],
+            "Concepts": ["**Concurrent programming**", "Multithreading"],
+            "Systems": ["Bash", "Linux", "Arch Linux"],
+            "Tools": ["Makefile", "VSCode", "Git", "GitHub"],
+            "Tests": ["Functional testing"],
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          },
+          "github": "https://github.com/VivicatcHub/EpiPanoramix",
+          "syncedCommit": "e78abb77ac11ba3b220a8bd9c98e0cdadba6a065"
         },
         {
           "id": "the-plazza",
@@ -1023,17 +1062,25 @@
           "collaborators": ["LAFOLIE \"LORAY\" Evan"],
           "company": "2nd Year",
           "icon": "/images/epitech-icon.png",
-          "description": "A concurrent-programming specialisation simulating several kitchens and an order terminal for a pizza restaurant, distributing cooking tasks across processes and threads.",
+          "description": "A concurrent-programming specialisation in C++20 simulating a pizza restaurant: the reception reads orders from the shell and dispatches them to kitchens (child processes) through IPC, each running a pool of cook threads with its own ingredient stock. Kitchens are created when needed and close after 5 seconds without work. As a bonus, a React web reception backed by an Express server drives the program.",
           "stack": {
-            "Programming": ["C++"],
+            "Programming": ["**C++**"],
             "Concepts": [
               "**Concurrent programming**",
+              "Multithreading",
               "Object-Oriented Programming (OOP)"
             ],
+            "Frontend": ["React.js", "Vite", "JavaScript"],
+            "Backend": ["Node.js", "Express"],
             "Systems": ["Linux", "Arch Linux"],
             "Tools": ["Makefile", "g++", "VSCode", "Git", "GitHub"],
-            "AI": ["Without AI"]
-          }
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          },
+          "github": "https://github.com/VivicatcHub/EpiPlazza",
+          "cover": "/images/the-plazza2.png",
+          "images": ["/images/the-plazza.png", "/images/the-plazza2.png"],
+          "syncedCommit": "ed04689473eedb5811b2c6392340b6a6a05c4d1a"
         },
         {
           "id": "zappy",
@@ -1053,20 +1100,58 @@
           ],
           "company": "2nd Year",
           "icon": "/images/epitech-icon.png",
-          "description": "An end-of-year project simulating a small tribe-management game inside a shared world, split into three parts:\n- a server that talks to the GUI and the AI, stores the world state, computes commands, handles flooding and secures actions\n- a GUI offering a readable 2D view and a spectacular 3D view\n- and an artificial intelligence that gives orders to our team's players and orchestrates them. It was presented to the whole class and their families.",
+          "description": "An end-of-year project simulating a small tribe-management game inside a shared world, where AI-driven teams gather stones and perform rituals to level up. It is split into three parts:\n- a C++ server that talks to the GUI and the AI over TCP, stores the world state, computes commands, handles flooding and secures actions\n- a raylib GUI offering a readable isometric 2D view and a spectacular 3D view, which can also record and replay games\n- and a Python artificial intelligence that gives orders to our team's players and coordinates them through encoded broadcasts. It was presented to the whole class and their families.",
           "stack": {
-            "Programming": ["C++", "C", "Python"],
+            "Programming": ["**C++**", "Python"],
             "Libraries": ["Raylib"],
             "Concepts": [
               "**Network programming**",
               "**Concurrent programming**",
               "Algorithms",
+              "Graphics programming",
               "Object-Oriented Programming (OOP)"
             ],
             "Systems": ["Linux", "Arch Linux"],
             "Tools": ["Makefile", "g++", "Git", "GitHub"],
-            "AI": ["Without AI"]
-          }
+            "AI": ["Without AI"],
+            "Documentation": ["Markdown"]
+          },
+          "github": "https://github.com/VivicatcHub/EpiZappy",
+          "cover": "/images/zappy.png",
+          "images": [
+            "/images/zappy.png",
+            "/images/zappy2.png",
+            "/images/zappy3.png",
+            "/images/zappy4.png"
+          ],
+          "syncedCommit": "8d5708810785ae20c8136222d22e33041d7797cd"
+        },
+        {
+          "id": "mypgp",
+          "name": "MyPGP",
+          "dateBegin": "21/09/2026",
+          "dateEnd": "19/10/2026",
+          "status": "done",
+          "personCount": 2,
+          "collaborators": ["LAFOLIE \"LORAY\" Evan"],
+          "company": "3rd Year",
+          "icon": "/images/epitech-icon.png",
+          "cover": "/images/mypgp.png",
+          "images": ["/images/mypgp.png"],
+          "github": "https://github.com/VivicatcHub/EpiPgp",
+          "description": "A command-line tool that ciphers and deciphers messages with XOR, AES, RSA and two hybrid PGP schemes (RSA + XOR, RSA + AES), all implemented from scratch in C++20, including the big integers needed for RSA key generation. A small local web page lets you try every mode, and a black-box tester compares the program with a Python reference implementation over 589 cases, run by a CI pipeline.",
+          "stack": {
+            "Programming": ["**C++**", "Python"],
+            "Concepts": ["**Cryptography**", "Mathematics", "Algorithms"],
+            "Libraries": ["argparse"],
+            "Frontend": ["HTML"],
+            "DevOps": ["CI/CD"],
+            "Tests": ["Functional testing"],
+            "Systems": ["Linux", "Arch Linux"],
+            "Tools": ["Makefile", "g++", "Git", "GitHub"],
+            "Documentation": ["Markdown"]
+          },
+          "syncedCommit": "6d0cf25453d9b39691aa5be9a1c0bf59e0973cf3"
         }
       ]
     },
